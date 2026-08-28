@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Coco_Cat_AC
+  m_Controller: {fileID: 9100000, guid: eb55859a2ee336a419bbbc48ea1ee783, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 5982347250400238132, guid: a49e4fc4fe2e597419842dfc531f31dc, type: 3}
+    m_OverrideClip: {fileID: -3100369314251171874, guid: 5a6beb3b7199ae84db694d5d5775c31c, type: 3}
+  - m_OriginalClip: {fileID: 4738233949501992912, guid: 08d56f46b738efb44a3c43318842f8d8, type: 3}
+    m_OverrideClip: {fileID: 7714211649974476186, guid: 8809628e9aaffe848b532f0dce05ce67, type: 3}

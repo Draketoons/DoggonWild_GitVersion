@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "CatMinigameInput",
+    "maps": [
+        {
+            "name": "CatMinigame",
+            "id": "2aba1dae-b1eb-4846-821f-ea0c5c4f2e00",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "d1f76511-9ff3-4c7e-8216-48f92314244b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e5386f90-e543-4f33-ae3a-a02004124b10",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d57ab1f3-4193-431e-aa7c-e1bdf6f81338",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
