@@ -16,6 +16,16 @@ public class Hamster : MonoBehaviour
         }
     }
 
+    public void Stop()
+    {
+        canMove = false;
+    }
+
+    public void Go()
+    {
+        canMove = true;
+    }
+
     public void Rotate(Vector3 Direction)
     {
         transform.rotation = Quaternion.Euler(Direction);

@@ -3,7 +3,7 @@ using UnityEngine;
 public class HamsterTube : MonoBehaviour
 {
     [Header("Tube Settings")]
-    [SerializeField] private Vector3 tubeDirection;
+    public Vector3 tubeDirection;
     [SerializeField] private float hamsterDistance;
 
     private Hamster hamster;
@@ -39,5 +39,10 @@ public class HamsterTube : MonoBehaviour
             hamster.Rotate(tubeDirection);
             Debug.Log($"Rotated Hamster {tubeDirection}");
         }
+    }
+
+    public Vector3 GetDirection()
+    {
+        return tubeDirection;
     }
 }

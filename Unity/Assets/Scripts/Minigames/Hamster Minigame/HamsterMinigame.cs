@@ -1,70 +1,105 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.LightTransport;
 
 public class HamsterMinigame : MinigameBase
 {
     [Header("Minigame Settings")]
-    [SerializeField] private HamsterTube[] tubes;
-    [SerializeField] private float tubeXOffset;
-    [SerializeField] private float tubeZOffset;
-    [SerializeField] private Vector3 startingPosition;
+    [SerializeField] private List<TubeRow> TubeRows = new List<TubeRow>();
+    [SerializeField] private int Rows;
+    [SerializeField] private float RowOffset;
 
-    private Vector3 currentTubePosition = Vector3.zero;
-    private float xValue = 0f;
-    private float zValue = 0f;
-    private float tubeDirection = 0;
+    [Header("References")]
+    [SerializeField] private TubeRow TubeRowObj;
+
+    [Header("Stats")]
+    [Serialize] private List<HamsterTube> CorrectPath = new List<HamsterTube>();
 
     private Camera cam;
     private Hamster hamster;
+    private float zValue;
 
     private void Start()
     {
         cam = Camera.main;
         hamster = FindAnyObjectByType<Hamster>();
+        hamster.Stop();
 
+        ConstructTubes(Rows);
+
+        hamster.Go();
     }
 
-    private void Update()
+    public void ConstructTubes(int length)
     {
-        if (zValue < 19)
+        for (int i = 0; i < length; i++)
         {
-            ConstructTubePath();
+            TubeRows.Add(Instantiate(TubeRowObj, new Vector3(0, 1, zValue), Quaternion.identity));
+            TubeRows[i].SetHamsterMinigameManager(this);
+            zValue += RowOffset;
+        }
+
+        for (int i = 0; i < length; i++)
+        {
+            if (i == 0 || i == length - 1)
+            {
+                TubeRows[i].SetTubes(true);
+            }
+            else
+            {
+                TubeRows[i].SetTubes(false);
+            }
+        }
+
+        //MakePath();
+    }
+
+    public void MakePath()
+    {
+        TubePoint currentPoint = null;
+        int currentRowIndex = 0;
+
+        while (currentRowIndex < TubeRows.Count)
+        {
+            if (currentPoint && currentPoint.GetTube().tubeDirection == new Vector3(0.0f, 90.0f, 0.0f))
+            {
+                Debug.Log("Tube path going left");
+                currentPoint = TubeRows[currentRowIndex - 2].GetPoints()[currentPoint.positionInRow + 1];
+                currentPoint.correctPoint = true;
+                continue;
+            }
+            if (currentPoint && currentPoint.GetTube().tubeDirection == new Vector3(0.0f, -90.0f, 0.0f))
+            {
+                Debug.Log("Tube path going right");
+                currentPoint = TubeRows[currentRowIndex - 2].GetPoints()[currentPoint.positionInRow - 1];
+                currentPoint.correctPoint = true;
+                continue;
+            }
+            if (currentRowIndex <= 0)
+            {
+                currentPoint = TubeRows[currentRowIndex].GetPoints()[Random.Range(0, TubeRows[currentRowIndex].GetPoints().Length)];
+                currentPoint.correctPoint = true;
+                currentRowIndex++;
+            }
+            else
+            {
+                Debug.Log("Iterating Path");
+                int previousCorrectPointIndex = currentPoint.positionInRow;
+                currentPoint = TubeRows[currentRowIndex - 1].GetPoints()[previousCorrectPointIndex];
+                currentPoint.correctPoint = true;
+                currentRowIndex++;
+            }
         }
     }
 
-    public void ConstructTubePath()
+    public void AddToPath(HamsterTube tube)
     {
-        tubeDirection = (float)(int)Random.Range(-1, 2);
+        CorrectPath.Add(tube);
+    }
 
-        if (xValue == 0)
-            zValue += tubeZOffset;
-
-        if (xValue > Mathf.Abs(3))
-            tubeDirection = 0;
-
-        switch (tubeDirection)
-        {
-            case 0:
-                Instantiate(tubes[0], new Vector3(xValue, 1, zValue), Quaternion.identity);
-                break;
-            case 1:
-                Instantiate(tubes[1], new Vector3(xValue, 1, zValue), Quaternion.identity);
-                break;
-            case -1:
-                Instantiate(tubes[2], new Vector3(xValue, 1, zValue), Quaternion.identity);
-                break;
-        }
-
-        xValue = xValue + tubeXOffset * tubeDirection;
-
-        Debug.Log($"Tube Direction: {tubeDirection}");
-        Debug.Log($"XValue: {xValue}");
-        Debug.Log($"zValue: {zValue}");
-
-        if (tubeDirection == 0)
-            zValue += tubeZOffset;
-
-        Instantiate(tubes[0], new Vector3(xValue, 1, zValue), Quaternion.identity);
+    public List<HamsterTube> GetCorrectPath()
+    {
+        return CorrectPath;
     }
 }
