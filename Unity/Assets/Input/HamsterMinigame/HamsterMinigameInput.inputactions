@@ -79,6 +79,162 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "TubeSelectKeyB1",
+            "id": "b0de7012-e4ef-4231-8074-d329a87f6c01",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "6555550f-bec1-4c80-a202-1676c2744a68",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "de579da0-7683-4259-9779-a605d939d6fc",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "TubeSelectKeyB2",
+            "id": "e156c27c-d38e-44ae-acf2-cba6fab074de",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "87511292-3ee1-4be4-9a73-922e224e3dd1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a1c7dd6c-4b75-4161-a61b-ce7f442f7049",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "TubeSwitchKeyB1",
+            "id": "876994ca-44b2-44c0-85b3-bec0a8444ab4",
+            "actions": [
+                {
+                    "name": "Switch",
+                    "type": "Button",
+                    "id": "e9679cef-118c-4af6-8f4c-a691852c7905",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "23a7b317-8f36-4ceb-9ee4-cac2c842731d",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "bbdc88ea-432b-437d-b6d4-f295d9e18405",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "838df869-dd3c-4f7c-abcd-44b2258a972f",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "TubeSwitchKeyB2",
+            "id": "cf578782-12b7-4a23-a3fd-8f1ee0980e7f",
+            "actions": [
+                {
+                    "name": "Switch",
+                    "type": "Button",
+                    "id": "25486e1f-83d0-4bcb-ae39-e4f32fbf150f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "db562d78-e056-4d7a-b0a9-0824ffea6935",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "e4b0acb9-aa35-4b00-9196-79b57182c1e4",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "309e5fc1-9244-46c5-a421-ce853f49d791",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
         }
     ],
     "controlSchemes": []

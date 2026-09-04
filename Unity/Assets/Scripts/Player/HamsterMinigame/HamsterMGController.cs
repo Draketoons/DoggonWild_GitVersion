@@ -11,6 +11,7 @@ public class HamsterMGController : MonoBehaviour
     [SerializeField] private InputAction SelectAction;
     [SerializeField] private Transform[] selectPositions;
     [SerializeField] private GameObject selectIcon;
+    [SerializeField] private bool usingKeyboard;
     public bool placedTreat;
     public bool canPlace;
 
@@ -21,7 +22,8 @@ public class HamsterMGController : MonoBehaviour
 
     private void Start()
     {
-        AssociateActionsWithController();
+        if (!usingKeyboard)
+            AssociateActionsWithController();
         SetInputActions();
         BindInputActions();
         EnableInputActions();
@@ -38,8 +40,23 @@ public class HamsterMGController : MonoBehaviour
 
     public void SetInputActions()
     {
-        SwitchTubeAction = PlayerControls.FindActionMap("TubeSwitch").FindAction("Switch");
-        SelectAction = PlayerControls.FindActionMap("TubeSelect").FindAction("Select");
+        if (!usingKeyboard)
+        {
+            SwitchTubeAction = PlayerControls.FindActionMap("TubeSwitch").FindAction("Switch");
+            SelectAction = PlayerControls.FindActionMap("TubeSelect").FindAction("Select");
+        }
+
+        if (PlayerIndex == 0)
+        {
+            SwitchTubeAction = PlayerControls.FindActionMap("TubeSwitchKeyB1").FindAction("Switch");
+            SelectAction = PlayerControls.FindActionMap("TubeSelectKeyB1").FindAction("Select");
+        }
+
+        if (PlayerIndex == 1)
+        {
+            SwitchTubeAction = PlayerControls.FindActionMap("TubeSwitchKeyB2").FindAction("Switch");
+            SelectAction = PlayerControls.FindActionMap("TubeSelectKeyB2").FindAction("Select");
+        }
     }
 
     public void BindInputActions()

@@ -1247,6 +1247,7 @@ MonoBehaviour:
   - {fileID: 1156697352}
   - {fileID: 306654652}
   selectIcon: {fileID: 818287425}
+  usingKeyboard: 1
   placedTreat: 0
   canPlace: 0
 --- !u!1 &1579876466
@@ -1387,7 +1388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1808918560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,6 +1426,7 @@ MonoBehaviour:
   - {fileID: 1156697352}
   - {fileID: 306654652}
   selectIcon: {fileID: 1373692077}
+  usingKeyboard: 1
   placedTreat: 0
   canPlace: 0
 --- !u!4 &1808918561
