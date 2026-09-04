@@ -2,6 +2,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.LightTransport;
+using Unity.Cinemachine;
+using System.Collections;
 
 public class HamsterMinigame : MinigameBase
 {
@@ -12,9 +14,20 @@ public class HamsterMinigame : MinigameBase
 
     [Header("References")]
     [SerializeField] private TubeRow TubeRowObj;
+    [SerializeField] private Transform[] HamsterStartPositions;
+    [SerializeField] private GameObject TreatPrefab;
+    [SerializeField] private HamsterMGController[] Players;
 
     [Header("Stats")]
     [Serialize] private List<HamsterTube> CorrectPath = new List<HamsterTube>();
+
+    [Header("Camera Settings")]
+    [SerializeField] CinemachineCamera StartCamera;
+    [SerializeField] CinemachineCamera EndCamera;
+    [SerializeField] CinemachineCamera FollowCamera;
+    [SerializeField] CinemachineBrain MainCameraBrain;
+    [SerializeField] Transform HamsterFollowPoint;
+    [SerializeField] float blendTime;
 
     private Camera cam;
     private Hamster hamster;
@@ -24,11 +37,39 @@ public class HamsterMinigame : MinigameBase
     {
         cam = Camera.main;
         hamster = FindAnyObjectByType<Hamster>();
+        hamster.transform.position = HamsterStartPositions[Random.Range(0, HamsterStartPositions.Length)].position;
         hamster.Stop();
 
         ConstructTubes(Rows);
 
-        hamster.Go();
+        StartCamera.Priority = 10;
+        EndCamera.Priority = 20;
+        MainCameraBrain.DefaultBlend.Time = blendTime;
+
+        StartCoroutine(WaitForCamera());
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Players[0].placedTreat && Players[1].placedTreat)
+        {
+            StartCamera.Priority = 20;
+            EndCamera.Priority = 10;
+            MainCameraBrain.DefaultBlend.Time = blendTime * 0.3f;
+            StartCoroutine(StartHamster());
+        }
+
+        HamsterFollowPoint.position = new Vector3(0, hamster.transform.position.y, hamster.transform.position.z);
+
+        if (hamster.transform.position.z >= 36.8)
+        {
+            hamster.Stop();
+        }
+    }
+
+    public void SpawnTreat(Vector3 position)
+    {
+        Instantiate(TreatPrefab, position, Quaternion.identity);
     }
 
     public void ConstructTubes(int length)
@@ -90,6 +131,22 @@ public class HamsterMinigame : MinigameBase
                 currentPoint.correctPoint = true;
                 currentRowIndex++;
             }
+        }
+    }
+
+    public IEnumerator StartHamster()
+    {
+        yield return new WaitForSeconds(blendTime * 0.3f);
+        hamster.Go();
+        FollowCamera.Priority = 30;
+    }
+
+    public IEnumerator WaitForCamera()
+    {
+        yield return new WaitForSeconds(blendTime);
+        foreach (HamsterMGController player in Players)
+        {
+            player.canPlace = true;
         }
     }
 

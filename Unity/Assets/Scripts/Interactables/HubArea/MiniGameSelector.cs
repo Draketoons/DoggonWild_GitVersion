@@ -12,8 +12,6 @@ public class MiniGameSelector : MonoBehaviour
     [SerializeField] private float detectionRadius;
     [SerializeField] private GameObject display;
 
-    private Camera camera;
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -23,7 +21,6 @@ public class MiniGameSelector : MonoBehaviour
     private void Start()
     {
         CloseSelectHUD();
-        camera = Camera.main;
     }
 
     private void Update()
@@ -31,7 +28,7 @@ public class MiniGameSelector : MonoBehaviour
         if (!display)
             return;
 
-        display.transform.LookAt(camera.transform.position);
+        display.transform.LookAt(Camera.main.transform.position);
     }
 
     private void OnTriggerEnter(Collider other)

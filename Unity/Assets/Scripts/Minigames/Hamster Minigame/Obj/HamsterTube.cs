@@ -20,6 +20,8 @@ public class HamsterTube : MonoBehaviour
 
         if (hamsterDistance <= 0.4)
         {
+            if (tubeDirection == new Vector3(hamster.transform.rotation.x, hamster.transform.rotation.y, hamster.transform.rotation.z))
+                return;
             hamster.Rotate(tubeDirection);
             if (!movedHamster)
                 hamster.transform.position = transform.position;

@@ -1,0 +1,85 @@
+{
+    "version": 1,
+    "name": "HamsterMinigameInput",
+    "maps": [
+        {
+            "name": "TubeSwitch",
+            "id": "e9d5c8d9-96bd-48f0-8737-fc385cf3b17b",
+            "actions": [
+                {
+                    "name": "Switch",
+                    "type": "Button",
+                    "id": "96abb240-120e-4f86-9bd7-8716283f35fd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "376838f3-6406-48f1-88e2-7cc07837131e",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c2c058be-3207-443c-b6af-498729a60f0c",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "9b8b846a-9433-4649-9c61-f00df98e8652",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "TubeSelect",
+            "id": "c0041bee-5d80-45d6-9388-3543c728451b",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "71796275-8786-4012-a2f6-8877700d2e20",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "33f7d495-ada6-4a64-8f10-ea01227e99d0",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

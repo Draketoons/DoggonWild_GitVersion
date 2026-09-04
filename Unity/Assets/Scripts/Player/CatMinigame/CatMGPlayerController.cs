@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
-using UnityEngine.SceneManagement;
 
 public class CatMGPlayerController : MonoBehaviour
 {
