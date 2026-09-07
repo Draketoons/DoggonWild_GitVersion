@@ -21,7 +21,8 @@ public class HamsterMGScoreHolder : MonoBehaviour
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
+        if (RoundNumber < 4)
+            DontDestroyOnLoad(gameObject);
     }
 
     public void AddToScore(int playerIndex, float amount)
@@ -33,6 +34,26 @@ public class HamsterMGScoreHolder : MonoBehaviour
             Player2Score += amount;
     }
 
+    public void IncrementRoundNumber()
+    {
+        RoundNumber++;
+    }
+
+    public int GetRoundNumber()
+    {
+        return RoundNumber;
+    }
+
+    public float GetP1Score()
+    {
+        return Player1Score;
+    }
+
+    public float GetP2Score()
+    {
+        return Player2Score;
+    }
+
     public int GetWinningPlayer()
     {
         if (Player1Score > Player2Score)
@@ -40,6 +61,9 @@ public class HamsterMGScoreHolder : MonoBehaviour
 
         if (Player1Score < Player2Score)
             WinningPlayerIndex = 1;
+
+        if (Player1Score == Player2Score)
+            WinningPlayerIndex = -1;
 
         return WinningPlayerIndex;
     }

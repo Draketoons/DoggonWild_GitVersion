@@ -22,6 +22,7 @@ public class HamsterMGController : MonoBehaviour
     HamsterMinigame GM;
     GameObject selectIcon;
     Vector3 playerIconStartPosition;
+    private int finalSelectionIndex;
 
     private void Start()
     {
@@ -73,14 +74,24 @@ public class HamsterMGController : MonoBehaviour
 
     public void SelectTube(InputAction.CallbackContext context)
     {
+        if (!currentSelectedPosition)
+            return;
+
         if (placedTreat || !canPlace)
             return;
+
         Debug.Log($"Value {context.ReadValue<float>()}");
-        GM.SpawnTreat(currentSelectedPosition.position + new Vector3(0,0,-1.5f), PlayerIndex);
+
+        if (otherPlayer.GetFinalSelectionIndex() != selectionIndex || !otherPlayer.placedTreat)
+            GM.SpawnTreat(currentSelectedPosition.position + new Vector3(0,0,-1.5f), PlayerIndex);
+
         placedTreat = true;
-        if (otherPlayer.GetSelectionIndex() == selectionIndex)
+
+        if (otherPlayer.GetCurrentSelectionIndex() == selectionIndex)
             otherPlayer.ResetIconPosition();
+
         selectIcon.SetActive(false);
+        finalSelectionIndex = selectionIndex;
         selectionIndex = -1;
     }
 
@@ -88,7 +99,7 @@ public class HamsterMGController : MonoBehaviour
     {
         if (placedTreat || !canPlace)
             return;
-
+        
         if (selectionIndex < 0)
             selectionIndex = 0;
 
@@ -98,19 +109,19 @@ public class HamsterMGController : MonoBehaviour
 
         if (value < 0 && selectionIndex > 0)
         {
-            if (otherPlayer.GetSelectionIndex() == selectionIndex)
+            if (otherPlayer.GetCurrentSelectionIndex() == selectionIndex)
                 otherPlayer.ResetIconPosition();
             selectionIndex--;
         }
 
         if (value > 0 && selectionIndex < 2)
         {
-            if (otherPlayer.GetSelectionIndex() == selectionIndex)
+            if (otherPlayer.GetCurrentSelectionIndex() == selectionIndex)
                 otherPlayer.ResetIconPosition();
             selectionIndex++;
         }
 
-        if (otherPlayer.GetSelectionIndex() == selectionIndex)
+        if (otherPlayer.GetCurrentSelectionIndex() == selectionIndex)
         {
             Debug.Log("Other player is already on this tube!");
             playerIcon.transform.localPosition = new Vector3(0, 0, 2);
@@ -124,14 +135,19 @@ public class HamsterMGController : MonoBehaviour
         selectIcon.transform.position = currentSelectedPosition.position;
     }
 
-    void ResetIconPosition()
+    public void ResetIconPosition()
     {
         playerIcon.transform.localPosition = playerIconStartPosition;
     }
 
-    int GetSelectionIndex()
+    public int GetCurrentSelectionIndex()
     {
         return selectionIndex;
+    }
+
+    public int GetFinalSelectionIndex()
+    {
+        return finalSelectionIndex;
     }
 
     void AssociateActionsWithController()

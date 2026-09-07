@@ -8,11 +8,11 @@ public class Hamster : MonoBehaviour
     [Header("Hamster Stats")]
     [SerializeField] private bool canMove;
 
-    HamsterMGScoreHolder scoreHolder;
+    HamsterMinigame hamsterMGManager;
 
     private void Start()
     {
-        scoreHolder = GameObject.FindGameObjectWithTag("ScoreHolder").GetComponent<HamsterMGScoreHolder>();
+        hamsterMGManager = GameObject.FindGameObjectWithTag("GM").GetComponent<HamsterMinigame>();
     }
 
     private void Update()
@@ -45,7 +45,7 @@ public class Hamster : MonoBehaviour
             Debug.Log("Hamster Found the Treat!");
             Stop();
             Treat treat = other.GetComponent<Treat>();
-            scoreHolder.AddToScore(treat.GetPlayerIndex(), 1.0f);
+            hamsterMGManager.SetScores(treat.GetPlayerIndex());
             Destroy(other.gameObject);
         }
     }
