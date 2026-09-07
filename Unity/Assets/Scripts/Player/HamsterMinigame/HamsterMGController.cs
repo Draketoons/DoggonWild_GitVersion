@@ -10,15 +10,18 @@ public class HamsterMGController : MonoBehaviour
     [SerializeField] private InputAction SwitchTubeAction;
     [SerializeField] private InputAction SelectAction;
     [SerializeField] private Transform[] selectPositions;
-    [SerializeField] private GameObject selectIcon;
+    [SerializeField] private GameObject playerIcon;
     [SerializeField] private bool usingKeyboard;
+    [SerializeField] private int selectionIndex;
+    [SerializeField] private HamsterMGController otherPlayer;
     public bool placedTreat;
     public bool canPlace;
 
     InputUser inputUser;
-    int selectionIndex;
     Transform currentSelectedPosition;
     HamsterMinigame GM;
+    GameObject selectIcon;
+    Vector3 playerIconStartPosition;
 
     private void Start()
     {
@@ -27,9 +30,12 @@ public class HamsterMGController : MonoBehaviour
         SetInputActions();
         BindInputActions();
         EnableInputActions();
+        selectIcon = playerIcon.transform.parent.gameObject;
         selectIcon.SetActive(false);
         GM = GameObject.FindGameObjectWithTag("GM").GetComponent<HamsterMinigame>();
         canPlace = false;
+        playerIconStartPosition = playerIcon.transform.localPosition;
+        selectionIndex = -1;
     }
 
     public void EnableInputActions()
@@ -70,24 +76,62 @@ public class HamsterMGController : MonoBehaviour
         if (placedTreat || !canPlace)
             return;
         Debug.Log($"Value {context.ReadValue<float>()}");
-        GM.SpawnTreat(currentSelectedPosition.position + new Vector3(0,0,-1.5f));
+        GM.SpawnTreat(currentSelectedPosition.position + new Vector3(0,0,-1.5f), PlayerIndex);
         placedTreat = true;
+        if (otherPlayer.GetSelectionIndex() == selectionIndex)
+            otherPlayer.ResetIconPosition();
         selectIcon.SetActive(false);
+        selectionIndex = -1;
     }
 
     public void SwitchTube(InputAction.CallbackContext context)
     {
         if (placedTreat || !canPlace)
             return;
+
+        if (selectionIndex < 0)
+            selectionIndex = 0;
+
         selectIcon.SetActive(true);
         float value = context.ReadValue<float>();
         Debug.Log($"Input value from player {PlayerIndex + 1}: {value}");
+
         if (value < 0 && selectionIndex > 0)
+        {
+            if (otherPlayer.GetSelectionIndex() == selectionIndex)
+                otherPlayer.ResetIconPosition();
             selectionIndex--;
+        }
+
         if (value > 0 && selectionIndex < 2)
+        {
+            if (otherPlayer.GetSelectionIndex() == selectionIndex)
+                otherPlayer.ResetIconPosition();
             selectionIndex++;
+        }
+
+        if (otherPlayer.GetSelectionIndex() == selectionIndex)
+        {
+            Debug.Log("Other player is already on this tube!");
+            playerIcon.transform.localPosition = new Vector3(0, 0, 2);
+        }
+        else
+        {
+            ResetIconPosition();
+        }
+
         currentSelectedPosition = selectPositions[selectionIndex];
         selectIcon.transform.position = currentSelectedPosition.position;
+    }
+
+    void ResetIconPosition()
+    {
+        playerIcon.transform.localPosition = playerIconStartPosition;
+    }
+
+    int GetSelectionIndex()
+    {
+        return selectionIndex;
     }
 
     void AssociateActionsWithController()

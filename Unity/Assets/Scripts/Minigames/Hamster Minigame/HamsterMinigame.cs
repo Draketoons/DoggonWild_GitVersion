@@ -18,9 +18,6 @@ public class HamsterMinigame : MinigameBase
     [SerializeField] private GameObject TreatPrefab;
     [SerializeField] private HamsterMGController[] Players;
 
-    [Header("Stats")]
-    [Serialize] private List<HamsterTube> CorrectPath = new List<HamsterTube>();
-
     [Header("Camera Settings")]
     [SerializeField] CinemachineCamera StartCamera;
     [SerializeField] CinemachineCamera EndCamera;
@@ -32,9 +29,15 @@ public class HamsterMinigame : MinigameBase
     private Camera cam;
     private Hamster hamster;
     private float zValue;
+    private bool startedGame = false;
+    private bool endedGame = false;
+    private HamsterMGScoreHolder scoreHolder;
 
     private void Start()
     {
+        scoreHolder = GameObject.FindGameObjectWithTag("ScoreHolder").GetComponent<HamsterMGScoreHolder>();
+
+        startedGame = false;
         cam = Camera.main;
         hamster = FindAnyObjectByType<Hamster>();
         hamster.transform.position = HamsterStartPositions[Random.Range(0, HamsterStartPositions.Length)].position;
@@ -51,25 +54,28 @@ public class HamsterMinigame : MinigameBase
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Players[0].placedTreat && Players[1].placedTreat)
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Players[0].placedTreat && Players[1].placedTreat && !startedGame)
         {
             StartCamera.Priority = 20;
             EndCamera.Priority = 10;
             MainCameraBrain.DefaultBlend.Time = blendTime * 0.3f;
             StartCoroutine(StartHamster());
+            startedGame = true;
         }
 
         HamsterFollowPoint.position = new Vector3(0, hamster.transform.position.y, hamster.transform.position.z);
 
-        if (hamster.transform.position.z >= 36.8)
+        if (hamster.transform.position.z >= 36.8 && !endedGame)
         {
             hamster.Stop();
+            endedGame = true;
         }
     }
 
-    public void SpawnTreat(Vector3 position)
+    public void SpawnTreat(Vector3 position, int playerIndex)
     {
-        Instantiate(TreatPrefab, position, Quaternion.identity);
+        Treat spawnedTreat = Instantiate(TreatPrefab, position, Quaternion.identity).GetComponent<Treat>();
+        spawnedTreat.SetPlayerIndex(playerIndex);
     }
 
     public void ConstructTubes(int length)
@@ -96,6 +102,7 @@ public class HamsterMinigame : MinigameBase
         //MakePath();
     }
 
+    /*
     public void MakePath()
     {
         TubePoint currentPoint = null;
@@ -133,6 +140,7 @@ public class HamsterMinigame : MinigameBase
             }
         }
     }
+    */
 
     public IEnumerator StartHamster()
     {
@@ -148,15 +156,5 @@ public class HamsterMinigame : MinigameBase
         {
             player.canPlace = true;
         }
-    }
-
-    public void AddToPath(HamsterTube tube)
-    {
-        CorrectPath.Add(tube);
-    }
-
-    public List<HamsterTube> GetCorrectPath()
-    {
-        return CorrectPath;
     }
 }

@@ -98,7 +98,7 @@
                 {
                     "name": "",
                     "id": "de579da0-7683-4259-9779-a605d939d6fc",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -126,7 +126,7 @@
                 {
                     "name": "",
                     "id": "a1c7dd6c-4b75-4161-a61b-ce7f442f7049",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

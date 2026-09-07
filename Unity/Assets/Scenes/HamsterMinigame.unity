@@ -386,6 +386,52 @@ Transform:
   - {fileID: 1916629756}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &500504973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500504975}
+  - component: {fileID: 500504974}
+  m_Layer: 0
+  m_Name: GameInstance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &500504974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500504973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e42bf9b9a0c25a4b82c24b2c7de4594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameInstance
+  playerOneStarCount: 0
+  playerTwoStarCount: 0
+--- !u!4 &500504975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500504973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49937, y: 1.02541, z: -3.73809}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &509117448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1373692078
 Transform:
   m_ObjectHideFlags: 0
@@ -1190,7 +1236,7 @@ GameObject:
   - component: {fileID: 1379877848}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1246,8 +1292,10 @@ MonoBehaviour:
   - {fileID: 1876652233}
   - {fileID: 1156697352}
   - {fileID: 306654652}
-  selectIcon: {fileID: 818287425}
+  playerIcon: {fileID: 1666748569}
   usingKeyboard: 1
+  selectionIndex: 0
+  otherPlayer: {fileID: 1808918560}
   placedTreat: 0
   canPlace: 0
 --- !u!1 &1579876466
@@ -1372,6 +1420,54 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1736062034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736062036}
+  - component: {fileID: 1736062035}
+  m_Layer: 0
+  m_Name: ScoreHolder
+  m_TagString: ScoreHolder
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1736062035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736062034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5599deb4343a9e418cf677f23f90a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HamsterMGScoreHolder
+  Player1Score: 0
+  Player2Score: 0
+  WinningPlayerIndex: 0
+  RoundNumber: 0
+--- !u!4 &1736062036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736062034}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49937, y: 1.02541, z: -3.73809}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808918559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1480,7 @@ GameObject:
   - component: {fileID: 1808918560}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1425,8 +1521,10 @@ MonoBehaviour:
   - {fileID: 1876652233}
   - {fileID: 1156697352}
   - {fileID: 306654652}
-  selectIcon: {fileID: 1373692077}
+  playerIcon: {fileID: 1341338230}
   usingKeyboard: 1
+  selectionIndex: 0
+  otherPlayer: {fileID: 1379877848}
   placedTreat: 0
   canPlace: 0
 --- !u!4 &1808918561
@@ -1818,3 +1916,5 @@ SceneRoots:
   - {fileID: 459672822}
   - {fileID: 1373692078}
   - {fileID: 818287426}
+  - {fileID: 500504975}
+  - {fileID: 1736062036}
