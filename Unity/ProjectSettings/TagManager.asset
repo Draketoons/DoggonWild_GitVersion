@@ -6,8 +6,6 @@ TagManager:
   tags:
   - GM
   - GI
-  - Treat
-  - ScoreHolder
   layers:
   - Default
   - TransparentFX

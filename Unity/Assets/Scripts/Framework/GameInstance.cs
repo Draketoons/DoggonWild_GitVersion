@@ -94,7 +94,6 @@ public class GameInstance : MonoBehaviour
 
     public void AddController(Gamepad controllerToConnect)
     {
-
     }
 
     public void QuitGame()

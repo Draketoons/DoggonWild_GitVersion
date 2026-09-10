@@ -123,7 +123,7 @@ public class HamsterMinigame : MinigameBase
 
     public void SpawnTreat(Vector3 position, int playerIndex)
     {
-        Treat spawnedTreat = Instantiate(TreatPrefab, position, Quaternion.identity).GetComponent<Treat>();
+        HamsterTreat spawnedTreat = Instantiate(TreatPrefab, position, Quaternion.identity).GetComponent<HamsterTreat>();
         spawnedTreat.SetPlayerIndex(playerIndex);
     }
 

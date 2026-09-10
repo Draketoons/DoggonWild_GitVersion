@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Treat : MonoBehaviour
+public class HamsterTreat : MonoBehaviour
 {
     [SerializeField] private int PlayerIndex;
 

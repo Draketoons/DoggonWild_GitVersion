@@ -44,7 +44,7 @@ public class Hamster : MonoBehaviour
         {
             Debug.Log("Hamster Found the Treat!");
             Stop();
-            Treat treat = other.GetComponent<Treat>();
+            HamsterTreat treat = other.GetComponent<HamsterTreat>();
             hamsterMGManager.SetScores(treat.GetPlayerIndex());
             Destroy(other.gameObject);
         }
