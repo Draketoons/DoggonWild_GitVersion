@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 
 public class GameInstance : MonoBehaviour
 {
@@ -14,6 +13,8 @@ public class GameInstance : MonoBehaviour
 
     private void Awake()
     {
+        this.tag = "GI";
+
         if (gameInstance == null)
         {
             gameInstance = this;

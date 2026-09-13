@@ -9,6 +9,7 @@ public static class Bootstrapper
 
         GameObject gameInstance = new GameObject("GameInstance");
         gameInstance.AddComponent<GameInstance>();
+        gameInstance.tag = "GI";
 
 
         ServiceLocator.RegisterService<IAudioService>(new AudioService());

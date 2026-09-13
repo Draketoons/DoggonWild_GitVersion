@@ -1861,7 +1861,7 @@ MonoBehaviour:
   - {fileID: 1156697352}
   - {fileID: 306654652}
   playerIcon: {fileID: 1666748569}
-  usingKeyboard: 1
+  usingKeyboard: 0
   selectionIndex: 0
   otherPlayer: {fileID: 1808918560}
   placedTreat: 0
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   - {fileID: 1156697352}
   - {fileID: 306654652}
   playerIcon: {fileID: 1341338230}
-  usingKeyboard: 1
+  usingKeyboard: 0
   selectionIndex: 0
   otherPlayer: {fileID: 1379877848}
   placedTreat: 0
