@@ -12,5 +12,6 @@ public static class Bootstrapper
 
 
         ServiceLocator.RegisterService<IAudioService>(new AudioService());
+        ServiceLocator.RegisterService<ILevelLoadService>(new LevelLoadService());
     }
 }
