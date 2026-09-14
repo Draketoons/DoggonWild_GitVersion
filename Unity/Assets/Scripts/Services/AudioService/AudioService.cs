@@ -9,14 +9,19 @@ public class AudioService : IAudioService
 
     public AudioService()
     {
-        //GameObject audioService = new GameObject("AudioService");
+        GameObject audioService = new GameObject("AudioService");
 
-        //audioSource = audioService.AddComponent<AudioSource>();
+        audioSource = audioService.AddComponent<AudioSource>();
         
-        //Object.DontDestroyOnLoad(audioService);
+        Object.DontDestroyOnLoad(audioService);
     }
 
-    public void PlaySound(AudioClip audio)
+    public void PlayLooping(AudioClip audio)
+    {
+        
+    }
+
+    public void PlayOneShot(AudioClip audio)
     {
         audioSource.PlayOneShot(audio);
     }
