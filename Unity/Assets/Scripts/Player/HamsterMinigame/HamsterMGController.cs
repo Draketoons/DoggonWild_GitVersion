@@ -26,8 +26,8 @@ public class HamsterMGController : MonoBehaviour
 
     private void Start()
     {
-        if (!usingKeyboard)
-            AssociateActionsWithController();
+        PlayerControls.Enable();
+        AssociateActionsWithController();
         SetInputActions();
         BindInputActions();
         EnableInputActions();
@@ -41,6 +41,7 @@ public class HamsterMGController : MonoBehaviour
 
     public void EnableInputActions()
     {
+        Debug.Log("Enabling Input Actions");
         SwitchTubeAction.Enable();
         SelectAction.Enable();
     }
@@ -49,8 +50,14 @@ public class HamsterMGController : MonoBehaviour
     {
         if (!usingKeyboard)
         {
+            Debug.Log("Player is not using keyboard");
             SwitchTubeAction = PlayerControls.FindActionMap("TubeSwitch").FindAction("Switch");
+            if (SwitchTubeAction != null)
+                Debug.Log("Found Switch Tube Action");
             SelectAction = PlayerControls.FindActionMap("TubeSelect").FindAction("Select");
+            if (SelectAction != null)
+                Debug.Log("Found Select Tube Action");
+            return;
         }
 
         if (PlayerIndex == 0)
@@ -68,19 +75,22 @@ public class HamsterMGController : MonoBehaviour
 
     public void BindInputActions()
     {
+        Debug.Log("Binding input actions");
+
         SwitchTubeAction.performed += SwitchTube;
         SelectAction.performed += SelectTube;
     }
 
     public void SelectTube(InputAction.CallbackContext context)
     {
+        Debug.Log($"Value {context.ReadValue<float>()}");
+
         if (!currentSelectedPosition)
             return;
 
         if (placedTreat || !canPlace)
             return;
 
-        Debug.Log($"Value {context.ReadValue<float>()}");
 
         if (otherPlayer.GetFinalSelectionIndex() != selectionIndex || !otherPlayer.placedTreat)
             GM.SpawnTreat(currentSelectedPosition.position + new Vector3(0,0,-1.5f), PlayerIndex);
@@ -152,6 +162,7 @@ public class HamsterMGController : MonoBehaviour
 
     void AssociateActionsWithController()
     {
+        Debug.Log("Associating actions with controller");
         PlayerControls = Instantiate(PlayerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
         InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(PlayerIndex), inputUser);

@@ -4,6 +4,7 @@ using UnityEngine;
 public class BeatUI : MonoBehaviour
 {
     private RectTransform rectTransform;
+    private BirdMGController playerController;
 
     private void Awake()
     {
@@ -36,5 +37,11 @@ public class BeatUI : MonoBehaviour
         rectTransform.localPosition = targetPosition;
 
         Destroy(gameObject);
+    }
+
+    public void SetPlayer(BirdMGController player)
+    {
+        playerController = player;
+        playerController.currentBeat = this;
     }
 }

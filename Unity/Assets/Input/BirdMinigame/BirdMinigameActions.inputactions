@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "name": "BirdMinigameActions",
+    "maps": [
+        {
+            "name": "BirdActionMap",
+            "id": "76ffba30-bc74-4b95-922b-7cc874d0a3cb",
+            "actions": [
+                {
+                    "name": "UpNote",
+                    "type": "Button",
+                    "id": "9718ccce-b285-4516-abef-bac692af81b3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DownNote",
+                    "type": "Button",
+                    "id": "5ff77e37-d6f0-4862-8a51-cf31a750e396",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightNote",
+                    "type": "Button",
+                    "id": "b1d85180-484f-4a36-834a-9abe7eed7a5e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftNote",
+                    "type": "Button",
+                    "id": "22aed54c-1e53-4d2d-8440-97ddaf4f4c67",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c2ffb4a6-9124-4d4a-baa7-02929ded9cf2",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpNote",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46db8298-f4d0-4ff7-bdc8-5699fe76324a",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownNote",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e819740f-8c75-44e3-8d41-8db8406060f8",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightNote",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc6261e5-7791-4e6e-9bec-852928988568",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftNote",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

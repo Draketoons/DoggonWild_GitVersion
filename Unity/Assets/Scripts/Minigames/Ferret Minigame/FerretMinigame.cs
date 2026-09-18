@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FerretMinigame : MonoBehaviour
 {
@@ -10,8 +9,10 @@ public class FerretMinigame : MonoBehaviour
     [SerializeField] private FerretMGController[] players;
     [SerializeField] private float EndGameDelay;
     [SerializeField] private TextMeshProUGUI WinText;
-
     [SerializeField] private GameInstance gameInstance;
+    [SerializeField] private Ferret ferret;
+
+    public bool endedGame = false;
 
     private void Awake()
     {
@@ -21,7 +22,19 @@ public class FerretMinigame : MonoBehaviour
         WinText.text = "";
     }
 
-    public void UpdateRangeUI(int playerIndex, float rangeYValue)
+    private void FixedUpdate()
+    {
+        if (!players[0].isShaking && !players[1].isShaking)
+        {
+            ferret.canMove = false;
+        }
+        if (players[0].isShaking || players[1].isShaking)
+        {
+            ferret.canMove = true;
+        }
+    }
+
+    public void RepositionRangeUI(int playerIndex, float rangeYValue)
     {
         if (playerIndex == 0)
         {
@@ -33,6 +46,19 @@ public class FerretMinigame : MonoBehaviour
             Player2ShakeMeter.RepositionRangeIcon(rangeYValue);
         }
     }
+
+    public void UpdateRangeUI(int playerIndex)
+    {
+        if (playerIndex == 0)
+        {
+            Player1ShakeMeter.UpdateRangeScale();
+        }
+
+        if (playerIndex == 1)
+        {
+            Player2ShakeMeter.UpdateRangeScale();
+        }
+    }    
 
     public void UpdateFerretUI(int playerIndex, float ferretYValue)
     {
@@ -49,6 +75,7 @@ public class FerretMinigame : MonoBehaviour
 
     public void EndMinigame()
     {
+        endedGame = true;
         StartCoroutine(EndMinigameSequence());
     }
 

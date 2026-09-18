@@ -110,7 +110,6 @@ public class CatMGPlayerController : MonoBehaviour
 
     public void MoveForward()
     {
-        Debug.Log("Move input called");
 
         if (!canMove)
         {

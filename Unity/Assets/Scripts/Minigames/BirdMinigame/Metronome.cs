@@ -10,7 +10,8 @@ public class Metronome : MonoBehaviour
     [Header("AudioClip")]
     [SerializeField] AudioClip metronomeTick;
 
-    private double nextTickTime;
+    public double nextTickTime;
+    public double previousTickTime;
     //private int CurrentBeat = 0;
     private bool isRunning;
 
@@ -20,6 +21,8 @@ public class Metronome : MonoBehaviour
     [SerializeField] private RectTransform player1BeatSpawnPosition;
     [SerializeField] private RectTransform player2BeatSpawnPosition;
 
+    [SerializeField] BirdMGController player1;
+    [SerializeField] BirdMGController player2;
 
     private void Start()
     {
@@ -30,7 +33,6 @@ public class Metronome : MonoBehaviour
     }
     private void Update()
     {
-       
         if (!isRunning)
         {
             return;
@@ -42,6 +44,7 @@ public class Metronome : MonoBehaviour
         {
             ServiceLocator.GetService<IAudioService>().PlayOneShot(metronomeTick);
 
+            previousTickTime = nextTickTime;
             nextTickTime += beatInterval;
             SpawnPlayerBeats();
         }
@@ -56,8 +59,10 @@ public class Metronome : MonoBehaviour
     {
         BeatUI player1Beat = Instantiate(playerBeatUI, player1BeatSpawnPosition);
         player1Beat.StartMoveToPositionCoroutine(beatIndicator.rectTransform, nextTickTime);
+        player1.currentBeat = player1Beat;
         
         BeatUI player2Beat = Instantiate(playerBeatUI, player2BeatSpawnPosition);
         player2Beat.StartMoveToPositionCoroutine(beatIndicator.rectTransform, nextTickTime);
+        player2.currentBeat = player2Beat;
     }
 }

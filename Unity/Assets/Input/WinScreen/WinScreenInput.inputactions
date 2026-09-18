@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "WinScreenInput",
+    "maps": [
+        {
+            "name": "WinScreen",
+            "id": "6b517944-085f-4c7a-9bd1-cf1f28f66bbe",
+            "actions": [
+                {
+                    "name": "MainMenuButton",
+                    "type": "Button",
+                    "id": "3ebd2634-c566-41df-aaee-f988db15c50d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "37446fe0-b3f8-4d52-8dc3-3663bf794ec8",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MainMenuButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

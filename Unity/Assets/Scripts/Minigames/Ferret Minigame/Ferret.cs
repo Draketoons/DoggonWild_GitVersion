@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Ferret : MonoBehaviour
 {
     public float attentionLevel;
+    public bool canMove;
     [SerializeField] private float attentionChangeRate;
     [SerializeField] private int direction;
     [SerializeField] private float speed;
@@ -52,7 +53,7 @@ public class Ferret : MonoBehaviour
             endedGame = true;
         }
 
-        if (!endedGame)
+        if (!endedGame && canMove)
             transform.position += new Vector3(speed * direction, 0, 0);
     }
 
@@ -60,7 +61,7 @@ public class Ferret : MonoBehaviour
     {
         while (true)
         {
-            attentionLevel = Random.Range(40f, 100.0f);
+            attentionLevel = Random.Range(40f, 310.0f);
             Debug.Log("Ferret attention level changed!");
 
             FerretMGManager.UpdateFerretUI(0, attentionLevel);
