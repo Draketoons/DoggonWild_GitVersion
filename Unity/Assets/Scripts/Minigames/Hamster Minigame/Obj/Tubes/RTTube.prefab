@@ -47,8 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8e3f008a4be6c42954b4230991c46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HamsterTube
-  tubeDirection: {x: 0, y: 90, z: 0}
+  tubeDirection: {x: 1, y: 0, z: 0}
   hamsterDistance: 0
+  tubeTriggerOffset: {x: 0, y: 0, z: 0.4}
 --- !u!1 &2179159376054093058
 GameObject:
   m_ObjectHideFlags: 0

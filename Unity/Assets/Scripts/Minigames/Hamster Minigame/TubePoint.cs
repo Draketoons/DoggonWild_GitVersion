@@ -29,7 +29,7 @@ public class TubePoint : MonoBehaviour
                 currentTube = Instantiate(tubes[2], this.transform.position, Quaternion.identity, this.transform); 
                 break;
             case 1:
-                if (previousTube && previousTube.tubeDirection != new Vector3(0, 90, 0))
+                if (previousTube && previousTube.tubeDirection != new Vector3(1, 0, 0))
                 {
                     Debug.Log("Tube to the left of the middle is straight");
                     currentTube = Instantiate(tubes[1], this.transform.position, Quaternion.identity, this.transform);
@@ -41,7 +41,7 @@ public class TubePoint : MonoBehaviour
                 }
                 break;
             case 2:
-                if (previousTube && previousTube.tubeDirection != new Vector3(0, 90, 0))
+                if (previousTube && previousTube.tubeDirection != new Vector3(1, 0, 0))
                 {
                     Debug.Log("Tube to the left of the rightmost tube is straight");
                     currentTube = Instantiate(tubes[1], this.transform.position, Quaternion.identity, this.transform);

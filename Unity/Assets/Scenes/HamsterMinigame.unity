@@ -728,98 +728,6 @@ Transform:
   - {fileID: 1916629756}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &500504973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 500504975}
-  - component: {fileID: 500504974}
-  m_Layer: 0
-  m_Name: GameInstance
-  m_TagString: GI
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &500504974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500504973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e42bf9b9a0c25a4b82c24b2c7de4594, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameInstance
-  playerOneStarCount: 0
-  playerTwoStarCount: 0
---- !u!4 &500504975
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500504973}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49937, y: 1.02541, z: -3.73809}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &509117448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 509117450}
-  - component: {fileID: 509117449}
-  m_Layer: 0
-  m_Name: GameInstance
-  m_TagString: GI
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &509117449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509117448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e42bf9b9a0c25a4b82c24b2c7de4594, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameInstance
-  playerOneStarCount: 0
-  playerTwoStarCount: 0
---- !u!4 &509117450
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509117448}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41834, y: 0.0973, z: 0.28747}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &524528585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1535,8 @@ MonoBehaviour:
   Rows: 8
   MaxRounds: 3
   RowOffset: 4.7
-  EndGameWait: 1
+  EndGameWait: 2
+  FinalEndGameWait: 6
   TubeRowObj: {fileID: 8553402362495683109, guid: 38ce4b05cf0f974469f0a4d2da04f5cf, type: 3}
   HamsterStartPositions:
   - {fileID: 1579876467}
@@ -1687,7 +1596,7 @@ Transform:
   m_GameObject: {fileID: 1305830076}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 37.95}
+  m_LocalPosition: {x: 0, y: 1, z: 38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2639,7 +2548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52e529cd5b94b584e8acfbc8224cd811, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.2
+      value: 5.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 52e529cd5b94b584e8acfbc8224cd811, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2690,6 +2599,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7300163688687320521, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4113033649037333942}
+    - target: {fileID: 7300163688687320521, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
+      propertyPath: turnDelay
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300163688687320521, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
+      propertyPath: victoryDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7686112602426739886, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
       propertyPath: m_Name
       value: Hamster
@@ -2735,41 +2656,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: -4639072713155866784, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7686112602426739886, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4113033649037333942}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
---- !u!1 &4113033649037333941 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7686112602426739886, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
+--- !u!95 &4113033649037333942 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7663169319333983092, guid: 14875d7de5efd584798c2f82d84db19b, type: 3}
   m_PrefabInstance: {fileID: 4113033649037333940}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &4113033649037333942
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4113033649037333941}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0c0cd14502666e448bdc7823f16c6652, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3e0a7064133ec90409010bec27ff15a2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2784,12 +2679,10 @@ SceneRoots:
   - {fileID: 1169793124}
   - {fileID: 1379877847}
   - {fileID: 1808918561}
-  - {fileID: 509117450}
   - {fileID: 1305830077}
   - {fileID: 459672822}
   - {fileID: 1373692078}
   - {fileID: 818287426}
-  - {fileID: 500504975}
   - {fileID: 1736062036}
   - {fileID: 300200786}
   - {fileID: 1656324095}

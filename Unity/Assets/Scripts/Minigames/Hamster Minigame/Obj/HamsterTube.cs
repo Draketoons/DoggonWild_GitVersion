@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class HamsterTube : MonoBehaviour
@@ -5,6 +6,7 @@ public class HamsterTube : MonoBehaviour
     [Header("Tube Settings")]
     public Vector3 tubeDirection;
     [SerializeField] private float hamsterDistance;
+    [SerializeField] private Vector3 tubeTriggerOffset;
 
     private Hamster hamster;
     bool movedHamster = false;
@@ -16,16 +18,17 @@ public class HamsterTube : MonoBehaviour
 
     private void Update()
     {
-        hamsterDistance = Vector3.Distance(transform.position, hamster.transform.position);
+        hamsterDistance = Vector3.Distance(transform.position + tubeTriggerOffset, hamster.transform.position);
 
-        if (hamsterDistance <= 0.4)
+        if (hamsterDistance <= 0.4 && !movedHamster)
         {
-            if (tubeDirection == new Vector3(hamster.transform.rotation.x, hamster.transform.rotation.y, hamster.transform.rotation.z))
+            if (tubeDirection == hamster.GetCurrentDirection())
                 return;
-            hamster.Rotate(tubeDirection);
-            if (!movedHamster)
+            if (tubeDirection == new Vector3(0, 0, 1.0f))
                 hamster.transform.position = transform.position;
-            movedHamster=true;
+            hamster.Rotate(tubeDirection);
+            
+            movedHamster = true;
         }
         if (hamsterDistance >= 0.5)
         {

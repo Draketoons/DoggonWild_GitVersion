@@ -12,6 +12,7 @@ public class HamsterMinigame : MinigameBase
     [SerializeField] private int MaxRounds;
     [SerializeField] private float RowOffset;
     [SerializeField] private float EndGameWait;
+    [SerializeField] private float FinalEndGameWait;
 
     [Header("References")]
     [SerializeField] private TubeRow TubeRowObj;
@@ -40,13 +41,14 @@ public class HamsterMinigame : MinigameBase
     private bool endedGame = false;
     private HamsterMGScoreHolder scoreHolder;
     private GameInstance gameInstance;
+    bool finalRound;
 
     private void Start()
     {
         ResultText.text = "";
 
         scoreHolder = GameObject.FindGameObjectWithTag("ScoreHolder").GetComponent<HamsterMGScoreHolder>();
-        gameInstance = GameObject.FindGameObjectWithTag("GI").GetComponent<GameInstance>();
+        gameInstance = GameInstance.gameInstance;
 
         UpdateUI();
 
@@ -214,14 +216,14 @@ public class HamsterMinigame : MinigameBase
         if (scoreHolder.GetWinningPlayer() != -1)
         {
             Debug.Log($"Game Over! Player: {scoreHolder.GetWinningPlayer() + 1} won!");
-            yield return new WaitForSeconds(EndGameWait);
+            yield return new WaitForSeconds(FinalEndGameWait);
             gameInstance.IncreasePlayerStarCount(scoreHolder.GetWinningPlayer());
             gameInstance.InitializePlayerHub();
         }
         else
         {
             Debug.Log($"Game Over! Nobody won!");
-            yield return new WaitForSeconds(EndGameWait);
+            yield return new WaitForSeconds(FinalEndGameWait);
             gameInstance.InitializePlayerHub();
         }
     }

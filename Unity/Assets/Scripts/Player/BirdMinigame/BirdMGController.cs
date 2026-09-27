@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
@@ -18,6 +19,7 @@ public class BirdMGController : MonoBehaviour
     [SerializeField] int playerIndex;
     [SerializeField] private InputActionAsset playerControls;
     [SerializeField] private Metronome metronome;
+    [SerializeField] private BirdMinigameManager minigameManager;
     private InputAction UpNoteAction;
     private InputAction DownNoteAction;
     private InputAction LeftNoteAction;
@@ -25,7 +27,11 @@ public class BirdMGController : MonoBehaviour
     private InputUser inputUser;
 
     public BeatUI currentBeat;
+    private BeatUI previousBeat;
 
+    [SerializeField] public int playerHealth;
+    [SerializeField] private TextMeshProUGUI playerHealthUI;
+    public bool noteAttempted = false;
 
 
     private void Start()
@@ -35,6 +41,8 @@ public class BirdMGController : MonoBehaviour
         SetInputActions();
         BindInputActions();
         EnableInputActions();
+
+        UpdatePlayerHealth(0);
     }
 
     private void EnableInputActions()
@@ -75,19 +83,47 @@ public class BirdMGController : MonoBehaviour
 
         if (currentBeat != null)
         {
-            if ((pressTime - .1 <= metronome.previousTickTime))
+            if ((pressTime - .2 <= metronome.previousTickTime))
             {
-                Debug.Log("Pressed in time");
+                minigameManager.CheckPreviousNote(this, noteType);
+                noteAttempted = true;
+                return;
+                
+            }
+
+            if (pressTime + .2 >= metronome.nextTickTime)
+            {
+                minigameManager.CheckPlayerNote(this, noteType);
+                noteAttempted = true;
                 return;
             }
 
-            if (pressTime + .1 >= metronome.nextTickTime)
-            {
-                Debug.Log("Pressed in time");
-                return;
-            }
-
+            NoteWrong();
             Destroy(currentBeat.gameObject);
+
+            noteAttempted = true;
+        }
+    }
+
+    public void NoteCorrect()
+    {
+        // DO A THING
+    }
+
+    public void NoteWrong()
+    {
+        UpdatePlayerHealth(-1);
+    }
+
+    private void UpdatePlayerHealth(int value)
+    {
+        playerHealth += value;
+
+        playerHealthUI.text = playerHealth.ToString();
+
+        if (playerHealth <= 0)
+        {
+            minigameManager.EndMinigame(playerIndex);
         }
     }
 }
