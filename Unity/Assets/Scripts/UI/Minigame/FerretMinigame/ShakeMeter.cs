@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,20 +18,9 @@ public class ShakeMeter : MonoBehaviour
         RepositionRangeIcon(0.0f);
     }
 
-    private void FixedUpdate()
-    {
-        if (lerping)
-            t += Time.deltaTime * 2;
-            ferretIcon.rectTransform.localPosition = Vector3.Lerp(previousPosition, newPosition, t);
-    }
-
     public void RepositionFerretIcon(float newYPosition)
     {
-        t = 0;
-        lerping = true;
-        previousPosition = ferretIcon.rectTransform.localPosition;
-        newPosition = new Vector3(ferretIcon.transform.localPosition.x, newYPosition, ferretIcon.transform.localPosition.z);
-        ferretIcon.rectTransform.localPosition = newPosition;
+        ferretIcon.rectTransform.DOMove(new Vector3(ferretIcon.transform.position.x, newYPosition, ferretIcon.transform.position.z), 0.5f);
     }
 
     public void RepositionRangeIcon(float newYPosition)

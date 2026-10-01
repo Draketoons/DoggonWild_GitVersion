@@ -20,6 +20,8 @@ public class CatMinigame : MinigameBase
     [SerializeField] private float minLookBackDuration;
     [SerializeField] private float maxWaitDuration;
     [SerializeField] private float minWaitDuration;
+    [SerializeField] private float endMinigameDelay;
+    [SerializeField] private float lookBackTriggerDelay;
 
     private Animator catAnimator;
     private Coroutine waitCoroutine;
@@ -63,6 +65,7 @@ public class CatMinigame : MinigameBase
         //catObj.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 90.0f, 0.0f));
 
         catAnimator.SetTrigger("LookUp");
+        yield return new WaitForSeconds(lookBackTriggerDelay);
         lookingBack = true;
         Debug.Log("Red Light!");
         yield return new WaitForSeconds(lookInterval);
@@ -102,14 +105,14 @@ public class CatMinigame : MinigameBase
         if (playerIndex > -1)
         {
             Debug.Log($"Player: {playerIndex + 1} won!");
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(endMinigameDelay);
             gameInstance.IncreasePlayerStarCount(playerIndex);
             gameInstance.InitializePlayerHub();
         }
         if (playerIndex < 0)
         {
             Debug.Log("Minigame end! No players won...");
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(endMinigameDelay);
             gameInstance.InitializePlayerHub();
         }
     }

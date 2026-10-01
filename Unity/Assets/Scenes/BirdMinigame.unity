@@ -1573,7 +1573,7 @@ MonoBehaviour:
   numberOfRoundsTilNotesIncrease: 2
   numberOfRoundsTilNotesSpeedUp: 2
   metronome: {fileID: 1481494088}
-  numberOfNotesPlayed: 3
+  numberOfNotesPlayed: 4
   UIText: {fileID: 1574633933}
   waitTime: 0.5
   playerTurn: 0
