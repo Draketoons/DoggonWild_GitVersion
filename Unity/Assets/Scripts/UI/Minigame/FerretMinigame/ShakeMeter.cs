@@ -7,10 +7,7 @@ public class ShakeMeter : MonoBehaviour
     [SerializeField] private Image attentionRangeIcon;
     [SerializeField] private Image ferretIcon;
     [SerializeField] private FerretMGController player;
-    private Vector3 newPosition;
-    private Vector3 previousPosition;
-    private bool lerping;
-    private float t;
+    [SerializeField] bool ferretIconOffsetNegative;
 
     private void Start()
     {
@@ -20,7 +17,10 @@ public class ShakeMeter : MonoBehaviour
 
     public void RepositionFerretIcon(float newYPosition)
     {
-        ferretIcon.rectTransform.DOMove(new Vector3(ferretIcon.transform.position.x, newYPosition, ferretIcon.transform.position.z), 0.5f);
+        if (ferretIconOffsetNegative)
+            ferretIcon.rectTransform.DOLocalMove(new Vector3(-50, newYPosition, 0), 0.5f);
+        if (!ferretIconOffsetNegative)
+            ferretIcon.rectTransform.DOLocalMove(new Vector3(50, newYPosition, 0), 0.5f);
     }
 
     public void RepositionRangeIcon(float newYPosition)
