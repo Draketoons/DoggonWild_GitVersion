@@ -7,14 +7,14 @@ using UnityEngine.UI;
 
 public class RatMGController : MonoBehaviour
 {
-    [SerializeField] int playerIndex;
+    [SerializeField] public int playerIndex;
     [SerializeField] private InputActionAsset playerControls;
     [SerializeField] Image playerSelector;
     [SerializeField] float moveSpeed;
     [SerializeField] TextMeshProUGUI scoreUI;
     [SerializeField] RatMinigameManager minigameManager;
 
-    private int score = 0;
+    public int score = 0;
     private InputUser inputUser;
 
     private InputAction moveAction;
