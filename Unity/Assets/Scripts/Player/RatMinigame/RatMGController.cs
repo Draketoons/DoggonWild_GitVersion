@@ -26,6 +26,8 @@ public class RatMGController : MonoBehaviour
     private float canvasWidth;
     private float canvasHeight;
 
+    private GameObject currentRaycastSpot;
+
     private void Start()
     {
         AssociateActionsWithController();
@@ -45,6 +47,16 @@ public class RatMGController : MonoBehaviour
     private void Update()
     {
         Move();
+
+        currentRaycastSpot = ShootRaycastFromPosition();
+
+        if (currentRaycastSpot)
+        {
+            foreach(Transform child in currentRaycastSpot.transform)
+            {
+                child.gameObject.layer = 6;
+            }
+        }
     }
 
     private void AssociateActionsWithController()
@@ -97,8 +109,6 @@ public class RatMGController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Debug.Log(hit.collider.gameObject);
-
             if (hit.collider.gameObject.TryGetComponent<RatHidingSpot>(out RatHidingSpot hidingSpot))
             {
                 if (hidingSpot.currentRat)
@@ -114,6 +124,46 @@ public class RatMGController : MonoBehaviour
                 
             }
         }
+    }
+
+    private GameObject ShootRaycastFromPosition()
+    {
+        Vector3 position = playerSelector.rectTransform.position;
+
+        Ray ray = Camera.main.ScreenPointToRay(position);
+
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            if (hit.collider.gameObject.TryGetComponent<RatHidingSpot>(out RatHidingSpot hidingSpot))
+            {
+                if (hit.collider.gameObject == currentRaycastSpot)
+                {
+                    return currentRaycastSpot;
+                }
+                else
+                {
+                    if (currentRaycastSpot)
+                    {
+                        foreach (Transform child in currentRaycastSpot.transform)
+                        {
+                            child.gameObject.layer = 0;
+                        }
+                    }
+                }
+
+                return hit.collider.gameObject;
+            }
+        }
+
+        if (currentRaycastSpot)
+        {
+            foreach (Transform child in currentRaycastSpot.transform)
+            {
+                child.gameObject.layer = 0;
+            }
+        }
+
+        return null;
     }
 
     private void CheckRat(BaseRat rat)

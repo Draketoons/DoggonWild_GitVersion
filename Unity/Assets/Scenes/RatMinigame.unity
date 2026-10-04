@@ -395,6 +395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashBag (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109690006000679505, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2161435761260158033, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.42
@@ -435,10 +439,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2839917213242839067, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7383102816261593205, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
       propertyPath: minigameManager
       value: 
       objectReference: {fileID: 1875246474}
+    - target: {fileID: 7917837367517121383, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140456154735806521, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -542,6 +558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashBag (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1109690006000679505, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2161435761260158033, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -582,10 +602,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2839917213242839067, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7383102816261593205, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
       propertyPath: minigameManager
       value: 
       objectReference: {fileID: 1875246474}
+    - target: {fileID: 7917837367517121383, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140456154735806521, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -747,9 +779,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1449181722272392087, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296356511810331525, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3482797502773706862, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4481075245320136087, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
       propertyPath: m_Name
       value: TrashCan (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481075245320136087, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5457293907904049303, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
       propertyPath: m_LocalScale.x
@@ -858,6 +906,7 @@ MonoBehaviour:
   moveSpeed: 300
   scoreUI: {fileID: 45970687}
   minigameManager: {fileID: 1875246474}
+  score: 0
   canvas: {fileID: 1697712750}
 --- !u!4 &1006814094
 Transform:
@@ -885,6 +934,10 @@ PrefabInstance:
     - target: {fileID: 1109690006000679505, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
       propertyPath: m_Name
       value: TrashBag (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109690006000679505, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2161435761260158033, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -926,10 +979,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2839917213242839067, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7383102816261593205, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
       propertyPath: minigameManager
       value: 
       objectReference: {fileID: 1875246474}
+    - target: {fileID: 7917837367517121383, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140456154735806521, guid: 506ac9a03e1b249418a4a90ad5bc8cf7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1091,9 +1156,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1449181722272392087, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296356511810331525, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3482797502773706862, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4481075245320136087, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
       propertyPath: m_Name
       value: TrashCan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481075245320136087, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5457293907904049303, guid: 6d1755bc42a2841469134e1b94288bd8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1453,6 +1534,7 @@ MonoBehaviour:
   moveSpeed: 300
   scoreUI: {fileID: 1158739406}
   minigameManager: {fileID: 1875246474}
+  score: 0
   canvas: {fileID: 1697712750}
 --- !u!4 &1846045171
 Transform:
@@ -1523,7 +1605,7 @@ MonoBehaviour:
   fakeRatPrefabs:
   - {fileID: 5063486628807825818, guid: 1d996a6209c8a4e4584cbcc89f662813, type: 3}
   numberOfHidingSpotsToShake: 5
-  gameTimer: 10
+  gameTimer: 60
   TimerUI: {fileID: 2035456203}
   playerOne: {fileID: 1006814093}
   playerTwo: {fileID: 1846045170}
