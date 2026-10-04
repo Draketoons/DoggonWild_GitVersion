@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5535845472532239576}
-  - component: {fileID: 8923991480419245743}
   - component: {fileID: 8804810705766495522}
   - component: {fileID: 5845699161146929374}
+  - component: {fileID: 8686712027678859335}
   m_Layer: 0
   m_Name: Treat
   m_TagString: Untagged
@@ -35,27 +35,6 @@ Transform:
   - {fileID: 5224998003876877093}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &8923991480419245743
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5198012043751352616}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8804810705766495522
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -95,9 +74,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0edf5f535667b340998ad959b50154b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treat
-  fallSpeed: 2.5
+  fallSpeed: 2
   pointAmount: 1
   dog: {fileID: 0}
+--- !u!65 &8686712027678859335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198012043751352616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20318916, y: 0.30407628, z: 0.82339406}
+  m_Center: {x: 0, y: -0.16, z: 0}
 --- !u!1001 &5694895724899710158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,19 +108,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3394
+      value: 1.848506
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3394
+      value: 1.848506
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3394
+      value: 1.848506
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.014995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
       propertyPath: m_LocalPosition.y

@@ -10,7 +10,7 @@ public class TreatSpawner : MonoBehaviour
     private Collider spawnerCollider;
 
     private Bounds bounds;
-
+    
     
     private void Start()
     {
@@ -24,11 +24,15 @@ public class TreatSpawner : MonoBehaviour
 
     private void SpawnTreat()
     {
-        float XPosition = Random.Range(bounds.min.x, bounds.max.x);
-        float ZPosition = Random.Range(bounds.min.z, bounds.max.z);
+        Vector2 randomCircle = Random.insideUnitCircle * GetComponent<SphereCollider>().radius;
+
+
+
+        float XPosition = Random.Range(bounds.min.x, bounds.max.x - 1);
+        float ZPosition = Random.Range(bounds.min.z, bounds.max.z - 1);
         float YPosition = gameObject.transform.position.y;
 
-        Vector3 spawnPosition = new Vector3(XPosition, YPosition, ZPosition);
+        Vector3 spawnPosition = new Vector3(randomCircle.x, YPosition, randomCircle.y);
 
         GameObject newTreat = Instantiate(treatPrefab, spawnPosition, Quaternion.identity);
         newTreat.GetComponent<DogTreat>().dog = dog;

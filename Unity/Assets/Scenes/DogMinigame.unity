@@ -385,7 +385,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3.5
+  m_Radius: 4.2
   m_Center: {x: 0, y: 0.63668156, z: 0}
 --- !u!114 &464769026
 MonoBehaviour:
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TreatSpawner
   treatPrefab: {fileID: 5198012043751352616, guid: e0c2d6769225e284a888c75d6f37442b, type: 3}
   dog: {fileID: 1789586252}
-  spawnInterval: 0.5
+  spawnInterval: 0.8
 --- !u!4 &464769027
 Transform:
   m_ObjectHideFlags: 0
@@ -523,6 +523,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &744103561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3166525367028591300, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
+  m_PrefabInstance: {fileID: 7327789251514089886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &848988168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1119,12 +1124,34 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3412547660241135630, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
   m_PrefabInstance: {fileID: 7327789251514089886}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 744103561}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 757618ac664346c4d8733dc5d5d9ccd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DogBehavior
+--- !u!95 &1789586259
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744103561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ff3029eaf6bf54547a6f242fcf5cb14b, type: 3}
+  m_Controller: {fileID: 9100000, guid: 154f1d6c6033c14469f11adcac34a181, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1897558398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1476,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog
       objectReference: {fileID: 0}
+    - target: {fileID: 3412547660241135630, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
+      propertyPath: eatTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412547660241135630, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3680332093439405511, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.489
@@ -1497,10 +1532,17 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5233222632302414057, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cefef17b7dff96e4bbbaa9ffaa833adf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3166525367028591300, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1789586259}
   m_SourcePrefab: {fileID: 100100000, guid: ef25ee9f5ff1503459e11407dd380678, type: 3}
 --- !u!1001 &7352767269572680980
 PrefabInstance:

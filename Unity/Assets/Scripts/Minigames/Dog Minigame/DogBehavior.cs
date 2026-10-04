@@ -13,7 +13,12 @@ public class DogBehavior : MonoBehaviour
     private List<GameObject> treatsOnFloor = new List<GameObject>();
 
     BehaviorGraphAgent behaviorGraph;
+    Animator animator;
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void Start()
     {
         behaviorGraph = GetComponent<BehaviorGraphAgent>();
@@ -50,6 +55,7 @@ public class DogBehavior : MonoBehaviour
     IEnumerator EatTreat()
     {
         behaviorGraph.BlackboardReference.SetVariableValue<DogStatus>("DogStatus", DogStatus.Eating);
+        animator.SetBool("Eating", true);
 
         currentTreat.GetComponent<Collider>().enabled = false;
 
@@ -60,6 +66,7 @@ public class DogBehavior : MonoBehaviour
         currentTreat = null;
 
         behaviorGraph.BlackboardReference.SetVariableValue<DogStatus>("DogStatus", DogStatus.NotEating);
+        animator.SetBool("Eating", false);
 
         behaviorGraph.BlackboardReference.SetVariableValue<GameObject>("CurrentTreat", null);
         

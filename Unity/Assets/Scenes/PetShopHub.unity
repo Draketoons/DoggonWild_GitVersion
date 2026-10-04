@@ -1287,6 +1287,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617902615}
   m_CullTransparentMesh: 1
+--- !u!1001 &696040243
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5493213
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221857376028373491, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3382977052421601456, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906571259145755317, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_Name
+      value: RatMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5071379130320400518, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748324762097788660, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381036553950939241, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: detectionRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381036553950939241, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: targetSceneName
+      value: RatMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521378219841564613, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
+      propertyPath: m_Radius
+      value: 2.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 164a3c18f25ec0c45afb63709f1523c0, type: 3}
 --- !u!1 &702819419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,6 +3852,7 @@ SceneRoots:
   - {fileID: 1372318295}
   - {fileID: 405287500}
   - {fileID: 463218359}
+  - {fileID: 696040243}
   - {fileID: 1564014540}
   - {fileID: 717022623}
   - {fileID: 488922713}
