@@ -73,7 +73,7 @@ public class BirdMGController : MonoBehaviour
     {
         playerControls = Instantiate(playerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(playerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(playerIndex), inputUser);
         inputUser.AssociateActionsWithUser(playerControls);
     }
 

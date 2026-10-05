@@ -16,9 +16,9 @@ public class FerretMinigame : MonoBehaviour
 
     private void Awake()
     {
-        gameInstance = GameObject.FindGameObjectWithTag("GI").GetComponent<GameInstance>();
-        if (gameInstance)
-            Debug.Log("FoundGameInstance");
+        //gameInstance = GameObject.FindGameObjectWithTag("GI").GetComponent<GameInstance>();
+        // (gameInstance)
+            //Debug.Log("FoundGameInstance");
         WinText.text = "";
     }
 
@@ -85,22 +85,22 @@ public class FerretMinigame : MonoBehaviour
         {
             Debug.Log("Player 1 won!");
             WinText.text = "Player 1 Won!";
-            gameInstance.IncreasePlayerStarCount(0);
+            ServiceLocator.GetService<IGameService>().IncreaseStarCount(0);
         }
         if (players[0].attentionScore < players[1].attentionScore)
         {
             Debug.Log("Player 2 won!");
             WinText.text = "Player 2 Won!";
-            gameInstance.IncreasePlayerStarCount(1);
+            ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
         }
         if (players[0].attentionScore == players[1].attentionScore)
         {
             Debug.Log("Neither Player won!");
             WinText.text = "Nobody Won :/";
-            gameInstance.IncreasePlayerStarCount(1);
+            ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
         }
         yield return new WaitForSeconds(EndGameDelay);
-        gameInstance.InitializePlayerHub();
+        ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
     }
 
     public FerretMGController[] GetPlayers()

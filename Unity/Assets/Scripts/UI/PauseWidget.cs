@@ -27,8 +27,6 @@ public class PauseWidget : MonoBehaviour
 
     private void Awake()
     {
-        gameInstance = GameInstance.gameInstance;
-
         SetInputActions();
         BindInputActions();
         EnableInputActions();
@@ -36,10 +34,8 @@ public class PauseWidget : MonoBehaviour
 
     private void Start()
     {
-        mainMenuButton.onClick.AddListener(() => gameInstance.InitializeMainMenu());
-        quitButton.onClick.AddListener(() => gameInstance.QuitGame());
-
-        gameInstance = GameInstance.gameInstance;
+        mainMenuButton.onClick.AddListener(() => ServiceLocator.GetService<ILevelLoadService>().InitializeMainMenu());
+        quitButton.onClick.AddListener(() => ServiceLocator.GetService<IGameService>().QuitGame());
 
         selectionImage.transform.position = mainMenuButton.transform.position;
 
@@ -114,6 +110,6 @@ public class PauseWidget : MonoBehaviour
         {
             pausePanel.SetActive(false);
         }
-        gameInstance.SetPauseGame(paused);
+        ServiceLocator.GetService<IGameService>().SetPauseGame(paused);
     }
 }
