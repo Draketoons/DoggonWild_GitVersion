@@ -54,7 +54,7 @@ public class PlayerHubController : MonoBehaviour
     {
         playerControls = Instantiate(playerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(playerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(playerIndex), inputUser);
         inputUser.AssociateActionsWithUser(playerControls);
     }
 
@@ -63,13 +63,6 @@ public class PlayerHubController : MonoBehaviour
         moveAction.Enable();
         sprintAction.Enable();
         selectAction.Enable();
-    }
-
-    void DisableInputActions()
-    {
-        moveAction.Disable();
-        sprintAction.Disable();
-        selectAction.Disable();
     }
 
     // Update is called once per frame
@@ -139,7 +132,6 @@ public class PlayerHubController : MonoBehaviour
             Debug.Log("No current minigame selector!");
             return;
         }
-        DisableInputActions();
         currentMinigameSelector.LoadMinigame();
     }
 

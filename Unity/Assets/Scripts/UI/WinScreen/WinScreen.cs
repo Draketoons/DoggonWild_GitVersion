@@ -20,11 +20,11 @@ public class WinScreen : MonoBehaviour
 
     private void Update()
     {
-        if (ServiceLocator.GetService<IGameService>().playerOneStarCount >= 3)
+        if (gameInstance.playerOneStarCount >= 3)
         {
             winText.SetText("Player 1 wins");
         }
-        else if (ServiceLocator.GetService<IGameService>().playerTwoStarCount >= 3)
+        else if (gameInstance.playerTwoStarCount >= 3)
         {
             winText.SetText("Player 2 wins");
         }
@@ -32,7 +32,6 @@ public class WinScreen : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        ServiceLocator.GetService<IGameService>().RestartGame();
         SceneManager.LoadScene("MainMenu");
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameInstance : MonoBehaviour
 {
-    /*
     public static GameInstance gameInstance;
 
     public int playerOneStarCount = 0;
@@ -113,5 +112,4 @@ public class GameInstance : MonoBehaviour
         }
         Time.timeScale = 1;
     }
-    */
 }

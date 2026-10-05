@@ -16,7 +16,7 @@ public class BirdMinigameManager : MinigameBase
     [SerializeField] private float waitTime;
     private List<NoteType> noteOrder = new List<NoteType>();
     private int noteTypeIndex = 0;
-    // int roundNumber = 0;
+    private int roundNumber = 0;
     public bool playerTurn = false;
     public bool inBetweenTurn = false;
     public bool playerInBetweenTurn = false;
@@ -151,24 +151,24 @@ public class BirdMinigameManager : MinigameBase
         {
             if (metronome.player2.playerHealth <= 0)
             {
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                GameInstance.gameInstance.InitializePlayerHub();
             }
             else
             {
-                ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                GameInstance.gameInstance.IncreasePlayerStarCount(1);
+                GameInstance.gameInstance.InitializePlayerHub();
             }
         }
         if (playerIndex == 1)
         {
             if (metronome.player1.playerHealth <= 0)
             {
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                GameInstance.gameInstance.InitializePlayerHub();
             }
             else
             {
-                ServiceLocator.GetService<IGameService>().IncreaseStarCount(0);
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                GameInstance.gameInstance.IncreasePlayerStarCount(0);
+                GameInstance.gameInstance.InitializePlayerHub();
             }
         }
 

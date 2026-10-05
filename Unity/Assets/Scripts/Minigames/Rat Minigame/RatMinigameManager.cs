@@ -164,9 +164,9 @@ public class RatMinigameManager : MinigameBase
         RatMGController winningPlayer = DetermineWinner();
         if (winningPlayer)
         {
-            ServiceLocator.GetService<IGameService>().IncreaseStarCount(winningPlayer.playerIndex);
+            GameInstance.gameInstance.IncreasePlayerStarCount(winningPlayer.playerIndex);
         }
 
-        ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+        GameInstance.gameInstance.InitializePlayerHub();
     }
 }

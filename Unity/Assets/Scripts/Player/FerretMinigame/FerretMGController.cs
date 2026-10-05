@@ -5,7 +5,7 @@ using UnityEngine.InputSystem.Users;
 
 public class FerretMGController : MonoBehaviour
 {
-    [SerializeField] private int playerIndex;
+    [SerializeField] private int PlayerIndex;
     [SerializeField] private InputActionAsset PlayerControls;
     [SerializeField] private float attentionLevelDecayRate;
     [SerializeField] private float maxShakeLevel;
@@ -44,7 +44,7 @@ public class FerretMGController : MonoBehaviour
         if (shakeLevel > 0)
         {
             shakeLevel -= attentionLevelDecayRate;
-            ferretMGManager.RepositionRangeUI(playerIndex, shakeLevel);
+            ferretMGManager.RepositionRangeUI(PlayerIndex, shakeLevel);
         }
 
         if (ferret.attentionLevel < shakeLevel + attentionRange && ferret.attentionLevel > shakeLevel - attentionRange)
@@ -58,7 +58,7 @@ public class FerretMGController : MonoBehaviour
     {
         PlayerControls = Instantiate(PlayerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(playerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(PlayerIndex), inputUser);
         inputUser.AssociateActionsWithUser(PlayerControls);
     }
 
@@ -85,7 +85,7 @@ public class FerretMGController : MonoBehaviour
         isShaking = true;
         if (shakeLevel < maxShakeLevel)
             shakeLevel += shakeIntensity * currentToy.GetShakeMultiplier();
-        ferretMGManager.RepositionRangeUI(playerIndex, shakeLevel);
+        ferretMGManager.RepositionRangeUI(PlayerIndex, shakeLevel);
         StartCoroutine(ShakeCooldown());
     }
 
@@ -104,7 +104,7 @@ public class FerretMGController : MonoBehaviour
             currentToySelectionIndex--;
             currentToy = toys[currentToySelectionIndex];
             attentionRange = currentToy.GetAttentionRange();
-            ferretMGManager.UpdateRangeUI(playerIndex);
+            ferretMGManager.UpdateRangeUI(PlayerIndex);
             return;
         }
         if (inputValue > 0 && currentToySelectionIndex < 2)
@@ -112,7 +112,7 @@ public class FerretMGController : MonoBehaviour
             currentToySelectionIndex++;
             currentToy = toys[currentToySelectionIndex];
             attentionRange = currentToy.GetAttentionRange();
-            ferretMGManager.UpdateRangeUI(playerIndex);
+            ferretMGManager.UpdateRangeUI(PlayerIndex);
             return;
         }
     }

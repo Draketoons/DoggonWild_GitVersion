@@ -28,8 +28,10 @@ public class MainMenuWidget : MonoBehaviour
 
     private void Start()
     {
-        startButton.onClick.AddListener(() => ServiceLocator.GetService<ILevelLoadService>().InitializeHub());
-        quitButton.onClick.AddListener(() => ServiceLocator.GetService<IGameService>().QuitGame());
+        startButton.onClick.AddListener(() => gameInstance.InitializePlayerHub());
+        quitButton.onClick.AddListener(() => gameInstance.QuitGame());
+
+        gameInstance = GameInstance.gameInstance;
 
         selectionImage.transform.position = startButton.transform.position;
 
@@ -62,13 +64,6 @@ public class MainMenuWidget : MonoBehaviour
         leftAction.Enable();
         rightAction.Enable();
         selectAction.Enable();
-    }
-
-    public void DisableInputActions()
-    {
-        leftAction.Disable();
-        rightAction.Disable();
-        selectAction.Disable();
     }
 
     private void SetInputActions()

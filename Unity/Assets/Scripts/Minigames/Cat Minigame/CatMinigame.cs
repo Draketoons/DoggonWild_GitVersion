@@ -36,7 +36,7 @@ public class CatMinigame : MinigameBase
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //gameInstance = GameObject.FindGameObjectWithTag("GI").GetComponent<GameInstance>();
+        gameInstance = GameObject.FindGameObjectWithTag("GI").GetComponent<GameInstance>();
         alertProxy.SetActive(false);
         catAnimator = catObj.GetComponent<Animator>();
 
@@ -106,14 +106,14 @@ public class CatMinigame : MinigameBase
         {
             Debug.Log($"Player: {playerIndex + 1} won!");
             yield return new WaitForSeconds(endMinigameDelay);
-            ServiceLocator.GetService<IGameService>().IncreaseStarCount(playerIndex);
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            gameInstance.IncreasePlayerStarCount(playerIndex);
+            gameInstance.InitializePlayerHub();
         }
         if (playerIndex < 0)
         {
             Debug.Log("Minigame end! No players won...");
             yield return new WaitForSeconds(endMinigameDelay);
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            gameInstance.InitializePlayerHub();
         }
     }
 

@@ -3,12 +3,12 @@ using UnityEngine.InputSystem;
 
 public interface IGameService
 {
-    int playerOneStarCount { get; }
-    int playerTwoStarCount { get; }
+    int player1StarCount { get; }
+    int player2StarCount { get; }
+
+    Gamepad[] controllers { get; }
 
     void IncreaseStarCount(int playerIndex);
-    void SetPauseGame(bool paused);
-    void QuitGame();
-    void RestartGame();
-
+    void AddController(Gamepad controller);
+    void InitializeControllers();
 }

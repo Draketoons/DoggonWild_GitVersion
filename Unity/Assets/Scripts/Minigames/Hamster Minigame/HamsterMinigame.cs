@@ -48,6 +48,7 @@ public class HamsterMinigame : MinigameBase
         ResultText.text = "";
 
         scoreHolder = GameObject.FindGameObjectWithTag("ScoreHolder").GetComponent<HamsterMGScoreHolder>();
+        gameInstance = GameInstance.gameInstance;
 
         UpdateUI();
 
@@ -205,7 +206,7 @@ public class HamsterMinigame : MinigameBase
     {
         Debug.Log("Restarting Minigame!");
         yield return new WaitForSeconds(EndGameWait);
-        ServiceLocator.GetService<LevelLoadService>().InitializeMinigame("HamsterMinigame");
+        gameInstance.InitializeMinigame("HamsterMinigame");
     }
 
     public IEnumerator EndMinigame()
@@ -216,15 +217,14 @@ public class HamsterMinigame : MinigameBase
         {
             Debug.Log($"Game Over! Player: {scoreHolder.GetWinningPlayer() + 1} won!");
             yield return new WaitForSeconds(FinalEndGameWait);
-
-            ServiceLocator.GetService<IGameService>().IncreaseStarCount(scoreHolder.GetWinningPlayer());
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            gameInstance.IncreasePlayerStarCount(scoreHolder.GetWinningPlayer());
+            gameInstance.InitializePlayerHub();
         }
         else
         {
             Debug.Log($"Game Over! Nobody won!");
             yield return new WaitForSeconds(FinalEndGameWait);
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            gameInstance.InitializePlayerHub();
         }
     }
 }

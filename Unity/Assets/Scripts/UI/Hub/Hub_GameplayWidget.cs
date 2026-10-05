@@ -9,13 +9,14 @@ public class Hub_GameplayWidget : MonoBehaviour
 
     private void Start()
     {
+        GameInstance gameInstance = GameInstance.gameInstance;
 
-        InitializeStarCount(ServiceLocator.GetService<IGameService>().playerOneStarCount, ServiceLocator.GetService<IGameService>().playerTwoStarCount);
+        InitializeStarCount(gameInstance.playerOneStarCount, gameInstance.playerTwoStarCount);
     }
 
     public void InitializeStarCount(int playerOneStars, int playerTwoStars)
     {
-        playerGUI1.SetStarIcons(ServiceLocator.GetService<IGameService>().playerOneStarCount);
-        playerGUI2.SetStarIcons(ServiceLocator.GetService<IGameService>().playerTwoStarCount);
+        playerGUI1.SetStarIcons(GameInstance.gameInstance.playerOneStarCount);
+        playerGUI2.SetStarIcons(GameInstance.gameInstance.playerTwoStarCount);
     }
 }
