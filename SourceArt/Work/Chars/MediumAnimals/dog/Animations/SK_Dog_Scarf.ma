@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: SK_Dog_Scarf.ma
-//Last modified: Mon, Sep 28, 2026 11:57:35 AM
+//Last modified: Wed, Oct 14, 2026 12:02:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "SK_Dog_Rig" -rfn "SK_Dog_RigRN" -op "v=0;" -typ "mayaAscii"
 		 "E:/ProfileRedirect/ejrubio/ejrubio_AD415-475LM34_5077/SourceArt/Work/Chars/MediumAnimals/dog//Rig/SK_Dog_Rig.ma";
@@ -8,28 +8,28 @@ file -rdi 2 -ns "SK_Dog" -rfn "SK_Dog_Rig:SK_DogRN" -op "v=0;" -typ "mayaAscii"
 		 "E:/ProfileRedirect/ejrubio/ejrubio_AD415-475LM34_5077/SourceArt/Work/Chars/MediumAnimals/dog//Mesh/SK_Dog.ma";
 file -r -ns "SK_Dog_Rig" -dr 1 -rfn "SK_Dog_RigRN" -op "v=0;" -typ "mayaAscii" "E:/ProfileRedirect/ejrubio/ejrubio_AD415-475LM34_5077/SourceArt/Work/Chars/MediumAnimals/dog//Rig/SK_Dog_Rig.ma";
 requires maya "2027";
+requires -nodeType "UsdDefaultSettings" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.37.0";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.6.2";
-requires -nodeType "UsdDefaultSettings" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.37.0";
 currentUnit -l centimeter -a degree -t ntsc;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "B14CFF44-486C-0F8E-75BB-BB8271DABE68";
+fileInfo "UUID" "B0CCB180-450F-6C61-91A2-2DA4099F9DEF";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "CC1A094B-455F-7EEB-1B26-EFA813EB9D9B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -187.47366466565401 54.759785482648866 121.11113077607344 ;
-	setAttr ".r" -type "double3" -5.7383527362781956 657.79999999999211 1.7048916105028419e-15 ;
+	setAttr ".t" -type "double3" -142.3513370957096 76.422488972809418 159.66844390253866 ;
+	setAttr ".r" -type "double3" -11.738352735382671 318.20000000015204 -2.1332374770006211e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9B41FB1F-43D7-3957-578A-63BD25E38FB8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 216.02075116576904;
+	setAttr ".coi" 205.6796369341215;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -60,30 +60,30 @@ createNode camera -s -n "frontShape" -p "front";
 	rename -uid "8CEB8FAB-4E32-B163-26BB-9DA161866A13";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1001.4567710225203;
-	setAttr ".ow" 177.74444201381874;
+	setAttr ".coi" 998.28746460446632;
+	setAttr ".ow" 159.57945049477752;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" 0 40.473991469962861 4.3451236853317212 ;
+	setAttr ".tp" -type "double3" 0 40.473991469962861 7.5144301033857808 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
 	rename -uid "BC8C369A-4BE1-35D2-B1AD-859ED60DEE70";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.4345602763917 40.473991469962861 4.3451236853317212 ;
+	setAttr ".t" -type "double3" 1000.4395803338593 40.473991469962861 7.5144301033857808 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "92A20D7B-4281-7C17-8846-3087B55CFC09";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.4345602763917;
-	setAttr ".ow" 177.74444201381874;
+	setAttr ".coi" 1000.4395803338593;
+	setAttr ".ow" 159.57945049477752;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
-	setAttr ".tp" -type "double3" 0 40.473991469962861 4.3451236853317212 ;
+	setAttr ".tp" -type "double3" 0 40.473991469962861 7.5144301033857808 ;
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
@@ -107,33 +107,45 @@ createNode camera -n "GameViewShape" -p "GameView";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CC6A41CF-4F09-7C8D-51E7-4DB18FE34869";
-	setAttr -s 14 ".lnk";
-	setAttr -s 14 ".slnk";
 createNode UsdDefaultSettings -n "UsdDefaultRenderSettings";
+	rename -uid "F859FEC4-4518-CE68-0B04-70ADE123DF23";
+	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
+	setAttr ".ssl" -type "string" "#usda 1.0\n\n";
+	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
+lockNode -l 1 ;
+createNode UsdDefaultSettings -n "UsdDefaultRenderSettings1";
+	rename -uid "7833800C-4B2A-5E7E-C367-F59CB605F20C";
+	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
+	setAttr ".ssl" -type "string" "#usda 1.0\n\n";
+	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
+lockNode -l 1 ;
+createNode lightLinker -s -n "lightLinker1";
+	rename -uid "49443C3D-4BE4-0D75-4F4E-4CB81E0E2926";
+	setAttr -s 8 ".lnk";
+	setAttr -s 8 ".slnk";
+createNode UsdDefaultSettings -n "UsdDefaultRenderSettings2";
 	rename -uid "F9A411E2-4E67-C77C-5066-0C9F6338170C";
 	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
 	setAttr ".ssl" -type "string" "#usda 1.0\n\n";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "666F92F4-4D3E-340B-ADA0-51A1FC01975A";
+	rename -uid "84A879CC-4EC6-036F-49F3-72808EC7894E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "2363B40B-43F0-527A-9945-98A494433FC7";
+	rename -uid "86F319B5-470D-5FF4-E2B9-ABB6AB5EA913";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3009341E-43C0-6780-95A2-F9AEC2FF765B";
+	rename -uid "6A35C626-458B-4DA5-BFDE-C89D61B94991";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "CC0088C7-402B-8198-8EA2-419FD7166514";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7C144438-4AFC-0612-0465-F8A4C0C7A2AE";
+	rename -uid "432E12E0-40D5-96B0-F4A8-7A8F0B27DB62";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3AA51892-421A-C259-6147-10AAAC667F39";
 	setAttr ".g" yes;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "F0721F05-40EA-56F3-7D2A-5C9048D68CB8";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 68 -ast 0 -aet 80 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 78 -ast 0 -aet 80 ";
 	setAttr ".st" 6;
 createNode animCurveTA -n "IKLegFront_L_rotateX";
 	rename -uid "4DEDA21F-4E65-2ABB-2FEF-2FAD62886F10";
@@ -5517,7 +5529,7 @@ createNode animCurveTL -n "RootX_M_translateZ2";
 	setAttr -s 13 ".ots[11:12]"  18 0;
 createNode reference -n "SK_Dog_RigRN";
 	rename -uid "03047E73-4257-D362-67AE-44BD44A60426";
-	setAttr -s 246 ".phl";
+	setAttr -s 354 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -5764,11 +5776,129 @@ createNode reference -n "SK_Dog_RigRN";
 	setAttr ".phl[244]" 0;
 	setAttr ".phl[245]" 0;
 	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"SK_Dog_RigRN"
 		"SK_Dog_RigRN" 0
 		"SK_Dog_Rig:SK_DogRN" 0
-		"SK_Dog_RigRN" 246
+		"SK_Dog_RigRN" 359
+		2 "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:MainSystem|SK_Dog_Rig:SK_Dog_Rig:Main" 
+		"fingerVis" " -cb 1 1"
+		2 "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:MainSystem|SK_Dog_Rig:SK_Dog_Rig:Main" 
+		"bendVis" " -cb 1 0"
+		2 "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:MainSystem|SK_Dog_Rig:SK_Dog_Rig:Main" 
+		"arrowVis" " -cb 1 0"
+		2 "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:MainSystem|SK_Dog_Rig:SK_Dog_Rig:Main" 
+		"drvSysVis" " -cb 1 1"
+		2 "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:MainSystem|SK_Dog_Rig:SK_Dog_Rig:Main" 
+		"jointVis" " -cb 1 0"
 		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetJaw_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraJaw_M|SK_Dog_Rig:SK_Dog_Rig:FKJaw_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[1]" ""
 		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetJaw_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraJaw_M|SK_Dog_Rig:SK_Dog_Rig:FKJaw_M.scaleY" 
@@ -5787,487 +5917,704 @@ createNode reference -n "SK_Dog_RigRN";
 		"SK_Dog_RigRN.placeHolderList[8]" ""
 		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetJaw_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraJaw_M|SK_Dog_Rig:SK_Dog_Rig:FKJaw_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[9]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[10]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[11]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[12]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[13]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[14]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[15]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.translateX" 
 		"SK_Dog_RigRN.placeHolderList[16]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.translateY" 
 		"SK_Dog_RigRN.placeHolderList[17]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[18]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[19]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[20]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[21]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.translateX" 
 		"SK_Dog_RigRN.placeHolderList[22]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.translateY" 
 		"SK_Dog_RigRN.placeHolderList[23]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[24]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[25]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[26]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[27]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[28]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[29]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[30]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.translateX" 
 		"SK_Dog_RigRN.placeHolderList[31]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.translateY" 
 		"SK_Dog_RigRN.placeHolderList[32]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[33]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[34]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[35]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[36]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[37]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[38]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[39]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.translateX" 
 		"SK_Dog_RigRN.placeHolderList[40]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.translateY" 
 		"SK_Dog_RigRN.placeHolderList[41]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[42]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[43]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[44]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[45]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[46]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[47]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[48]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.translateX" 
 		"SK_Dog_RigRN.placeHolderList[49]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.translateY" 
 		"SK_Dog_RigRN.placeHolderList[50]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[51]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[52]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[53]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[54]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[55]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[56]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[57]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.translateX" 
 		"SK_Dog_RigRN.placeHolderList[58]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.translateY" 
 		"SK_Dog_RigRN.placeHolderList[59]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[60]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[61]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[62]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_R|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_R|SK_Dog_Rig:SK_Dog_Rig:FKEar6_R.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[63]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[64]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[65]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[66]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[67]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[68]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[69]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.translateX" 
 		"SK_Dog_RigRN.placeHolderList[70]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.translateY" 
 		"SK_Dog_RigRN.placeHolderList[71]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[72]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[73]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[74]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[75]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.translateX" 
 		"SK_Dog_RigRN.placeHolderList[76]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.translateY" 
 		"SK_Dog_RigRN.placeHolderList[77]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[78]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[79]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[80]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[81]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[82]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[83]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[84]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.translateX" 
 		"SK_Dog_RigRN.placeHolderList[85]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.translateY" 
 		"SK_Dog_RigRN.placeHolderList[86]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[87]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[88]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[89]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[90]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[91]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[92]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[93]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.translateX" 
 		"SK_Dog_RigRN.placeHolderList[94]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.translateY" 
 		"SK_Dog_RigRN.placeHolderList[95]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[96]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[97]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[98]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[99]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[100]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[101]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[102]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.translateX" 
 		"SK_Dog_RigRN.placeHolderList[103]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.translateY" 
 		"SK_Dog_RigRN.placeHolderList[104]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[105]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[106]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[107]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[108]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[109]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[110]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[111]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.translateX" 
 		"SK_Dog_RigRN.placeHolderList[112]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.translateY" 
 		"SK_Dog_RigRN.placeHolderList[113]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[114]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[115]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[116]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToHead_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar1_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar2_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar3_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar4_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKXEar5_L|SK_Dog_Rig:SK_Dog_Rig:FKOffsetEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKExtraEar6_L|SK_Dog_Rig:SK_Dog_Rig:FKEar6_L.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[117]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[118]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[119]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[120]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[121]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[122]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[123]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[124]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[125]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[126]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[127]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[128]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[129]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[130]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[131]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[132]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[133]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[134]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[135]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[136]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[137]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[138]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[139]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[140]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[141]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.followMain" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[142]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.followRoot" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[143]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.followChest" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToChest_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKXNeck2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetHead_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraHead_M|SK_Dog_Rig:SK_Dog_Rig:FKHead_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[144]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.swivel" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[145]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rock" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[146]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.roll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[147]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rollStartAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[148]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rollEndAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[149]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.toesAim" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[150]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.liftRoll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[151]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.legAim" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[152]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.stretchy" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[153]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.antiPop" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[154]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Lenght1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[155]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Lenght2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[156]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Fatness1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[157]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Fatness2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[158]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.volume" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[159]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[160]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[161]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[162]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[163]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[164]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[165]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.followMain" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[166]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.followRoot" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[167]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.swivel" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[168]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rock" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[169]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.roll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[170]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rollStartAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[171]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rollEndAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[172]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.toesAim" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[173]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.liftRoll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[174]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.stretchy" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[175]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.antiPop" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[176]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Lenght1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[177]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Lenght2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[178]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Fatness1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[179]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Fatness2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[180]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.volume" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[181]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[182]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[183]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[184]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[185]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[186]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[187]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[188]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[189]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[190]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[191]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[192]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[193]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.followMain" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[194]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.followRoot" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[195]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.followChest" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[196]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.swivel" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[197]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rock" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKParentConstraintToRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail0_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKXTail4_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraTail5_M|SK_Dog_Rig:SK_Dog_Rig:FKTail5_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[198]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.roll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[199]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rollStartAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[200]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rollEndAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[201]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.toesAim" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[202]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.liftRoll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[203]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.legAim" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[204]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.stretchy" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[205]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.antiPop" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[206]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Lenght1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKRoot_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[207]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Lenght2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[208]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Fatness1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[209]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Fatness2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[210]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.volume" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[211]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[212]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[213]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[214]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.scaleY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[215]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.scaleZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[216]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.scaleX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[217]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rock" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[218]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.roll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[219]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rollStartAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[220]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rollEndAngle" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[221]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.liftRoll" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[222]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.stretchy" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[223]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.antiPop" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[224]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Lenght1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[225]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Lenght2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[226]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Fatness1" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[227]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Fatness2" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[228]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.followRoot" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[229]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.followMain" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[230]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.volume" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[231]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.swivel" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[232]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.toesAim" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[233]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[234]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.scaleX" 
 		"SK_Dog_RigRN.placeHolderList[235]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[236]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[237]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.translateY" 
 		"SK_Dog_RigRN.placeHolderList[238]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.translateX" 
 		"SK_Dog_RigRN.placeHolderList[239]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.translateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.translateZ" 
 		"SK_Dog_RigRN.placeHolderList[240]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.translateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.rotateY" 
 		"SK_Dog_RigRN.placeHolderList[241]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.translateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.rotateX" 
 		"SK_Dog_RigRN.placeHolderList[242]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.rotateY" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:FKSystem|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKXRoot_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKXRootPart2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine1_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine2_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKXSpine3_M|SK_Dog_Rig:SK_Dog_Rig:FKOffsetChest_M|SK_Dog_Rig:SK_Dog_Rig:FKExtraChest_M|SK_Dog_Rig:SK_Dog_Rig:FKChest_M.rotateZ" 
 		"SK_Dog_RigRN.placeHolderList[243]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.rotateX" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.scaleY" 
 		"SK_Dog_RigRN.placeHolderList[244]" ""
-		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.rotateZ" 
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.scaleZ" 
 		"SK_Dog_RigRN.placeHolderList[245]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.scaleX" 
+		"SK_Dog_RigRN.placeHolderList[246]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.translateY" 
+		"SK_Dog_RigRN.placeHolderList[247]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.translateZ" 
+		"SK_Dog_RigRN.placeHolderList[248]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.translateX" 
+		"SK_Dog_RigRN.placeHolderList[249]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.followMain" 
+		"SK_Dog_RigRN.placeHolderList[250]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.followRoot" 
+		"SK_Dog_RigRN.placeHolderList[251]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.followChest" 
+		"SK_Dog_RigRN.placeHolderList[252]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.swivel" 
+		"SK_Dog_RigRN.placeHolderList[253]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rock" 
+		"SK_Dog_RigRN.placeHolderList[254]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.roll" 
+		"SK_Dog_RigRN.placeHolderList[255]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rollStartAngle" 
+		"SK_Dog_RigRN.placeHolderList[256]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rollEndAngle" 
+		"SK_Dog_RigRN.placeHolderList[257]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.toesAim" 
+		"SK_Dog_RigRN.placeHolderList[258]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.liftRoll" 
+		"SK_Dog_RigRN.placeHolderList[259]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.legAim" 
+		"SK_Dog_RigRN.placeHolderList[260]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.stretchy" 
+		"SK_Dog_RigRN.placeHolderList[261]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.antiPop" 
+		"SK_Dog_RigRN.placeHolderList[262]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Lenght1" 
+		"SK_Dog_RigRN.placeHolderList[263]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Lenght2" 
+		"SK_Dog_RigRN.placeHolderList[264]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Fatness1" 
+		"SK_Dog_RigRN.placeHolderList[265]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.Fatness2" 
+		"SK_Dog_RigRN.placeHolderList[266]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.volume" 
+		"SK_Dog_RigRN.placeHolderList[267]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rotateZ" 
+		"SK_Dog_RigRN.placeHolderList[268]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rotateX" 
+		"SK_Dog_RigRN.placeHolderList[269]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_R|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_R.rotateY" 
+		"SK_Dog_RigRN.placeHolderList[270]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.scaleY" 
+		"SK_Dog_RigRN.placeHolderList[271]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.scaleZ" 
+		"SK_Dog_RigRN.placeHolderList[272]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.scaleX" 
+		"SK_Dog_RigRN.placeHolderList[273]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.followMain" 
+		"SK_Dog_RigRN.placeHolderList[274]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.followRoot" 
+		"SK_Dog_RigRN.placeHolderList[275]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.swivel" 
+		"SK_Dog_RigRN.placeHolderList[276]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rock" 
+		"SK_Dog_RigRN.placeHolderList[277]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.roll" 
+		"SK_Dog_RigRN.placeHolderList[278]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rollStartAngle" 
+		"SK_Dog_RigRN.placeHolderList[279]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rollEndAngle" 
+		"SK_Dog_RigRN.placeHolderList[280]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.toesAim" 
+		"SK_Dog_RigRN.placeHolderList[281]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.liftRoll" 
+		"SK_Dog_RigRN.placeHolderList[282]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.stretchy" 
+		"SK_Dog_RigRN.placeHolderList[283]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.antiPop" 
+		"SK_Dog_RigRN.placeHolderList[284]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Lenght1" 
+		"SK_Dog_RigRN.placeHolderList[285]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Lenght2" 
+		"SK_Dog_RigRN.placeHolderList[286]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Fatness1" 
+		"SK_Dog_RigRN.placeHolderList[287]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.Fatness2" 
+		"SK_Dog_RigRN.placeHolderList[288]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.volume" 
+		"SK_Dog_RigRN.placeHolderList[289]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.translateY" 
+		"SK_Dog_RigRN.placeHolderList[290]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.translateZ" 
+		"SK_Dog_RigRN.placeHolderList[291]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.translateX" 
+		"SK_Dog_RigRN.placeHolderList[292]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rotateZ" 
+		"SK_Dog_RigRN.placeHolderList[293]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rotateX" 
+		"SK_Dog_RigRN.placeHolderList[294]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_R|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_R.rotateY" 
+		"SK_Dog_RigRN.placeHolderList[295]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.scaleY" 
+		"SK_Dog_RigRN.placeHolderList[296]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.scaleZ" 
+		"SK_Dog_RigRN.placeHolderList[297]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.scaleX" 
+		"SK_Dog_RigRN.placeHolderList[298]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.translateY" 
+		"SK_Dog_RigRN.placeHolderList[299]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.translateZ" 
+		"SK_Dog_RigRN.placeHolderList[300]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.translateX" 
+		"SK_Dog_RigRN.placeHolderList[301]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.followMain" 
+		"SK_Dog_RigRN.placeHolderList[302]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.followRoot" 
+		"SK_Dog_RigRN.placeHolderList[303]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.followChest" 
+		"SK_Dog_RigRN.placeHolderList[304]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.swivel" 
+		"SK_Dog_RigRN.placeHolderList[305]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rock" 
+		"SK_Dog_RigRN.placeHolderList[306]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.roll" 
+		"SK_Dog_RigRN.placeHolderList[307]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rollStartAngle" 
+		"SK_Dog_RigRN.placeHolderList[308]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rollEndAngle" 
+		"SK_Dog_RigRN.placeHolderList[309]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.toesAim" 
+		"SK_Dog_RigRN.placeHolderList[310]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.liftRoll" 
+		"SK_Dog_RigRN.placeHolderList[311]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.legAim" 
+		"SK_Dog_RigRN.placeHolderList[312]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.stretchy" 
+		"SK_Dog_RigRN.placeHolderList[313]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.antiPop" 
+		"SK_Dog_RigRN.placeHolderList[314]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Lenght1" 
+		"SK_Dog_RigRN.placeHolderList[315]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Lenght2" 
+		"SK_Dog_RigRN.placeHolderList[316]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Fatness1" 
+		"SK_Dog_RigRN.placeHolderList[317]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.Fatness2" 
+		"SK_Dog_RigRN.placeHolderList[318]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.volume" 
+		"SK_Dog_RigRN.placeHolderList[319]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rotateZ" 
+		"SK_Dog_RigRN.placeHolderList[320]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rotateX" 
+		"SK_Dog_RigRN.placeHolderList[321]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegFront_L|SK_Dog_Rig:SK_Dog_Rig:IKLegFront_L.rotateY" 
+		"SK_Dog_RigRN.placeHolderList[322]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.scaleY" 
+		"SK_Dog_RigRN.placeHolderList[323]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.scaleZ" 
+		"SK_Dog_RigRN.placeHolderList[324]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.scaleX" 
+		"SK_Dog_RigRN.placeHolderList[325]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rock" 
+		"SK_Dog_RigRN.placeHolderList[326]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.roll" 
+		"SK_Dog_RigRN.placeHolderList[327]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rollStartAngle" 
+		"SK_Dog_RigRN.placeHolderList[328]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rollEndAngle" 
+		"SK_Dog_RigRN.placeHolderList[329]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.liftRoll" 
+		"SK_Dog_RigRN.placeHolderList[330]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.stretchy" 
+		"SK_Dog_RigRN.placeHolderList[331]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.antiPop" 
+		"SK_Dog_RigRN.placeHolderList[332]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Lenght1" 
+		"SK_Dog_RigRN.placeHolderList[333]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Lenght2" 
+		"SK_Dog_RigRN.placeHolderList[334]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Fatness1" 
+		"SK_Dog_RigRN.placeHolderList[335]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.Fatness2" 
+		"SK_Dog_RigRN.placeHolderList[336]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.followRoot" 
+		"SK_Dog_RigRN.placeHolderList[337]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.followMain" 
+		"SK_Dog_RigRN.placeHolderList[338]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.volume" 
+		"SK_Dog_RigRN.placeHolderList[339]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.swivel" 
+		"SK_Dog_RigRN.placeHolderList[340]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.toesAim" 
+		"SK_Dog_RigRN.placeHolderList[341]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.translateY" 
+		"SK_Dog_RigRN.placeHolderList[342]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.translateZ" 
+		"SK_Dog_RigRN.placeHolderList[343]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.translateX" 
+		"SK_Dog_RigRN.placeHolderList[344]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rotateZ" 
+		"SK_Dog_RigRN.placeHolderList[345]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rotateX" 
+		"SK_Dog_RigRN.placeHolderList[346]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:IKSystem|SK_Dog_Rig:SK_Dog_Rig:IKHandle|SK_Dog_Rig:SK_Dog_Rig:IKOffsetLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKExtraLegBack_L|SK_Dog_Rig:SK_Dog_Rig:IKLegBack_L.rotateY" 
+		"SK_Dog_RigRN.placeHolderList[347]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.translateY" 
+		"SK_Dog_RigRN.placeHolderList[348]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.translateX" 
+		"SK_Dog_RigRN.placeHolderList[349]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.translateZ" 
+		"SK_Dog_RigRN.placeHolderList[350]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.rotateY" 
+		"SK_Dog_RigRN.placeHolderList[351]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.rotateX" 
+		"SK_Dog_RigRN.placeHolderList[352]" ""
+		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.rotateZ" 
+		"SK_Dog_RigRN.placeHolderList[353]" ""
 		5 4 "SK_Dog_RigRN" "|SK_Dog_Rig:SK_Dog_Rig:Group|SK_Dog_Rig:SK_Dog_Rig:MotionSystem|SK_Dog_Rig:SK_Dog_Rig:RootSystem|SK_Dog_Rig:SK_Dog_Rig:RootFollowMain|SK_Dog_Rig:SK_Dog_Rig:RootOffsetX_M|SK_Dog_Rig:SK_Dog_Rig:RootExtraX_M|SK_Dog_Rig:SK_Dog_Rig:RootX_M.visibility" 
-		"SK_Dog_RigRN.placeHolderList[246]" "";
+		"SK_Dog_RigRN.placeHolderList[354]" ""
+		"SK_Dog_Rig:SK_DogRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "FKChest_M_translateY3";
 	rename -uid "FDC2079C-4D98-B3CF-F7E1-9AB5D8B27EE9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 67 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6279,7 +6626,7 @@ createNode animCurveTU -n "FKChest_M_scaleZ3";
 	rename -uid "B4A92D65-4309-3E1C-0DEC-738FF84DCB9C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6291,7 +6638,7 @@ createNode animCurveTL -n "FKChest_M_translateX3";
 	rename -uid "1C40356D-4C74-729C-1B54-BE8A897C5E39";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 67 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6303,7 +6650,7 @@ createNode animCurveTA -n "FKChest_M_rotateY3";
 	rename -uid "563B7498-4288-B521-0A46-06AD98D411E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 67 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6315,7 +6662,7 @@ createNode animCurveTA -n "FKChest_M_rotateX3";
 	rename -uid "7A21CEE8-4920-BFA4-1F7B-AE87B0AF31DC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 67 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6327,22 +6674,15 @@ createNode animCurveTA -n "FKChest_M_rotateZ3";
 	rename -uid "795CC72D-47DE-DD88-CA27-2C97DA26A3B9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  0 0 4 -6.1598627370686074 11 13.208729146158403
-		 17 15.642601958898974 20 7.6107723181801106 23 12.561169714472557 30 25.88705811681907
-		 35 19.575695617339949 40 6.0658769602813765 45 10.466962721430999 53 13.208729146158403
-		 66 0 68 0;
-	setAttr -s 13 ".kit[11:12]"  1 18;
-	setAttr -s 13 ".kot[11:12]"  5 18;
-	setAttr -s 13 ".kix[11:12]"  1 1;
-	setAttr -s 13 ".kiy[11:12]"  0 0;
-	setAttr -s 13 ".kox[11:12]"  1 1;
-	setAttr -s 13 ".koy[11:12]"  0 0;
-	setAttr -s 13 ".ots[11:12]"  18 0;
+	setAttr -s 15 ".ktv[0:14]"  0 0 4 -6.1598627370686074 11 13.208729146158403
+		 17 15.642601958898974 20 7.6107723181801106 23 12.561169714472557 28 18.134988735840153
+		 30 25.88705811681907 35 24.233974620524386 40 6.0658769602813765 45 10.466962721430999
+		 53 13.208729146158403 61 -3.2481657185403443 67 4.084658676892059 73 0;
 createNode animCurveTU -n "FKChest_M_scaleY3";
 	rename -uid "0E9D2808-46DF-A5E5-A0EB-89AAC39D6A1B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6354,7 +6694,7 @@ createNode animCurveTU -n "FKChest_M_scaleX3";
 	rename -uid "5AB186D9-4DDC-963E-8F05-C6AECDB7449D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6366,7 +6706,7 @@ createNode animCurveTL -n "FKChest_M_translateZ3";
 	rename -uid "2ED5B438-4170-540D-EFD9-3492A5CF17E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 67 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6378,19 +6718,12 @@ createNode animCurveTL -n "FKHead_M_translateY3";
 	rename -uid "D0C28BB0-4889-6D6B-4D4F-B091A8346A84";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 53 0 78 0;
 createNode animCurveTU -n "FKHead_M_scaleZ3";
 	rename -uid "DAD38F1F-48AD-A81D-B911-EDAE5C1822FD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6402,57 +6735,30 @@ createNode animCurveTL -n "FKHead_M_translateX3";
 	rename -uid "25399958-4F27-EBE2-5886-699050D74C3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 53 0 78 0;
 createNode animCurveTA -n "FKHead_M_rotateY3";
 	rename -uid "5F265035-469A-4863-AE7E-04AB4F7840CF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 53 0 78 0;
 createNode animCurveTA -n "FKHead_M_rotateX3";
 	rename -uid "BD40E590-40A4-9A30-9352-97961591869D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 53 0 78 0;
 createNode animCurveTA -n "FKHead_M_rotateZ3";
 	rename -uid "4A4019FC-49E8-180C-42E7-F5828919018F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  0 7.2882890061087346 4 25.872056445107177
+	setAttr -s 14 ".ktv[0:13]"  0 7.2882890061087346 4 25.872056445107177
 		 7 25.242690298265007 11 -9.1517415819427974 21 -0.29035861297306231 26 -13.392235937066756
-		 35 -20.312837453849074 45 -43.437870541347735 53 -9.1517415819427974 64 0 68 0;
-	setAttr -s 11 ".kit[9:10]"  1 18;
-	setAttr -s 11 ".kot[9:10]"  5 18;
-	setAttr -s 11 ".kix[9:10]"  1 1;
-	setAttr -s 11 ".kiy[9:10]"  0 0;
-	setAttr -s 11 ".kox[9:10]"  1 1;
-	setAttr -s 11 ".koy[9:10]"  0 0;
-	setAttr -s 11 ".ots[9:10]"  18 0;
+		 30 -20.248244071239348 35 -2.6283805928506743 45 -43.437870541347735 53 -9.1517415819427974
+		 58 -15.467601507262827 61 8.6236089406495076 66 -12.4475794257818 78 0;
 createNode animCurveTU -n "FKHead_M_scaleY3";
 	rename -uid "0A2D2DDE-41C3-9FED-EB72-28AA8FF818C5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6464,7 +6770,7 @@ createNode animCurveTU -n "FKHead_M_scaleX3";
 	rename -uid "ED704E1A-4BF0-0C58-A801-B191D784443E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6476,19 +6782,12 @@ createNode animCurveTL -n "FKHead_M_translateZ3";
 	rename -uid "CD1A4EC6-4270-0FC5-AF0B-D29A30B65ED4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 53 0 78 0;
 createNode animCurveTL -n "FKJaw_M_translateY2";
 	rename -uid "F1E24518-48D1-AAD8-720F-AF9F8AA52F46";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 4 0 11 0 21 0 43 0 53 0 64 0 68 0;
+	setAttr -s 8 ".ktv[0:7]"  0 0 4 0 11 0 21 0 43 0 53 0 64 0 78 0;
 	setAttr -s 8 ".kit[6:7]"  1 18;
 	setAttr -s 8 ".kot[6:7]"  5 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -6500,7 +6799,7 @@ createNode animCurveTU -n "FKJaw_M_scaleZ2";
 	rename -uid "3D39594B-4328-3C1C-92E9-9594B128114F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 1 4 1 11 1 21 1 43 1 53 1 64 1 68 1;
+	setAttr -s 8 ".ktv[0:7]"  0 1 4 1 11 1 21 1 43 1 53 1 64 1 78 1;
 	setAttr -s 8 ".kit[6:7]"  1 18;
 	setAttr -s 8 ".kot[6:7]"  5 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -6512,7 +6811,7 @@ createNode animCurveTL -n "FKJaw_M_translateX2";
 	rename -uid "39EAF86A-4629-7FE3-23EB-04955EF3BC4F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 4 0 11 0 21 0 43 0 53 0 64 0 68 0;
+	setAttr -s 8 ".ktv[0:7]"  0 0 4 0 11 0 21 0 43 0 53 0 64 0 78 0;
 	setAttr -s 8 ".kit[6:7]"  1 18;
 	setAttr -s 8 ".kot[6:7]"  5 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -6524,49 +6823,37 @@ createNode animCurveTA -n "FKJaw_M_rotateY2";
 	rename -uid "4F21697A-4A0F-9D46-446A-46B2EB65F999";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 5.9435665136944777 8 2.4558697527668469
-		 11 0 21 0 43 0 53 0 64 0 68 0;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  5 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
-	setAttr -s 9 ".ots[7:8]"  18 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 78 0;
 createNode animCurveTA -n "FKJaw_M_rotateX2";
 	rename -uid "90707461-4483-1D51-F0E9-3B950EA55884";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 -2.5229895287769004 8 0.65332900570441532
-		 11 0 21 0 43 0 53 0 64 0 68 0;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  5 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
-	setAttr -s 9 ".ots[7:8]"  18 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 78 0;
 createNode animCurveTA -n "FKJaw_M_rotateZ2";
 	rename -uid "905F53D3-4DBC-FAF7-9B43-11A60C1334F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 -26.684211360291236 4 0.50283043313563791
+	setAttr -s 16 ".ktv[0:15]"  0 -26.684211360291236 4 0.50283043313563791
 		 8 16.758260736357279 14 -35.207655990520358 17 -1.5932378197309118 20 10.46096449265333
-		 22 16.870139127661577 25 -31.913980104813628 35 -19.3196434296473 39 14.038241118171371
-		 43 16.847520795926858 46 -30.632540167480517 53 -35.207655990520358 64 -26.684211360291236
-		 68 -26.684211360291236;
-	setAttr -s 15 ".kit[13:14]"  1 18;
-	setAttr -s 15 ".kot[13:14]"  5 18;
-	setAttr -s 15 ".kix[13:14]"  1 1;
-	setAttr -s 15 ".kiy[13:14]"  0 0;
-	setAttr -s 15 ".kox[13:14]"  1 1;
-	setAttr -s 15 ".koy[13:14]"  0 0;
-	setAttr -s 15 ".ots[13:14]"  18 0;
+		 22 16.870139127661577 25 -31.913980104813628 30 1.4266790032912617 35 -31.913980104813628
+		 39 14.038241118171371 43 16.847520795926858 46 -30.632540167480517 53 -35.207655990520358
+		 64 -26.684211360291236 78 -26.684211360291236;
+	setAttr -s 16 ".kit[9:15]"  1 18 18 18 18 1 18;
+	setAttr -s 16 ".kot[9:15]"  1 18 18 18 18 5 18;
+	setAttr -s 16 ".kix[9:15]"  1 0.67160187164474228 1 0.69774690760573266 
+		1 1 1;
+	setAttr -s 16 ".kiy[9:15]"  0 0.74091222557282654 0 -0.71634436755420716 
+		0 0 0;
+	setAttr -s 16 ".kox[9:15]"  1 0.67160187164474228 1 0.69774690760573266 
+		1 1 1;
+	setAttr -s 16 ".koy[9:15]"  0 0.74091222557282654 0 -0.71634436755420716 
+		0 0 0;
+	setAttr -s 16 ".ots[14:15]"  18 0;
 createNode animCurveTU -n "FKJaw_M_scaleY2";
 	rename -uid "5C177028-4B45-67B7-85BB-368F85D68846";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 1 4 1 11 1 21 1 43 1 53 1 64 1 68 1;
+	setAttr -s 8 ".ktv[0:7]"  0 1 4 1 11 1 21 1 43 1 53 1 64 1 78 1;
 	setAttr -s 8 ".kit[6:7]"  1 18;
 	setAttr -s 8 ".kot[6:7]"  5 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -6578,7 +6865,7 @@ createNode animCurveTU -n "FKJaw_M_scaleX2";
 	rename -uid "C04D2883-4BD6-F2B0-4F8F-9F85B357D2E4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 1 4 1 11 1 21 1 43 1 53 1 64 1 68 1;
+	setAttr -s 8 ".ktv[0:7]"  0 1 4 1 11 1 21 1 43 1 53 1 64 1 78 1;
 	setAttr -s 8 ".kit[6:7]"  1 18;
 	setAttr -s 8 ".kot[6:7]"  5 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -6590,7 +6877,7 @@ createNode animCurveTL -n "FKJaw_M_translateZ2";
 	rename -uid "B4F10A20-429A-1841-6918-6A85A4A3E947";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 4 0 11 0 21 0 43 0 53 0 64 0 68 0;
+	setAttr -s 8 ".ktv[0:7]"  0 0 4 0 11 0 21 0 43 0 53 0 64 0 78 0;
 	setAttr -s 8 ".kit[6:7]"  1 18;
 	setAttr -s 8 ".kot[6:7]"  5 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -6602,215 +6889,179 @@ createNode animCurveTL -n "FKNeck2_M_translateY3";
 	rename -uid "FACB389C-4F22-11AF-D827-C1A8A618A418";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 62 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTU -n "FKNeck2_M_scaleZ3";
 	rename -uid "AA3B9EDC-4AA9-BD6F-9AEF-B0A2B8FE6245";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 33 1 53 1 70 1;
+	setAttr -s 6 ".kit[4:5]"  1 18;
+	setAttr -s 6 ".kot[4:5]"  5 18;
+	setAttr -s 6 ".kix[4:5]"  1 1;
+	setAttr -s 6 ".kiy[4:5]"  0 0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 6 ".ots[4:5]"  18 0;
 createNode animCurveTL -n "FKNeck2_M_translateX3";
 	rename -uid "47D6F4C9-40DD-8B48-94C1-728216961AE7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 62 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTA -n "FKNeck2_M_rotateY3";
 	rename -uid "580BB0A2-49CB-7D0F-56E4-70A43717EBB6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 62 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTA -n "FKNeck2_M_rotateX3";
 	rename -uid "A30F0C93-42DC-6787-BA2E-1CB865CFBB0B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 62 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTA -n "FKNeck2_M_rotateZ3";
 	rename -uid "7D61CD0C-475E-CEB8-FDE2-0CB54A2ECDE1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 12.035872904168583 4 -0.056057969311712377
-		 7 -15.506282563119338 11 -9.1517415819427974 23 -5.3679919785850281 35 -0.14027409077307465
-		 45 15.065041337694904 53 -9.1517415819427974 65 0 68 0;
-	setAttr -s 10 ".kit[8:9]"  1 18;
-	setAttr -s 10 ".kot[8:9]"  5 18;
-	setAttr -s 10 ".kix[8:9]"  1 1;
-	setAttr -s 10 ".kiy[8:9]"  0 0;
-	setAttr -s 10 ".kox[8:9]"  1 1;
-	setAttr -s 10 ".koy[8:9]"  0 0;
-	setAttr -s 10 ".ots[8:9]"  18 0;
+	setAttr -s 13 ".ktv[0:12]"  0 12.035872904168583 4 -0.056057969311712377
+		 7 -15.506282563119338 11 -9.1517415819427974 23 -5.3679919785850281 31 0.59755585647415888
+		 35 -6.7029317712641694 40 -0.065679748638998711 45 15.065041337694904 53 -9.1517415819427974
+		 58 -7.4566383267313343 62 6.4943016941147453 70 0;
 createNode animCurveTU -n "FKNeck2_M_scaleY3";
 	rename -uid "964DF4DD-4AE2-A486-BA13-17AFD1B4AC83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 33 1 53 1 70 1;
+	setAttr -s 6 ".kit[4:5]"  1 18;
+	setAttr -s 6 ".kot[4:5]"  5 18;
+	setAttr -s 6 ".kix[4:5]"  1 1;
+	setAttr -s 6 ".kiy[4:5]"  0 0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 6 ".ots[4:5]"  18 0;
 createNode animCurveTU -n "FKNeck2_M_scaleX3";
 	rename -uid "7B1A77BE-4472-9F7E-85C2-B191E04D7CCB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 33 1 53 1 70 1;
+	setAttr -s 6 ".kit[4:5]"  1 18;
+	setAttr -s 6 ".kot[4:5]"  5 18;
+	setAttr -s 6 ".kix[4:5]"  1 1;
+	setAttr -s 6 ".kiy[4:5]"  0 0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 6 ".ots[4:5]"  18 0;
 createNode animCurveTL -n "FKNeck2_M_translateZ3";
 	rename -uid "62463E69-46C3-E2A5-2D1F-D2AC278BDA0B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 62 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTL -n "FKNeck_M_translateY3";
 	rename -uid "DD2D5386-44CC-3493-117A-EFACC41B9C00";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 64 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTU -n "FKNeck_M_scaleZ3";
 	rename -uid "5D5FB6EF-44B0-9078-0B49-61925E363F31";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 33 1 53 1 70 1;
+	setAttr -s 6 ".kit[4:5]"  1 18;
+	setAttr -s 6 ".kot[4:5]"  5 18;
+	setAttr -s 6 ".kix[4:5]"  1 1;
+	setAttr -s 6 ".kiy[4:5]"  0 0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 6 ".ots[4:5]"  18 0;
 createNode animCurveTL -n "FKNeck_M_translateX3";
 	rename -uid "40FC8158-4E45-5A99-3C35-01B49CD6D95A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 64 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTA -n "FKNeck_M_rotateY3";
 	rename -uid "CD8B2F21-4C13-8EAC-28A1-EDA36BE8B75C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 64 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTA -n "FKNeck_M_rotateX3";
 	rename -uid "AD3C9FB2-413B-888D-0FB4-C5AD7C8C755D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 64 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTA -n "FKNeck_M_rotateZ3";
 	rename -uid "78A1790E-4C1C-BC9A-6FBD-11B84F01A790";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 12.035872904168583 4 -0.056057969311712377
-		 7 -15.506282563119338 11 -9.1517415819427974 23 -5.3679919785850281 35 -0.14027409077307465
-		 45 15.065041337694904 53 -9.1517415819427974 66 0 68 0;
-	setAttr -s 10 ".kit[8:9]"  1 18;
-	setAttr -s 10 ".kot[8:9]"  5 18;
-	setAttr -s 10 ".kix[8:9]"  1 1;
-	setAttr -s 10 ".kiy[8:9]"  0 0;
-	setAttr -s 10 ".kox[8:9]"  1 1;
-	setAttr -s 10 ".koy[8:9]"  0 0;
-	setAttr -s 10 ".ots[8:9]"  18 0;
+	setAttr -s 13 ".ktv[0:12]"  0 12.035872904168583 4 -0.056057969311712377
+		 7 -15.506282563119338 11 -9.1517415819427974 23 -5.3679919785850281 31 0.59755585647415888
+		 35 -6.7029317712641694 40 -0.065679748638998711 45 15.065041337694904 53 -9.1517415819427974
+		 58 -8.0159037094003427 64 6.4943016941147453 72 0;
 createNode animCurveTU -n "FKNeck_M_scaleY3";
 	rename -uid "09F65270-45DE-03A3-006C-97B78EC71FE8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
-createNode animCurveTU -n "FKNeck_M_scaleX3";
-	rename -uid "D52E7E1D-4188-8F51-AC7F-B5A7A1693EC4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
-createNode animCurveTL -n "FKNeck_M_translateZ3";
-	rename -uid "3C7CED11-4FAB-5DFC-DA22-62AD0A819CB2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 33 1 53 1 70 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6818,11 +7069,35 @@ createNode animCurveTL -n "FKNeck_M_translateZ3";
 	setAttr -s 6 ".kox[4:5]"  1 1;
 	setAttr -s 6 ".koy[4:5]"  0 0;
 	setAttr -s 6 ".ots[4:5]"  18 0;
+createNode animCurveTU -n "FKNeck_M_scaleX3";
+	rename -uid "D52E7E1D-4188-8F51-AC7F-B5A7A1693EC4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 33 1 53 1 70 1;
+	setAttr -s 6 ".kit[4:5]"  1 18;
+	setAttr -s 6 ".kot[4:5]"  5 18;
+	setAttr -s 6 ".kix[4:5]"  1 1;
+	setAttr -s 6 ".kiy[4:5]"  0 0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 6 ".ots[4:5]"  18 0;
+createNode animCurveTL -n "FKNeck_M_translateZ3";
+	rename -uid "3C7CED11-4FAB-5DFC-DA22-62AD0A819CB2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 11 0 33 0 53 0 64 0 70 0;
+	setAttr -s 7 ".kit[5:6]"  1 18;
+	setAttr -s 7 ".kot[5:6]"  5 18;
+	setAttr -s 7 ".kix[5:6]"  1 1;
+	setAttr -s 7 ".kiy[5:6]"  0 0;
+	setAttr -s 7 ".kox[5:6]"  1 1;
+	setAttr -s 7 ".koy[5:6]"  0 0;
+	setAttr -s 7 ".ots[5:6]"  18 0;
 createNode animCurveTL -n "FKRoot_M_translateY3";
 	rename -uid "237CE274-433E-9892-C268-B08FC807E851";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6834,7 +7109,7 @@ createNode animCurveTU -n "FKRoot_M_scaleZ3";
 	rename -uid "58129052-4F50-C872-BD5F-83A5D5E47CA6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6846,7 +7121,7 @@ createNode animCurveTL -n "FKRoot_M_translateX3";
 	rename -uid "2CFEE15B-4C04-41B2-B171-D18E0E87D719";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6858,7 +7133,7 @@ createNode animCurveTA -n "FKRoot_M_rotateY3";
 	rename -uid "3C9D73B8-479D-CA61-5399-129F5485DCBE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6870,7 +7145,7 @@ createNode animCurveTA -n "FKRoot_M_rotateX3";
 	rename -uid "26B9CD2C-44E8-4CAC-6ED9-14B684900E1B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6884,7 +7159,7 @@ createNode animCurveTA -n "FKRoot_M_rotateZ3";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 13.208729146158403 19 -3.4007234471357526
 		 23 12.418192365046396 30 1.4717886270926661 35 5.5132251050078995 40 1.3958753368124093
-		 45 11.585304775130048 53 13.208729146158403 64 0 68 0;
+		 45 11.585304775130048 53 13.208729146158403 64 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -6896,7 +7171,7 @@ createNode animCurveTU -n "FKRoot_M_scaleY3";
 	rename -uid "29437586-43BB-B296-CD8F-408CFA2F5367";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6908,7 +7183,7 @@ createNode animCurveTU -n "FKRoot_M_scaleX3";
 	rename -uid "0F92DC60-4323-CA7F-60CA-5E9F14F82857";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6920,7 +7195,7 @@ createNode animCurveTL -n "FKRoot_M_translateZ3";
 	rename -uid "3D467DE7-4236-CFC5-B4BE-DDAEDC003192";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6932,7 +7207,7 @@ createNode animCurveTL -n "FKSpine1_M_translateY3";
 	rename -uid "5B249901-44D9-0061-CB87-589CA24B923E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6944,7 +7219,7 @@ createNode animCurveTU -n "FKSpine1_M_scaleZ3";
 	rename -uid "7907D418-410C-4F3E-101B-2A8984D99F83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -6956,7 +7231,7 @@ createNode animCurveTL -n "FKSpine1_M_translateX3";
 	rename -uid "08C13888-4594-B0BD-A89E-9188DBA81C4F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6968,7 +7243,7 @@ createNode animCurveTA -n "FKSpine1_M_rotateY3";
 	rename -uid "DD00FE04-4A6C-9116-CD4A-A298C17B55C5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6980,7 +7255,7 @@ createNode animCurveTA -n "FKSpine1_M_rotateX3";
 	rename -uid "A90174AF-4EA8-3818-8E28-E38DDF6440CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -6993,8 +7268,8 @@ createNode animCurveTA -n "FKSpine1_M_rotateZ3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 13.208729146158403 17 5.1094226801338376
-		 20 12.729169515365314 23 12.418192365046396 30 1.0938650069134328 35 5.5132251050078995
-		 45 11.585304775130048 53 13.208729146158403 64 0 68 0;
+		 20 12.729169515365314 23 12.418192365046396 30 9.1818537314757638 35 4.9459113998839959
+		 45 11.585304775130048 53 13.208729146158403 64 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -7006,7 +7281,7 @@ createNode animCurveTU -n "FKSpine1_M_scaleY3";
 	rename -uid "4102427D-4251-997E-640F-2CB4D88819A9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7018,7 +7293,7 @@ createNode animCurveTU -n "FKSpine1_M_scaleX3";
 	rename -uid "F90BC67E-4D0B-0A4A-CFF7-D7B04163D645";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7030,7 +7305,7 @@ createNode animCurveTL -n "FKSpine1_M_translateZ3";
 	rename -uid "CEB8BB29-46F1-FD77-22D1-028143D55D51";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7042,7 +7317,7 @@ createNode animCurveTL -n "FKSpine2_M_translateY3";
 	rename -uid "E9B05DBA-4A1F-C902-33C2-609150AD3887";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7054,7 +7329,7 @@ createNode animCurveTU -n "FKSpine2_M_scaleZ3";
 	rename -uid "6544D626-4026-1513-39AC-3D8CF1A8814C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7066,7 +7341,7 @@ createNode animCurveTL -n "FKSpine2_M_translateX3";
 	rename -uid "7A833C81-48C2-706B-0416-999F37E2DB58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7078,7 +7353,7 @@ createNode animCurveTA -n "FKSpine2_M_rotateY3";
 	rename -uid "D97777D7-44D7-37F5-9DA9-88811732E3C2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7090,7 +7365,7 @@ createNode animCurveTA -n "FKSpine2_M_rotateX3";
 	rename -uid "4F85F5D1-4352-9E78-471D-B4AB90AEA305";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7102,21 +7377,15 @@ createNode animCurveTA -n "FKSpine2_M_rotateZ3";
 	rename -uid "D1274318-424F-9DF6-0F55-1FBE0BEBCCA6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 0 4 -6.1598627370686074 7 6.8336693609919994
-		 11 13.208729146158403 20 12.500269124565003 23 8.997293606065746 35 1.7534637090767793
-		 53 13.208729146158403 64 0 68 0;
-	setAttr -s 10 ".kit[8:9]"  1 18;
-	setAttr -s 10 ".kot[8:9]"  5 18;
-	setAttr -s 10 ".kix[8:9]"  1 1;
-	setAttr -s 10 ".kiy[8:9]"  0 0;
-	setAttr -s 10 ".kox[8:9]"  1 1;
-	setAttr -s 10 ".koy[8:9]"  0 0;
-	setAttr -s 10 ".ots[8:9]"  18 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 4 -6.1598627370686074 7 6.8336693609919994
+		 11 13.208729146158403 20 12.500269124565003 23 8.997293606065746 28 7.3572655541343766
+		 35 5.8444290071373173 53 13.208729146158403 61 -5.195475183918643 64 4.1224795905669875
+		 76 0;
 createNode animCurveTU -n "FKSpine2_M_scaleY3";
 	rename -uid "7FD136D9-4368-BAD9-6908-BC901464777F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7128,7 +7397,7 @@ createNode animCurveTU -n "FKSpine2_M_scaleX3";
 	rename -uid "D484CB4C-4092-CFE6-D7FC-3D80E7D5CBDA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7140,7 +7409,7 @@ createNode animCurveTL -n "FKSpine2_M_translateZ3";
 	rename -uid "4816D140-4679-7657-9F28-3E8AE2FDF47B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7152,7 +7421,7 @@ createNode animCurveTL -n "FKSpine3_M_translateY3";
 	rename -uid "943CAEB8-4075-C46F-4917-E9A893BAA82D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7164,7 +7433,7 @@ createNode animCurveTU -n "FKSpine3_M_scaleZ3";
 	rename -uid "626262F1-4AF4-CFA5-4908-C9A8033EA2C9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7176,7 +7445,7 @@ createNode animCurveTL -n "FKSpine3_M_translateX3";
 	rename -uid "DC8F343C-4CA5-5E03-432D-1A9F3A6AF525";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7188,7 +7457,7 @@ createNode animCurveTA -n "FKSpine3_M_rotateY3";
 	rename -uid "FB3C7B9A-4731-671E-CAE5-5AB88D7D2266";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7200,7 +7469,7 @@ createNode animCurveTA -n "FKSpine3_M_rotateX3";
 	rename -uid "C60CC14A-42E5-25CE-11B1-00A805D07100";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7212,22 +7481,16 @@ createNode animCurveTA -n "FKSpine3_M_rotateZ3";
 	rename -uid "10138EE4-40C1-AD03-35F4-6D9073467696";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  0 0 4 -6.1598627370686074 7 5.9209670562142822
+	setAttr -s 16 ".ktv[0:15]"  0 0 4 -6.1598627370686074 7 5.9209670562142822
 		 11 13.208729146158403 17 15.642601958898974 20 7.6107723181801106 23 12.561169714472557
-		 30 25.88705811681907 35 19.575695617339949 40 6.0658769602813765 45 10.466962721430999
-		 53 13.208729146158403 65 0 68 0;
-	setAttr -s 14 ".kit[12:13]"  1 18;
-	setAttr -s 14 ".kot[12:13]"  5 18;
-	setAttr -s 14 ".kix[12:13]"  1 1;
-	setAttr -s 14 ".kiy[12:13]"  0 0;
-	setAttr -s 14 ".kox[12:13]"  1 1;
-	setAttr -s 14 ".koy[12:13]"  0 0;
-	setAttr -s 14 ".ots[12:13]"  18 0;
+		 28 14.946545557984413 30 16.643755518196745 35 15.354350195826605 40 6.0658769602813765
+		 45 10.466962721430999 53 13.208729146158403 61 -4.1825008809213857 66 4.084658676892059
+		 75 0;
 createNode animCurveTU -n "FKSpine3_M_scaleY3";
 	rename -uid "7C8EF16E-411B-10EB-4080-BB84D14A1571";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7239,7 +7502,7 @@ createNode animCurveTU -n "FKSpine3_M_scaleX3";
 	rename -uid "A7A03C58-48BC-A851-D2AA-9BB826C53F66";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 70 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7251,7 +7514,7 @@ createNode animCurveTL -n "FKSpine3_M_translateZ3";
 	rename -uid "54FD5A83-4A0D-83B7-C8BB-A5AD42DDEB49";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 65 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 66 0 70 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7263,7 +7526,7 @@ createNode animCurveTL -n "FKTail0_M_translateY2";
 	rename -uid "465CA016-4351-33E5-B6A9-7FAE0E97A33C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7275,7 +7538,7 @@ createNode animCurveTU -n "FKTail0_M_scaleZ2";
 	rename -uid "110BDE65-467F-DCF0-8299-A8B0C3F24B21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7287,7 +7550,7 @@ createNode animCurveTL -n "FKTail0_M_translateX2";
 	rename -uid "8B93D0DE-4313-8572-82EB-21AAAB8DD216";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7299,19 +7562,15 @@ createNode animCurveTA -n "FKTail0_M_rotateY2";
 	rename -uid "3C305E7B-4B48-A704-2E68-DA9E5E7E5D8C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 4 -5.5807457413249182 11 2.7041352681388018
+		 17 -2.9262276340693969 24 1.1535989905362762 30 -3.6828893375394287 37 2.3320065615141972
+		 44 -1.3508827760252327 51 2.7041352681388018 58 -2.2439916719242863 65 1.178407570977918
+		 78 0;
 createNode animCurveTA -n "FKTail0_M_rotateX2";
 	rename -uid "072B6596-4035-BFE0-373B-CB9E51501310";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7323,21 +7582,16 @@ createNode animCurveTA -n "FKTail0_M_rotateZ2";
 	rename -uid "BCA83350-4889-A34B-FB17-A38D996004F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 -7.5158056547683332 1 -16.770547391320122
-		 4 -15.430720723422789 8 -1.5970617652188066 11 -14.398072269677188 53 -14.398072269677188
-		 64 -7.5158056547683332 68 -7.5158056547683332;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  5 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
-	setAttr -s 8 ".ots[6:7]"  18 0;
+	setAttr -s 15 ".ktv[0:14]"  0 -7.5158056547683332 1 -16.770547391320122
+		 4 -15.430720723422789 8 -1.5970617652188066 11 -14.398072269677188 17 -8.3084291502393484
+		 20 -4.1747776595732686 25 -16.256246739403611 29 -10.555624251159903 35 -16.583159041741975
+		 45 5.1832985195641479 53 -11.327427971357311 64 3.8513231856934986 72 -11.327427971357311
+		 78 -7.5158056547683332;
 createNode animCurveTU -n "FKTail0_M_scaleY2";
 	rename -uid "69EF5B4B-4CFE-63E6-9109-EEB86FE607E7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7349,7 +7603,7 @@ createNode animCurveTU -n "FKTail0_M_scaleX2";
 	rename -uid "0EDA2D57-40D2-17E8-BD55-388888F7BEE0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7361,7 +7615,7 @@ createNode animCurveTL -n "FKTail0_M_translateZ2";
 	rename -uid "5BCFD727-4EB5-3F85-6C76-3C8E5F81C9E1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7373,7 +7627,7 @@ createNode animCurveTL -n "FKTail1_M_translateY2";
 	rename -uid "5CD23D5E-43C5-4E8E-E557-DDB8369D66B2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7385,7 +7639,7 @@ createNode animCurveTU -n "FKTail1_M_scaleZ2";
 	rename -uid "C3E414AC-4CA1-5954-3D8F-08A79E913B21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7397,7 +7651,7 @@ createNode animCurveTL -n "FKTail1_M_translateX2";
 	rename -uid "38544A9E-4647-03CF-219B-EDB3AD1A9C00";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7409,19 +7663,15 @@ createNode animCurveTA -n "FKTail1_M_rotateY2";
 	rename -uid "ED323C22-488F-301D-3BCE-F181D14001D4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 5 -5.5807457413249182 12 2.7041352681388018
+		 18 -2.9262276340693969 25 1.1535989905362762 31 -3.6828893375394287 38 2.3320065615141972
+		 45 -1.3508827760252327 52 2.7041352681388018 59 -2.2439916719242863 66 1.178407570977918
+		 78 0;
 createNode animCurveTA -n "FKTail1_M_rotateX2";
 	rename -uid "89043885-4665-8D87-A7C9-D69E9306FE3D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7429,25 +7679,11 @@ createNode animCurveTA -n "FKTail1_M_rotateX2";
 	setAttr -s 6 ".kox[4:5]"  1 1;
 	setAttr -s 6 ".koy[4:5]"  0 0;
 	setAttr -s 6 ".ots[4:5]"  18 0;
-createNode animCurveTA -n "FKTail1_M_rotateZ2";
-	rename -uid "7A686998-45C7-FF11-6EA8-01BDE636A827";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 -7.5158056547683332 2 -16.770547391320122
-		 5 -15.430720723422789 9 -1.5970617652188066 12 -14.398072269677188 53 -14.398072269677188
-		 64 -7.5158056547683332 68 -7.5158056547683332;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  5 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
-	setAttr -s 8 ".ots[6:7]"  18 0;
 createNode animCurveTU -n "FKTail1_M_scaleY2";
 	rename -uid "75DCDD71-4D4A-2273-6E01-77B2C659E1E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7459,7 +7695,7 @@ createNode animCurveTU -n "FKTail1_M_scaleX2";
 	rename -uid "1B4DBDA8-4C50-8043-1334-4D8CBF0CD4D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7471,7 +7707,7 @@ createNode animCurveTL -n "FKTail1_M_translateZ2";
 	rename -uid "198F60DA-40E5-A237-1AAE-03ADBB9E2735";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7483,7 +7719,7 @@ createNode animCurveTL -n "FKTail2_M_translateY2";
 	rename -uid "F4918D61-4EBC-9919-6E8D-8D82BED310F3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7495,7 +7731,7 @@ createNode animCurveTU -n "FKTail2_M_scaleZ2";
 	rename -uid "D255ADB2-4FBD-754F-E093-9BABEB9D44AD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7507,7 +7743,7 @@ createNode animCurveTL -n "FKTail2_M_translateX2";
 	rename -uid "B4ACF062-42E0-9D47-5A8D-BF923A1F2A57";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7519,19 +7755,15 @@ createNode animCurveTA -n "FKTail2_M_rotateY2";
 	rename -uid "CEE1C9F2-4AA1-B649-CF25-4AA907274F1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 5 -5.5807457413249182 12 2.7041352681388018
+		 18 -2.9262276340693969 25 1.1535989905362762 31 -3.6828893375394287 38 2.3320065615141972
+		 45 -1.3508827760252327 52 2.7041352681388018 59 -2.2439916719242863 66 1.178407570977918
+		 78 0;
 createNode animCurveTA -n "FKTail2_M_rotateX2";
 	rename -uid "C95B1776-4312-608A-309C-DE8CBB4D3001";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7539,25 +7771,11 @@ createNode animCurveTA -n "FKTail2_M_rotateX2";
 	setAttr -s 6 ".kox[4:5]"  1 1;
 	setAttr -s 6 ".koy[4:5]"  0 0;
 	setAttr -s 6 ".ots[4:5]"  18 0;
-createNode animCurveTA -n "FKTail2_M_rotateZ2";
-	rename -uid "9639BD94-455E-DB51-BE1A-BAB8077A8CC6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 -7.5158056547683332 2 -16.770547391320122
-		 5 -15.430720723422789 9 -1.5970617652188066 12 -14.398072269677188 53 -14.398072269677188
-		 64 -7.5158056547683332 68 -7.5158056547683332;
-	setAttr -s 8 ".kit[0:7]"  1 18 18 18 18 18 1 18;
-	setAttr -s 8 ".kot[0:7]"  1 18 18 18 18 18 5 18;
-	setAttr -s 8 ".kix[0:7]"  1 1 0.81864243829876693 1 1 1 1 1;
-	setAttr -s 8 ".kiy[0:7]"  0 0 0.57430354188029309 0 0 0 0 0;
-	setAttr -s 8 ".kox[0:7]"  1 1 0.81864243829876693 1 1 1 1 1;
-	setAttr -s 8 ".koy[0:7]"  0 0 0.57430354188029309 0 0 0 0 0;
-	setAttr -s 8 ".ots[6:7]"  18 0;
 createNode animCurveTU -n "FKTail2_M_scaleY2";
 	rename -uid "DFB66720-4971-7868-B240-58A114D3B6AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7569,7 +7787,7 @@ createNode animCurveTU -n "FKTail2_M_scaleX2";
 	rename -uid "7F2A1979-4AA9-9CB6-FA25-C88A33527169";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 5 1 12 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7581,7 +7799,7 @@ createNode animCurveTL -n "FKTail2_M_translateZ2";
 	rename -uid "91FEC0D3-4F99-9A40-96B6-E09DBBA15C2E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 5 0 12 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7593,7 +7811,7 @@ createNode animCurveTL -n "FKTail3_M_translateY2";
 	rename -uid "4568D3FC-44E7-BA27-6CC1-A7BCC7B9FF50";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7605,7 +7823,7 @@ createNode animCurveTU -n "FKTail3_M_scaleZ2";
 	rename -uid "BFA66CAA-419E-3247-55BD-CFA007C266A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 6 1 13 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 6 1 13 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7617,7 +7835,7 @@ createNode animCurveTL -n "FKTail3_M_translateX2";
 	rename -uid "C81EDF29-4C2C-3B7C-1CE7-3AA7757D0930";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7629,19 +7847,15 @@ createNode animCurveTA -n "FKTail3_M_rotateY2";
 	rename -uid "29187CEA-4E90-5120-0F91-099015A1D15A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 6 -5.5807457413249182 13 2.7041352681388018
+		 19 -2.9262276340693969 26 1.1535989905362762 32 -3.6828893375394287 39 2.3320065615141972
+		 46 -1.3508827760252327 53 2.7041352681388018 60 -2.2439916719242863 67 1.178407570977918
+		 78 0;
 createNode animCurveTA -n "FKTail3_M_rotateX2";
 	rename -uid "FACBBA60-43C2-F206-0897-43BDCB749023";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7649,25 +7863,11 @@ createNode animCurveTA -n "FKTail3_M_rotateX2";
 	setAttr -s 6 ".kox[4:5]"  1 1;
 	setAttr -s 6 ".koy[4:5]"  0 0;
 	setAttr -s 6 ".ots[4:5]"  18 0;
-createNode animCurveTA -n "FKTail3_M_rotateZ2";
-	rename -uid "277F64CF-47AA-E35C-E9EF-55A6F6ED5EB3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 -7.5158056547683332 3 -16.770547391320122
-		 6 -15.430720723422789 10 -1.5970617652188066 13 -14.398072269677188 53 -14.398072269677188
-		 64 -7.5158056547683332 68 -7.5158056547683332;
-	setAttr -s 8 ".kit[0:7]"  1 18 18 18 18 18 1 18;
-	setAttr -s 8 ".kot[0:7]"  1 18 18 18 18 18 5 18;
-	setAttr -s 8 ".kix[0:7]"  1 1 0.81864243829876693 1 1 1 1 1;
-	setAttr -s 8 ".kiy[0:7]"  0 0 0.57430354188029298 0 0 0 0 0;
-	setAttr -s 8 ".kox[0:7]"  1 1 0.81864243829876693 1 1 1 1 1;
-	setAttr -s 8 ".koy[0:7]"  0 0 0.57430354188029298 0 0 0 0 0;
-	setAttr -s 8 ".ots[6:7]"  18 0;
 createNode animCurveTU -n "FKTail3_M_scaleY2";
 	rename -uid "257A4091-4A10-531F-20DB-B0849129C5F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 6 1 13 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 6 1 13 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7679,7 +7879,7 @@ createNode animCurveTU -n "FKTail3_M_scaleX2";
 	rename -uid "BC567FD6-4312-2E95-0BB3-7CB718F193F5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 6 1 13 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 6 1 13 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7691,7 +7891,7 @@ createNode animCurveTL -n "FKTail3_M_translateZ2";
 	rename -uid "C19CF05D-41EE-0B87-3399-35807E5143B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 6 0 13 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7703,7 +7903,7 @@ createNode animCurveTL -n "FKTail4_M_translateY2";
 	rename -uid "E4673098-45ED-93C5-4268-5CA4962D4A08";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7715,7 +7915,7 @@ createNode animCurveTU -n "FKTail4_M_scaleZ2";
 	rename -uid "E9690150-481E-B48F-64D8-F1B95759CB36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 7 1 14 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 7 1 14 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7727,7 +7927,7 @@ createNode animCurveTL -n "FKTail4_M_translateX2";
 	rename -uid "3F78F684-445E-62AC-C343-C7958C2866D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7739,19 +7939,15 @@ createNode animCurveTA -n "FKTail4_M_rotateY2";
 	rename -uid "1ADEAACD-4FDB-29F5-0230-488E95FE5DB2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 7 -5.5807457413249182 14 2.7041352681388018
+		 20 -2.9262276340693969 27 1.1535989905362762 33 -3.6828893375394287 40 2.3320065615141972
+		 47 -1.3508827760252327 54 2.7041352681388018 61 -2.2439916719242863 68 1.178407570977918
+		 78 0;
 createNode animCurveTA -n "FKTail4_M_rotateX2";
 	rename -uid "AF2292D8-4B52-B52F-3A67-BC95EBD2558B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7759,25 +7955,11 @@ createNode animCurveTA -n "FKTail4_M_rotateX2";
 	setAttr -s 6 ".kox[4:5]"  1 1;
 	setAttr -s 6 ".koy[4:5]"  0 0;
 	setAttr -s 6 ".ots[4:5]"  18 0;
-createNode animCurveTA -n "FKTail4_M_rotateZ2";
-	rename -uid "333AD218-4AC8-D2D2-AAD8-348501E421B2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 -7.5158056547683332 4 -16.770547391320122
-		 7 -15.430720723422789 11 -1.5970617652188066 14 -14.398072269677188 53 -14.398072269677188
-		 64 -7.5158056547683332 68 -7.5158056547683332;
-	setAttr -s 8 ".kit[0:7]"  1 18 18 18 18 18 1 18;
-	setAttr -s 8 ".kot[0:7]"  1 18 18 18 18 18 5 18;
-	setAttr -s 8 ".kix[0:7]"  1 1 0.81864243829876693 1 1 1 1 1;
-	setAttr -s 8 ".kiy[0:7]"  0 0 0.57430354188029298 0 0 0 0 0;
-	setAttr -s 8 ".kox[0:7]"  1 1 0.81864243829876693 1 1 1 1 1;
-	setAttr -s 8 ".koy[0:7]"  0 0 0.57430354188029298 0 0 0 0 0;
-	setAttr -s 8 ".ots[6:7]"  18 0;
 createNode animCurveTU -n "FKTail4_M_scaleY2";
 	rename -uid "B32107A8-4489-69EA-17D1-E796B43827A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 7 1 14 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 7 1 14 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7789,7 +7971,7 @@ createNode animCurveTU -n "FKTail4_M_scaleX2";
 	rename -uid "E350054B-4368-F14F-CB83-F7AA11BCFD81";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 7 1 14 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 7 1 14 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7801,7 +7983,7 @@ createNode animCurveTL -n "FKTail4_M_translateZ2";
 	rename -uid "941A37D4-476D-BC93-8063-84BC3DC73317";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 7 0 14 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7813,7 +7995,7 @@ createNode animCurveTL -n "FKTail5_M_translateY2";
 	rename -uid "F21173B2-45A5-3EB4-4297-5BB2CC35A1AD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7825,7 +8007,7 @@ createNode animCurveTU -n "FKTail5_M_scaleZ2";
 	rename -uid "FBD1EB53-4153-BA34-A306-9996B70FA205";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 8 1 15 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 8 1 15 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7837,7 +8019,7 @@ createNode animCurveTL -n "FKTail5_M_translateX2";
 	rename -uid "082BDB0C-4317-3712-E13D-28A204480632";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7849,19 +8031,15 @@ createNode animCurveTA -n "FKTail5_M_rotateY2";
 	rename -uid "541F871B-42F5-E046-9011-16A432EA31B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 68 0;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  5 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
-	setAttr -s 6 ".ots[4:5]"  18 0;
+	setAttr -s 12 ".ktv[0:11]"  0 0 8 -5.5807457413249182 15 2.7041352681388018
+		 21 -2.9262276340693969 28 1.1535989905362762 34 -3.6828893375394287 41 2.3320065615141972
+		 48 -1.3508827760252327 55 2.7041352681388018 62 -2.2439916719242863 69 1.178407570977918
+		 78 0;
 createNode animCurveTA -n "FKTail5_M_rotateX2";
 	rename -uid "A325DD1C-4BFB-94D6-B3AE-E6A0AB82D43F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7869,25 +8047,11 @@ createNode animCurveTA -n "FKTail5_M_rotateX2";
 	setAttr -s 6 ".kox[4:5]"  1 1;
 	setAttr -s 6 ".koy[4:5]"  0 0;
 	setAttr -s 6 ".ots[4:5]"  18 0;
-createNode animCurveTA -n "FKTail5_M_rotateZ2";
-	rename -uid "9433EEE1-4372-0EA8-3D28-978BCE50D5A8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 -7.5158056547683332 5 -16.770547391320122
-		 8 -15.430720723422789 12 -1.5970617652188066 15 -14.398072269677188 53 -14.398072269677188
-		 64 -7.5158056547683332 68 -7.5158056547683332;
-	setAttr -s 8 ".kit[0:7]"  1 18 18 18 18 18 1 18;
-	setAttr -s 8 ".kot[0:7]"  1 18 18 18 18 18 5 18;
-	setAttr -s 8 ".kix[0:7]"  1 1 0.81864243829876693 1 1 1 1 1;
-	setAttr -s 8 ".kiy[0:7]"  0 0 0.57430354188029298 0 0 0 0 0;
-	setAttr -s 8 ".kox[0:7]"  1 1 0.81864243829876704 1 1 1 1 1;
-	setAttr -s 8 ".koy[0:7]"  0 0 0.57430354188029298 0 0 0 0 0;
-	setAttr -s 8 ".ots[6:7]"  18 0;
 createNode animCurveTU -n "FKTail5_M_scaleY2";
 	rename -uid "BD4CFAC4-4FAB-52B9-CA64-BFB6D63A9454";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 8 1 15 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 8 1 15 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7899,7 +8063,7 @@ createNode animCurveTU -n "FKTail5_M_scaleX2";
 	rename -uid "35082131-4D79-6F9F-59BD-A3B10C312427";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 1 8 1 15 1 53 1 64 1 68 1;
+	setAttr -s 6 ".ktv[0:5]"  0 1 8 1 15 1 53 1 64 1 78 1;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7911,7 +8075,7 @@ createNode animCurveTL -n "FKTail5_M_translateZ2";
 	rename -uid "F642E663-48FA-B6D9-695F-C1B6B04C73E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 8 0 15 0 53 0 64 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7924,7 +8088,7 @@ createNode animCurveTL -n "IKLegBack_L_translateY3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  0 0 3 0 6 3.1374924065397778 10 0 52 0 56 2.9659931468249816
-		 60 0 68 0;
+		 60 0 78 0;
 	setAttr -s 8 ".kit[6:7]"  1 18;
 	setAttr -s 8 ".kot[6:7]"  5 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -7936,7 +8100,7 @@ createNode animCurveTU -n "IKLegBack_L_scaleZ3";
 	rename -uid "86494E0A-452B-36EA-074F-92ABC0C9EF5B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7948,7 +8112,7 @@ createNode animCurveTU -n "IKLegBack_L_roll3";
 	rename -uid "523104CE-44AD-8BBF-B487-749D701F01ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7960,7 +8124,7 @@ createNode animCurveTU -n "IKLegBack_L_rollStartAngle3";
 	rename -uid "84120EE9-44A8-328B-6F69-55A403BA703A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 30 4 30 11 30 52 30 68 30;
+	setAttr -s 5 ".ktv[0:4]"  0 30 4 30 11 30 52 30 78 30;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7972,7 +8136,7 @@ createNode animCurveTA -n "IKLegBack_L_rotateZ3";
 	rename -uid "B4CA3508-4157-F793-29EB-D3857BCE3862";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 52 0 60 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 52 0 60 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -7984,7 +8148,7 @@ createNode animCurveTU -n "IKLegBack_L_Lenght7";
 	rename -uid "675DFA72-452E-A5AF-E96A-C0828FEA483C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -7996,7 +8160,7 @@ createNode animCurveTU -n "IKLegBack_L_rock3";
 	rename -uid "EA7BCCFB-4297-96C7-2739-4F9BB5B9171B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8009,7 +8173,7 @@ createNode animCurveTL -n "IKLegBack_L_translateZ3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 -4.0273746017936247 52 -4.0273746017936247
-		 60 0 68 0;
+		 60 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -8021,7 +8185,7 @@ createNode animCurveTU -n "IKLegBack_L_stretchy3";
 	rename -uid "20D32B31-4E27-AB23-3DA4-A7B899166EC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8033,7 +8197,7 @@ createNode animCurveTU -n "IKLegBack_L_Fatness7";
 	rename -uid "FFF6A0C9-4BB2-5FC0-AE89-08B9CEED93BF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8045,7 +8209,7 @@ createNode animCurveTU -n "IKLegBack_L_Fatness8";
 	rename -uid "52BACEBB-4A88-39D4-D628-A4B4D7084C20";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8057,7 +8221,7 @@ createNode animCurveTA -n "IKLegBack_L_rotateX3";
 	rename -uid "894AB71D-474A-0C0D-0509-82B65C5BC67D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 52 0 60 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 52 0 60 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -8069,7 +8233,7 @@ createNode animCurveTU -n "IKLegBack_L_followRoot3";
 	rename -uid "7EF8F58E-417A-BE53-6C0C-F897CD8A5DBC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8081,7 +8245,7 @@ createNode animCurveTU -n "IKLegBack_L_swivel3";
 	rename -uid "5F76B962-4674-358B-B099-04B79D9B6A85";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8094,7 +8258,7 @@ createNode animCurveTL -n "IKLegBack_L_translateX3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 7.2477957739465602 52 7.2477957739465602
-		 60 0 68 0;
+		 60 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -8106,7 +8270,7 @@ createNode animCurveTU -n "IKLegBack_L_volume3";
 	rename -uid "5F5EDFD7-4701-93E7-C16A-D6A1CD238638";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 68 10;
+	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 78 10;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8118,7 +8282,7 @@ createNode animCurveTU -n "IKLegBack_L_antiPop3";
 	rename -uid "E5CE3E25-4C22-3C9B-37BE-84AEEB98D75F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 68 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 52 0 78 0;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8130,7 +8294,7 @@ createNode animCurveTU -n "IKLegBack_L_scaleY3";
 	rename -uid "3B143848-48B3-DFD2-097F-B8BC8C1EDA1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8142,7 +8306,7 @@ createNode animCurveTU -n "IKLegBack_L_scaleX3";
 	rename -uid "41D943FB-4B1D-4E88-BD26-DFBD8D1E1F58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8154,7 +8318,7 @@ createNode animCurveTU -n "IKLegBack_L_toesAim3";
 	rename -uid "EAA01A5C-49AB-573E-8135-978329740F27";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 68 10;
+	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 78 10;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8166,7 +8330,7 @@ createNode animCurveTU -n "IKLegBack_L_liftRoll3";
 	rename -uid "521B91F6-4F41-E812-491E-D5935D9A5B85";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 68 10;
+	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 78 10;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8178,7 +8342,7 @@ createNode animCurveTU -n "IKLegBack_L_rollEndAngle3";
 	rename -uid "08D1FAA8-43C1-2F6A-9F97-CCA446903E9A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 60 4 60 11 60 52 60 68 60;
+	setAttr -s 5 ".ktv[0:4]"  0 60 4 60 11 60 52 60 78 60;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8190,7 +8354,7 @@ createNode animCurveTA -n "IKLegBack_L_rotateY3";
 	rename -uid "292D5E1C-43C0-355E-8961-6E94966F0E03";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 52 0 60 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 52 0 60 0 78 0;
 	setAttr -s 6 ".kit[4:5]"  1 18;
 	setAttr -s 6 ".kot[4:5]"  5 18;
 	setAttr -s 6 ".kix[4:5]"  1 1;
@@ -8202,7 +8366,7 @@ createNode animCurveTU -n "IKLegBack_L_Lenght8";
 	rename -uid "1D034622-4605-4371-E3D5-39B2B907463E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 68 1;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 52 1 78 1;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8214,7 +8378,7 @@ createNode animCurveTU -n "IKLegBack_L_followMain3";
 	rename -uid "5B969F2D-46F3-05F7-1EF5-5194FDAF19A8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 68 10;
+	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 52 10 78 10;
 	setAttr -s 5 ".kit[3:4]"  1 18;
 	setAttr -s 5 ".kot[3:4]"  5 18;
 	setAttr -s 5 ".kix[3:4]"  1 1;
@@ -8226,264 +8390,264 @@ createNode animCurveTL -n "IKLegBack_R_translateY3";
 	rename -uid "B54A140A-4333-B9A3-8795-5484FBA82B93";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 4 0 7 3.1374924065397778 10 0 57 0 63 2.9659931468249816
-		 68 0;
+	setAttr -s 8 ".ktv[0:7]"  0 0 4 0 7 3.1374924065397778 10 0 57 0 61 2.9659931468249816
+		 65 0 78 0;
 createNode animCurveTU -n "IKLegBack_R_scaleZ3";
 	rename -uid "E7B87332-4F0C-3B1F-CE7D-028256228357";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 57 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 57 1 65 1 78 1;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_roll3";
 	rename -uid "0E10A5AE-462B-1EA9-D0A7-099CBA6D61BD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_rollStartAngle3";
 	rename -uid "2A90CC67-4AA8-3F03-310C-B8BFCFCE5537";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 30 4 30 11 30 57 30 68 30;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 30 4 30 11 30 57 30 65 30 78 30;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTA -n "IKLegBack_R_rotateZ3";
 	rename -uid "2B371514-46DA-8DA8-F25C-4796A3D69581";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
 createNode animCurveTU -n "IKLegBack_R_Lenght7";
 	rename -uid "2744E263-4A5A-5AE8-9727-91A3FFAF4E91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 57 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 57 1 65 1 78 1;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_rock3";
 	rename -uid "43976C55-42A5-2F12-7A01-2FB9204F1C00";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTL -n "IKLegBack_R_translateZ3";
 	rename -uid "29777E5F-4B34-02FB-EE35-EAB1C378307B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 -1.9575443539910855 57 -1.9575443539910855
-		 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 -1.9575443539910855 57 -1.9575443539910855
+		 65 0 78 0;
 createNode animCurveTU -n "IKLegBack_R_stretchy3";
 	rename -uid "FA6C2237-4F9E-3F13-E015-209DFF3B5894";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_Fatness7";
 	rename -uid "B7E0D0A8-47A7-8BD9-4B9E-719F07FEE6F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_Fatness8";
 	rename -uid "0EBC43AB-47F9-08DE-E5C7-6A90DF8DC97F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTA -n "IKLegBack_R_rotateX3";
 	rename -uid "C250E6BD-4538-A300-1915-268CF6C200EA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
 createNode animCurveTU -n "IKLegBack_R_followRoot3";
 	rename -uid "D1A01580-44CF-C8A2-44A1-D79C5828C8D7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_swivel3";
 	rename -uid "1CF916F4-474E-E0D3-40B4-7BB178B59CF8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTL -n "IKLegBack_R_translateX3";
 	rename -uid "4171FD84-434B-7F86-739B-41B1987592C7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 -8.5303662903796038 57 -8.5303662903796038
-		 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 -8.5303662903796038 57 -8.5303662903796038
+		 65 0 78 0;
 createNode animCurveTU -n "IKLegBack_R_volume3";
 	rename -uid "33617925-4B01-50D5-5F98-78858583DF6F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 57 10 68 10;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 10 4 10 11 10 57 10 65 10 78 10;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_antiPop3";
 	rename -uid "E3E2DD7D-423C-6704-F1FD-B383F8CF371B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 0 57 0 68 0;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 0 57 0 65 0 78 0;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_scaleY3";
 	rename -uid "C95B5362-4E1B-35D6-A0E7-788B2C78BE19";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 57 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 57 1 65 1 78 1;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_scaleX3";
 	rename -uid "81E012A9-472C-67EB-7B7D-86B98D8A42C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 57 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 57 1 65 1 78 1;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_toesAim3";
 	rename -uid "A1F9B086-4172-ED17-311A-4D876D97BB2C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 57 10 68 10;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 10 4 10 11 10 57 10 65 10 78 10;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_liftRoll3";
 	rename -uid "25F6FC40-4647-D071-8D7B-4FB63BE92144";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 57 10 68 10;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 10 4 10 11 10 57 10 65 10 78 10;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_rollEndAngle3";
 	rename -uid "C75BA0BE-4F4B-A463-03E7-18AF44F907D6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 60 4 60 11 60 57 60 68 60;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 60 4 60 11 60 57 60 65 60 78 60;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTA -n "IKLegBack_R_rotateY3";
 	rename -uid "3620E072-47E2-F5C1-EFA3-A6AEDA24B1B3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 4 0 11 -6.2621770788536884 57 -6.2621770788536884
-		 68 0;
+	setAttr -s 6 ".ktv[0:5]"  0 0 4 0 11 -6.2621770788536884 57 -6.2621770788536884
+		 65 0 78 0;
 createNode animCurveTU -n "IKLegBack_R_Lenght8";
 	rename -uid "7676A3C9-4E4D-0500-135D-DA8C74192925";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 57 1 68 1;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 1 4 1 11 1 57 1 65 1 78 1;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTU -n "IKLegBack_R_followMain3";
 	rename -uid "DC379B53-410D-AD2E-E167-0297EBDF3F61";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 10 4 10 11 10 57 10 68 10;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  5 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
-	setAttr -s 5 ".ots[3:4]"  18 0;
+	setAttr -s 6 ".ktv[0:5]"  0 10 4 10 11 10 57 10 65 10 78 10;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[3:5]"  5 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[3:5]"  1 1 1;
+	setAttr -s 6 ".koy[3:5]"  0 0 0;
+	setAttr -s 6 ".ots[3:5]"  18 0 0;
 createNode animCurveTL -n "IKLegFront_L_translateY3";
 	rename -uid "2D6C053A-49DF-FFF5-A035-E6BFC7A8EE10";
 	setAttr ".tan" 18;
@@ -8491,7 +8655,7 @@ createNode animCurveTL -n "IKLegFront_L_translateY3";
 	setAttr -s 14 ".ktv[0:13]"  0 0 4 0 7 3.1374933217348042 10 1.8303900528082693e-06
 		 16 1.8303900528082693e-06 20 1.4883308051163617 23 1.8303900528082693e-06 36 1.8303900528082693e-06
 		 40 1.4883308051163617 43 1.8303900528082693e-06 57 1.8303900528082693e-06 61 3.1261276212960993
-		 65 0 68 0;
+		 66 0 78 0;
 	setAttr -s 14 ".kit[12:13]"  1 18;
 	setAttr -s 14 ".kot[12:13]"  5 18;
 	setAttr -s 14 ".kix[12:13]"  1 1;
@@ -8504,7 +8668,7 @@ createNode animCurveTU -n "IKLegFront_L_scaleZ3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 16 1 20 1 23 1 36 1 40 1 43 1
-		 57 1 68 1;
+		 57 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8517,7 +8681,7 @@ createNode animCurveTU -n "IKLegFront_L_roll3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8530,7 +8694,7 @@ createNode animCurveTU -n "IKLegFront_L_rollStartAngle3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 30 4 30 11 30 16 30 20 30 23 30 36 30
-		 40 30 43 30 57 30 68 30;
+		 40 30 43 30 57 30 78 30;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8543,7 +8707,7 @@ createNode animCurveTA -n "IKLegFront_L_rotateZ3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 0 16 0 20 -3.5242923652409042
-		 23 0 36 0 40 -3.5242923652409042 43 0 57 0 65 0 68 0;
+		 23 0 36 0 40 -3.5242923652409042 43 0 57 0 66 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -8556,7 +8720,7 @@ createNode animCurveTU -n "IKLegFront_L_Lenght7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 16 1 20 1 23 1 36 1 40 1 43 1
-		 57 1 68 1;
+		 57 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8569,7 +8733,7 @@ createNode animCurveTU -n "IKLegFront_L_rock3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8583,7 +8747,7 @@ createNode animCurveTL -n "IKLegFront_L_translateZ3";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 1.2271602992742341e-06 16 1.2271602992742341e-06
 		 20 1.2271602992742341e-06 23 1.7485435655208643 36 1.7485435655208643 40 1.2271602992742341e-06
-		 43 1.2271602992742341e-06 57 1.2271602992742341e-06 65 0 68 0;
+		 43 1.2271602992742341e-06 57 1.2271602992742341e-06 66 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -8596,7 +8760,7 @@ createNode animCurveTU -n "IKLegFront_L_stretchy3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8609,7 +8773,7 @@ createNode animCurveTU -n "IKLegFront_L_Fatness7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8622,7 +8786,7 @@ createNode animCurveTU -n "IKLegFront_L_Fatness8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8635,7 +8799,7 @@ createNode animCurveTA -n "IKLegFront_L_rotateX3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 0 16 0 20 5.3281678382450703
-		 23 0 36 0 40 5.3281678382450703 43 0 57 0 65 0 68 0;
+		 23 0 36 0 40 5.3281678382450703 43 0 57 0 66 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -8648,7 +8812,7 @@ createNode animCurveTU -n "IKLegFront_L_followRoot3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8661,7 +8825,7 @@ createNode animCurveTU -n "IKLegFront_L_swivel3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8675,7 +8839,7 @@ createNode animCurveTL -n "IKLegFront_L_translateX3";
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 10.964923422837748 16 10.964923422837748
 		 23 12.850201858943572 36 12.850201858943572 40 10.964923422837748 43 10.964923422837748
-		 57 10.964923422837748 65 0 68 0;
+		 57 10.964923422837748 66 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8688,7 +8852,7 @@ createNode animCurveTU -n "IKLegFront_L_volume3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 16 10 20 10 23 10 36 10
-		 40 10 43 10 57 10 68 10;
+		 40 10 43 10 57 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8701,7 +8865,7 @@ createNode animCurveTU -n "IKLegFront_L_antiPop3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8714,7 +8878,7 @@ createNode animCurveTU -n "IKLegFront_L_scaleY3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 16 1 20 1 23 1 36 1 40 1 43 1
-		 57 1 68 1;
+		 57 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8727,7 +8891,7 @@ createNode animCurveTU -n "IKLegFront_L_scaleX3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 16 1 20 1 23 1 36 1 40 1 43 1
-		 57 1 68 1;
+		 57 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8740,7 +8904,7 @@ createNode animCurveTU -n "IKLegFront_L_toesAim3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 16 10 20 10 23 10 36 10
-		 40 10 43 10 57 10 68 10;
+		 40 10 43 10 57 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8753,7 +8917,7 @@ createNode animCurveTU -n "IKLegFront_L_liftRoll3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 16 10 20 10 23 10 36 10
-		 40 10 43 10 57 10 68 10;
+		 40 10 43 10 57 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8766,7 +8930,7 @@ createNode animCurveTU -n "IKLegFront_L_rollEndAngle3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 60 4 60 11 60 16 60 20 60 23 60 36 60
-		 40 60 43 60 53 60 68 60;
+		 40 60 43 60 53 60 78 60;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8780,7 +8944,7 @@ createNode animCurveTA -n "IKLegFront_L_rotateY3";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 28.946317892045379 16 28.946317892045379
 		 20 31.01958130065648 23 36.1485747561455 36 36.1485747561455 40 31.01958130065648
-		 43 28.946317892045379 57 28.946317892045379 65 0 68 0;
+		 43 28.946317892045379 57 28.946317892045379 66 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -8793,7 +8957,7 @@ createNode animCurveTU -n "IKLegFront_L_followChest3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 16 0 20 0 23 0 36 0 40 0 43 0
-		 57 0 68 0;
+		 57 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8806,7 +8970,7 @@ createNode animCurveTU -n "IKLegFront_L_Lenght8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 16 1 20 1 23 1 36 1 40 1 43 1
-		 57 1 68 1;
+		 57 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8819,7 +8983,7 @@ createNode animCurveTU -n "IKLegFront_L_legAim3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 16 10 20 10 23 10 36 10
-		 40 10 43 10 57 10 68 10;
+		 40 10 43 10 57 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8832,7 +8996,7 @@ createNode animCurveTU -n "IKLegFront_L_followMain3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 16 10 20 10 23 10 36 10
-		 40 10 43 10 57 10 68 10;
+		 40 10 43 10 57 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8846,7 +9010,7 @@ createNode animCurveTL -n "IKLegFront_R_translateY3";
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  0 0 5 0 8 3.137493192017629 12 1.5709557023746885e-06
 		 15 1.5709557023746885e-06 19 2.3509149843855353 22 0 33 0 37 2.3509149843855353 40 1.5709557023746885e-06
-		 53 1.5709557023746885e-06 57 3.1261274439483993 61 0 68 0;
+		 53 1.5709557023746885e-06 57 3.1261274439483993 61 0 78 0;
 	setAttr -s 14 ".kit[12:13]"  1 18;
 	setAttr -s 14 ".kot[12:13]"  5 18;
 	setAttr -s 14 ".kix[12:13]"  1 1;
@@ -8859,7 +9023,7 @@ createNode animCurveTU -n "IKLegFront_R_scaleZ3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 15 1 19 1 22 1 33 1 37 1 40 1
-		 53 1 68 1;
+		 53 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8872,7 +9036,7 @@ createNode animCurveTU -n "IKLegFront_R_roll3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8885,7 +9049,7 @@ createNode animCurveTU -n "IKLegFront_R_rollStartAngle3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 30 4 30 11 30 15 30 19 30 22 30 33 30
-		 37 30 40 30 53 30 68 30;
+		 37 30 40 30 53 30 78 30;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8898,7 +9062,7 @@ createNode animCurveTA -n "IKLegFront_R_rotateZ3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 61 0 68 0;
+		 53 0 61 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -8911,7 +9075,7 @@ createNode animCurveTU -n "IKLegFront_R_Lenght7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 15 1 19 1 22 1 33 1 37 1 40 1
-		 53 1 68 1;
+		 53 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8924,7 +9088,7 @@ createNode animCurveTU -n "IKLegFront_R_rock3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8938,7 +9102,7 @@ createNode animCurveTL -n "IKLegFront_R_translateZ3";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 7.0474769219806288e-07 15 7.0474769219806288e-07
 		 19 0.51115494244954829 22 0.84291370249642616 33 0.84291370249642616 37 0.33175946479456975
-		 40 7.0474769219806288e-07 53 7.0474769219806288e-07 61 0 68 0;
+		 40 7.0474769219806288e-07 53 7.0474769219806288e-07 61 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -8951,7 +9115,7 @@ createNode animCurveTU -n "IKLegFront_R_stretchy3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8964,7 +9128,7 @@ createNode animCurveTU -n "IKLegFront_R_Fatness7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8977,7 +9141,7 @@ createNode animCurveTU -n "IKLegFront_R_Fatness8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -8990,7 +9154,7 @@ createNode animCurveTA -n "IKLegFront_R_rotateX3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 0 15 0 19 11.986073370882718
-		 22 0 33 0 37 11.986073370882718 40 0 53 0 61 0 68 0;
+		 22 0 33 0 37 11.986073370882718 40 0 53 0 61 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -9003,7 +9167,7 @@ createNode animCurveTU -n "IKLegFront_R_followRoot3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9016,7 +9180,7 @@ createNode animCurveTU -n "IKLegFront_R_swivel3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9030,7 +9194,7 @@ createNode animCurveTL -n "IKLegFront_R_translateX3";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 -12.695153551715167 15 -12.695153551715167
 		 19 -13.731301062322434 22 -14.403800648533879 33 -14.403800648533879 37 -13.367653137926613
-		 40 -12.695153551715167 53 -12.695153551715167 61 0 68 0;
+		 40 -12.695153551715167 53 -12.695153551715167 61 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -9043,7 +9207,7 @@ createNode animCurveTU -n "IKLegFront_R_volume3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 15 10 19 10 22 10 33 10
-		 37 10 40 10 53 10 68 10;
+		 37 10 40 10 53 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9056,7 +9220,7 @@ createNode animCurveTU -n "IKLegFront_R_antiPop3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9069,7 +9233,7 @@ createNode animCurveTU -n "IKLegFront_R_scaleY3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 15 1 19 1 22 1 33 1 37 1 40 1
-		 53 1 68 1;
+		 53 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9082,7 +9246,7 @@ createNode animCurveTU -n "IKLegFront_R_scaleX3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 15 1 19 1 22 1 33 1 37 1 40 1
-		 53 1 68 1;
+		 53 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9095,7 +9259,7 @@ createNode animCurveTU -n "IKLegFront_R_toesAim3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 15 10 19 10 22 10 33 10
-		 37 10 40 10 53 10 68 10;
+		 37 10 40 10 53 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9108,7 +9272,7 @@ createNode animCurveTU -n "IKLegFront_R_liftRoll3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 15 10 19 10 22 10 33 10
-		 37 10 40 10 53 10 68 10;
+		 37 10 40 10 53 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9121,7 +9285,7 @@ createNode animCurveTU -n "IKLegFront_R_rollEndAngle3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 60 4 60 11 60 15 60 19 60 22 60 33 60
-		 37 60 40 60 53 60 68 60;
+		 37 60 40 60 53 60 78 60;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9135,7 +9299,7 @@ createNode animCurveTA -n "IKLegFront_R_rotateY3";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 4 0 11 -14.332408176637623 15 -14.332408176637623
 		 19 -19.755575001698588 22 -23.100206144584398 33 -23.100206144584398 37 -19.755575001698588
-		 40 -14.332408176637623 53 -14.332408176637623 61 0 68 0;
+		 40 -14.332408176637623 53 -14.332408176637623 61 0 78 0;
 	setAttr -s 12 ".kit[10:11]"  1 18;
 	setAttr -s 12 ".kot[10:11]"  5 18;
 	setAttr -s 12 ".kix[10:11]"  1 1;
@@ -9148,7 +9312,7 @@ createNode animCurveTU -n "IKLegFront_R_followChest3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 0 15 0 19 0 22 0 33 0 37 0 40 0
-		 53 0 68 0;
+		 53 0 78 0;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9161,7 +9325,7 @@ createNode animCurveTU -n "IKLegFront_R_Lenght8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 11 1 15 1 19 1 22 1 33 1 37 1 40 1
-		 53 1 68 1;
+		 53 1 78 1;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9174,7 +9338,7 @@ createNode animCurveTU -n "IKLegFront_R_legAim3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 15 10 19 10 22 10 33 10
-		 37 10 40 10 53 10 68 10;
+		 37 10 40 10 53 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9187,7 +9351,7 @@ createNode animCurveTU -n "IKLegFront_R_followMain3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 10 4 10 11 10 15 10 19 10 22 10 33 10
-		 37 10 40 10 53 10 68 10;
+		 37 10 40 10 53 10 78 10;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  5 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -9199,152 +9363,910 @@ createNode animCurveTL -n "RootX_M_translateY3";
 	rename -uid "4944A4D6-42D8-4EC9-907C-54AD4521A75E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 0 4 -4.4288021109517004 7 1.1074505943688431
+	setAttr -s 17 ".ktv[0:16]"  0 0 4 -4.4288021109517004 7 1.1074505943688431
 		 11 -4.5198491033042174 16 -2.9148044055470237 20 -4.3450255070195327 23 -6.5579017720804629
-		 35 -4.3564560577677298 45 -7.815323143124445 53 -4.5198491033042174 67 0 68 0;
-	setAttr -s 12 ".kit[10:11]"  1 18;
-	setAttr -s 12 ".kot[10:11]"  5 18;
-	setAttr -s 12 ".kix[10:11]"  1 1;
-	setAttr -s 12 ".kiy[10:11]"  0 0;
-	setAttr -s 12 ".kox[10:11]"  1 1;
-	setAttr -s 12 ".koy[10:11]"  0 0;
-	setAttr -s 12 ".ots[10:11]"  18 0;
+		 28 -4.9496867881221398 35 -7.2286980448885743 40 -6.3144958257252082 45 -7.815323143124445
+		 53 -4.5198491033042174 61 -3.639262562525567 67 -0.12083518453064901 69 -0.31889844051050181
+		 72 -0.8839300074943155 78 0;
+	setAttr -s 17 ".ktl[0:16]" no no no no no no no no no no no no yes 
+		no yes yes no;
 createNode animCurveTL -n "RootX_M_translateX3";
 	rename -uid "B59A9B86-490B-F8E6-DBF3-46AFD2863A84";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 0 4 0 11 -0.50876324488150004 16 -1.6087765293848362
-		 28 -0.63413853403342113 35 1.6572398288691419 45 0.24627449904674847 53 -0.50876324488150004
-		 67 0 68 0;
-	setAttr -s 10 ".kit[8:9]"  1 18;
-	setAttr -s 10 ".kot[8:9]"  5 18;
-	setAttr -s 10 ".kix[8:9]"  1 1;
-	setAttr -s 10 ".kiy[8:9]"  0 0;
-	setAttr -s 10 ".kox[8:9]"  1 1;
-	setAttr -s 10 ".koy[8:9]"  0 0;
-	setAttr -s 10 ".ots[8:9]"  18 0;
+	setAttr -s 11 ".ktv[0:10]"  0 0 4 0 11 -0.50876324488150004 16 -1.6087765293848362
+		 28 -0.63064989860575504 35 1.3941294714418904 40 0.95228510624658924 45 0.24627449904674847
+		 53 -0.50876324488150004 69 0 78 0;
+	setAttr -s 11 ".ktl[0:10]" no no no no no no no no no no no;
 createNode animCurveTA -n "RootX_M_rotateY3";
 	rename -uid "B8CAE159-493B-B59D-97BB-D99A6CCFFEF4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 0 4 0 11 0 16 2.8940250152043174 28 -0.30257305054326405
-		 35 -3.5233039445365986 45 0.27111286660974837 53 0 67 0 68 0;
-	setAttr -s 10 ".kit[8:9]"  1 18;
-	setAttr -s 10 ".kot[8:9]"  5 18;
-	setAttr -s 10 ".kix[8:9]"  1 1;
-	setAttr -s 10 ".kiy[8:9]"  0 0;
-	setAttr -s 10 ".kox[8:9]"  1 1;
-	setAttr -s 10 ".koy[8:9]"  0 0;
-	setAttr -s 10 ".ots[8:9]"  18 0;
+		 35 -3.5233039445365986 45 0.27111286660974837 53 0 69 0 78 0;
+	setAttr -s 10 ".ktl[0:9]" no no no no no no no no no no;
 createNode animCurveTA -n "RootX_M_rotateX3";
 	rename -uid "E2B47E0F-4077-35D3-FA8D-97B3425C8C65";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 0 4 -3.9098062815780725 7 -10.673822743944202
+	setAttr -s 15 ".ktv[0:14]"  0 0 4 -3.9098062815780725 7 -10.673822743944202
 		 11 -2.1737953082444017 16 1.1456599802102883 23 3.0495828656825088 28 3.0480634672073847
-		 35 -0.0063136880316639835 45 0.0011251860817228366 53 -2.1737953082444017 67 0 68 0;
-	setAttr -s 12 ".kit[10:11]"  1 18;
-	setAttr -s 12 ".kot[10:11]"  5 18;
-	setAttr -s 12 ".kix[10:11]"  1 1;
-	setAttr -s 12 ".kiy[10:11]"  0 0;
-	setAttr -s 12 ".kox[10:11]"  1 1;
-	setAttr -s 12 ".koy[10:11]"  0 0;
-	setAttr -s 12 ".ots[10:11]"  18 0;
+		 35 6.8236793887320966 45 0.0011251860817228366 53 -2.1737953082444017 61 -7.3711312471606476
+		 67 0.70653955707055471 69 0.91114896176616156 73 -0.46070597889144749 78 0;
+	setAttr -s 15 ".ktl[0:14]" no no no no no no no no no no yes no yes 
+		yes no;
 createNode animCurveTA -n "RootX_M_rotateZ3";
 	rename -uid "541FE95A-4C59-EFD6-9B8A-BE8864AD882A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  0 0 4 0 11 0 16 0.057924581824387061 28 -0.1123777493427766
-		 35 -0.11220024929447277 45 -0.11237211622663663 53 0 67 0 68 0;
-	setAttr -s 10 ".kit[8:9]"  1 18;
-	setAttr -s 10 ".kot[8:9]"  5 18;
-	setAttr -s 10 ".kix[8:9]"  1 1;
-	setAttr -s 10 ".kiy[8:9]"  0 0;
-	setAttr -s 10 ".kox[8:9]"  1 1;
-	setAttr -s 10 ".koy[8:9]"  0 0;
-	setAttr -s 10 ".ots[8:9]"  18 0;
+		 35 -0.11220024929447277 45 -0.11237211622663663 53 0 69 0 78 0;
+	setAttr -s 10 ".ktl[0:9]" no no no no no no no no no no;
 createNode animCurveTU -n "RootX_M_visibility3";
 	rename -uid "89350FDC-4840-1B22-B196-C1A7E12B1F0D";
-	setAttr ".tan" 5;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 68 1;
-	setAttr -s 5 ".kit[0:4]"  9 9 9 1 18;
-	setAttr -s 5 ".kot[4]"  18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[0:4]"  0 0 0 1 1;
-	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
-	setAttr -s 5 ".ots[0:4]"  9 9 18 18 0;
+	setAttr -s 5 ".ktv[0:4]"  0 1 4 1 11 1 53 1 78 1;
+	setAttr -s 5 ".ktl[0:4]" no no no no no;
 createNode animCurveTL -n "RootX_M_translateZ3";
 	rename -uid "E49462D2-435E-FB3A-C08A-6D8BF46F2538";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  0 0 3 -4.2535679522598304 6 -1.2688202859389464
+	setAttr -s 18 ".ktv[0:17]"  0 0 3 -4.2535679522598304 6 -1.2688202859389464
 		 10 -0.87965554485474051 15 -3.7356785967008079 22 1.470458599779727 27 -0.56726146754832385
-		 34 -5.5548394626503157 39 -0.16781645720868843 44 1.9007619656428432 52 -0.87965554485474051
-		 66 0 68 0;
-	setAttr -s 13 ".kit[11:12]"  1 18;
-	setAttr -s 13 ".kot[11:12]"  5 18;
-	setAttr -s 13 ".kix[11:12]"  1 1;
-	setAttr -s 13 ".kiy[11:12]"  0 0;
-	setAttr -s 13 ".kox[11:12]"  1 1;
-	setAttr -s 13 ".koy[11:12]"  0 0;
-	setAttr -s 13 ".ots[11:12]"  18 0;
+		 31 -1.7900971764788558 35 -0.93211157485428175 39 -0.16781645720868843 40 0.34890108555575344
+		 44 1.9007619656428432 52 -0.87965554485474051 61 0.014505876586143883 67 0.4476437969782765
+		 69 0.28336996133270342 74 -0.14157912436904674 78 0;
+	setAttr -s 18 ".ktl[0:17]" no no no no no no no no no no no no no yes 
+		no yes yes no;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "3719F132-40AA-BDF1-6C6B-F0B0B239B6F0";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 975\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|GameView\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
+		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 875\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
-		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
-		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 975\n            -height 498\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
-		+ "            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n"
-		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
-		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 975\n            -height 498\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
-		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1957\n            -height 1044\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
-		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
-		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
-		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n"
-		+ "            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n"
-		+ "            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
-		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showRowButtons 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n"
-		+ "                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
-		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
-		+ "                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
-		+ "                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            cameraSequencer -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -showThumbnail 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -showNamespace 1\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n"
-		+ "                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n"
-		+ "                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n"
-		+ "                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
-		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n                $editorName; };\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.png\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1957\\n    -height 1044\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1957\\n    -height 1044\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
+		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 875\n            -height 498\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n"
+		+ "            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n"
+		+ "            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n"
+		+ "            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 875\n            -height 498\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
+		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1757\n            -height 1044\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
+		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
+		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
+		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
+		+ "            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
+		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.25\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showRowButtons 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n"
+		+ "                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n"
+		+ "                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
+		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Sequencer\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            cameraSequencer -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -showThumbnail 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
+		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -showNamespace 1\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
+		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
+		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
+		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
+		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n"
+		+ "\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.png\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1757\\n    -height 1044\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1757\\n    -height 1044\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
+createNode animCurveTU -n "FKEar1_R_scaleX";
+	rename -uid "032FDB5B-4011-798D-BDDF-68A7A25447F4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 1 69 1 75 1;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTA -n "FKEar1_R_rotateX";
+	rename -uid "2C45E43B-4502-D962-EAE6-5090BD42CCE9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  0 0 4 -0.92407440873551294 8 10.237132631695602
+		 10 34.725234119139621 16 20.206028736604829 22 38.948038591898566 31 13.956020177959898
+		 40 15.256615209154873 44 32.963079753502292 53 29.678784590151253 58 18.080568172563538
+		 69 8.8372784427249247 75 0;
+createNode animCurveTL -n "FKEar1_R_translateX";
+	rename -uid "D3166CB1-464E-A34E-9662-2AA37EB8636C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 0 69 0 75 0;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTA -n "FKEar1_R_rotateY";
+	rename -uid "09D650E7-4D74-D35A-AE7B-0A94A2FA94E4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  0 -27.689739276110188 4 -3.7735595585794677
+		 8 -0.25092449916467119 10 -6.1560003127375813 16 -20.809171955843301 22 -8.3249831317318108
+		 31 -16.584770489512547 40 -5.491208660954447 44 2.0514614418724237 53 -28.836957307223489
+		 58 9.0530384586076451 69 -18.54417817487321 75 0;
+createNode animCurveTU -n "FKEar1_R_scaleZ";
+	rename -uid "BE2C8153-4F6C-FF6E-683F-7AA2689AFAD1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 1 69 1 75 1;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTU -n "FKEar1_R_scaleY";
+	rename -uid "B750E8CE-4A44-6C4B-6D16-DDA77078E8FB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 1 69 1 75 1;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTL -n "FKEar1_R_translateY";
+	rename -uid "E51691C8-4B81-6407-161D-85AC4DFA6A3B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 0 69 0 75 0;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTA -n "FKEar1_R_rotateZ";
+	rename -uid "6E0CC780-462A-63EC-9D25-04A9FEA8BF58";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  0 0 4 13.770610606104226 8 -13.516686176263358
+		 10 -33.139958823662944 16 8.438906702734263 22 -9.6814326686449732 31 9.6411486485122921
+		 40 -0.25097325083199473 44 -30.509648820486355 53 9.2667930681661748 58 12.334936590513552
+		 69 -8.1321258115976125 75 0;
+createNode animCurveTL -n "FKEar1_R_translateZ";
+	rename -uid "A638B3CE-4771-6DEA-9498-CFA156C9053D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 0 69 0 75 0;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTU -n "FKEar1_L_scaleX";
+	rename -uid "80F70EC5-4B46-395D-C69F-62BBDE27A270";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 1 70 1.1100617941153581 75 1.1100617941153581;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTA -n "FKEar1_L_rotateX";
+	rename -uid "8F03789B-42E8-239C-8799-058B9512D0D2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  0 0 5 -0.39071612246340853 8 8.3150246600101578
+		 10 27.415742264506669 17 16.090762988523224 23 30.709529484987186 31 11.215756709838308
+		 40 12.230220751544605 44 26.041261971257828 54 23.479511952492707 58 14.432903883599854
+		 70 7.2231384815446633 75 0.33006185764457174;
+createNode animCurveTL -n "FKEar1_L_translateX";
+	rename -uid "C086642B-46B6-785D-2508-CC8750C48DA0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 0 70 0.33006185764457152 75 0.33006185764457152;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTA -n "FKEar1_L_rotateY";
+	rename -uid "2E1781F8-4A87-64F2-0C3C-3C99D6C68F96";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  0 -27.689739276110188 5 -2.6133143583161416
+		 8 0.13434076423716418 10 -4.471617995204884 17 -15.901090945922874 23 -6.1634244562266121
+		 31 -12.60605807055779 40 -3.9530805490477294 44 1.9302016519773297 54 -22.162763010000536
+		 58 7.3914312802261239 70 -14.134395940659477 75 0.33006185764457174;
+createNode animCurveTU -n "FKEar1_L_scaleZ";
+	rename -uid "FBBD8C6D-46D5-2CBC-8917-33B33068BA95";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 1 70 1.1100617941153581 75 1.1100617941153581;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTU -n "FKEar1_L_scaleY";
+	rename -uid "71DD1B8A-4F9B-2601-899F-0A92CA7401C9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 1 70 1.1100617941153581 75 1.1100617941153581;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTL -n "FKEar1_L_translateY";
+	rename -uid "8745171A-477D-D0E9-811F-86A7722F5D36";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 0 70 0.33006185764457152 75 0.33006185764457152;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTA -n "FKEar1_L_rotateZ";
+	rename -uid "4BB9A2EF-4DFE-D17D-60D3-9AA077A1EB23";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 13 ".ktv[0:12]"  0 0 5 11.071137255569806 8 -10.212952501136407
+		 10 -25.519103919457002 17 6.912408549660193 23 -7.2214550088447051 31 7.8501571909895693
+		 40 0.1343027379397489 44 -23.467462284080796 54 7.5581598621021149 58 9.951311614616321
+		 70 -6.0129957587740108 75 0.33006185764457174;
+createNode animCurveTL -n "FKEar1_L_translateZ";
+	rename -uid "B94FE0FA-45A8-D9AE-F3B8-6CBE87FED9C3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  0 0 70 0.33006185764457152 75 0.33006185764457152;
+	setAttr -s 3 ".kit[0:2]"  1 18 18;
+	setAttr -s 3 ".kot[0:2]"  5 18 18;
+	setAttr -s 3 ".kix[0:2]"  0 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr -s 3 ".ots[0:2]"  18 0 0;
+createNode animCurveTA -n "FKTail5_M_rotateZ2";
+	rename -uid "9433EEE1-4372-0EA8-3D28-978BCE50D5A8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 -7.5158056547683332 4 -16.770547391320122
+		 7 -15.430720723422789 11 -1.5970617652188066 14 -14.398072269677188 20 -8.3084291502393484
+		 23 -4.1747776595732686 28 -16.256246739403611 32 -10.555624251159903 38 -16.583159041741975
+		 48 5.1832985195641479 56 -11.327427971357311 67 3.8513231856934986 75 -11.327427971357311
+		 78 -7.5158056547683332;
+createNode animCurveTA -n "FKTail4_M_rotateZ2";
+	rename -uid "333AD218-4AC8-D2D2-AAD8-348501E421B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 -7.5158056547683332 4 -16.770547391320122
+		 7 -15.430720723422789 11 -1.5970617652188066 14 -14.398072269677188 20 -8.3084291502393484
+		 23 -4.1747776595732686 28 -16.256246739403611 32 -10.555624251159903 38 -16.583159041741975
+		 48 5.1832985195641479 56 -11.327427971357311 67 3.8513231856934986 75 -11.327427971357311
+		 78 -7.5158056547683332;
+createNode animCurveTA -n "FKTail3_M_rotateZ2";
+	rename -uid "277F64CF-47AA-E35C-E9EF-55A6F6ED5EB3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 -7.5158056547683332 3 -16.770547391320122
+		 6 -15.430720723422789 10 -1.5970617652188066 13 -14.398072269677188 19 -8.3084291502393484
+		 22 -4.1747776595732686 27 -16.256246739403611 31 -10.555624251159903 37 -16.583159041741975
+		 47 5.1832985195641479 55 -11.327427971357311 66 3.8513231856934986 74 -11.327427971357311
+		 78 -7.5158056547683332;
+createNode animCurveTA -n "FKTail2_M_rotateZ2";
+	rename -uid "9639BD94-455E-DB51-BE1A-BAB8077A8CC6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 -7.5158056547683332 3 -16.770547391320122
+		 6 -15.430720723422789 10 -1.5970617652188066 13 -14.398072269677188 19 -8.3084291502393484
+		 22 -4.1747776595732686 27 -16.256246739403611 31 -10.555624251159903 37 -16.583159041741975
+		 47 5.1832985195641479 55 -11.327427971357311 66 3.8513231856934986 74 -11.327427971357311
+		 78 -7.5158056547683332;
+createNode animCurveTA -n "FKTail1_M_rotateZ2";
+	rename -uid "7A686998-45C7-FF11-6EA8-01BDE636A827";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 -7.5158056547683332 2 -16.770547391320122
+		 5 -15.430720723422789 9 -1.5970617652188066 12 -14.398072269677188 18 -8.3084291502393484
+		 21 -4.1747776595732686 26 -16.256246739403611 30 -10.555624251159903 36 -16.583159041741975
+		 46 5.1832985195641479 54 -11.327427971357311 65 3.8513231856934986 73 -11.327427971357311
+		 78 -7.5158056547683332;
+createNode animCurveTL -n "FKEar2_R_translateX";
+	rename -uid "7F97F936-4386-0128-9711-8391B02A98B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar2_R_translateY";
+	rename -uid "8079D233-4060-3296-F6C2-5ABF13D157EE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar2_R_translateZ";
+	rename -uid "9C0098D0-4ACA-C756-CBD8-5E85A423D250";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar2_R_rotateX";
+	rename -uid "1FC911A0-40B5-711E-9F25-399BBF10C1D9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 6 -0.34528094875873722 9 1.8642497383308094
+		 14 0.76431432528653631 21 -5.3193178295554189 24 0.17331147460164045 28 0.29373251373372683
+		 35 6.6835747242628072 41 -0.11165723273317418 44 -4.9785503711567589 51 -9.9166362858386883
+		 60 -4.7389048458705387 69 -4.603393182172697 75 0;
+createNode animCurveTA -n "FKEar2_R_rotateY";
+	rename -uid "B06519EA-4138-B38E-A7FD-DDAF75216331";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 6 -3.392506636357179 9 8.8908753182957145
+		 14 2.3798210419402785 21 -9.6715183582388402 24 -2.6929032552396297 28 -2.6824479391463045
+		 35 -7.350112746470133 41 -18.373841442229555 44 0.73438149674403164 51 -9.2900134310836684
+		 60 -18.992336104803599 69 -13.261218654878853 75 0;
+createNode animCurveTA -n "FKEar2_R_rotateZ";
+	rename -uid "233A1A83-42A5-ECA4-75A8-18806820DFE9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 6 5.8148556435725789 9 5.3042581152713613
+		 14 6.4502321332019372 21 15.983148830893455 24 8.4273481954994587 28 5.8597036201331436
+		 35 3.3347132655238294 41 9.1856801792421958 44 23.97048554769453 51 14.480138648531035
+		 60 7.3922650342002667 69 6.9050109692900143 75 0;
+createNode animCurveTU -n "FKEar2_R_scaleX";
+	rename -uid "E5FF1C4F-4BC0-2FEE-1A7B-53AB1DC1D2D9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar2_R_scaleY";
+	rename -uid "5A9B1450-4C87-18DF-19B0-30938FB6BCBD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar2_R_scaleZ";
+	rename -uid "B4C5D015-4906-4EF4-2355-C7A8DA33F53B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar3_R_translateX";
+	rename -uid "E505815B-47C4-DC1F-3FA1-F291BF862777";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar3_R_translateY";
+	rename -uid "65DE30B7-4A64-2B2E-01BC-E28EE6087597";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar3_R_translateZ";
+	rename -uid "51164CDF-4827-C694-C001-4690C63996B8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar3_R_rotateX";
+	rename -uid "2E5C79DD-476D-4A3B-A7E5-52BFAC9639B0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 8 -0.92829748019017655 16 -1.9750765623099216
+		 20 -2.1991840750065585 22 -2.5649602787079342 25 -1.6458127302604744 29 -1.4774244630990716
+		 40 -1.6051637512655665 44 -1.6762373399521655 49 -3.2405385838941463 54 2.3233705032543579
+		 58 1.3081286929274161 63 1.2574073049073458 67 1.2943744252025027 75 0;
+createNode animCurveTA -n "FKEar3_R_rotateY";
+	rename -uid "6641C110-4EEB-3EFE-F136-28B17E9FF362";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 5 -3.6796801993881911 8 0.15810197543593851
+		 10 0.010774560172595805 16 -5.4635344565041075 20 2.6482901526978901 22 2.2958456034249966
+		 25 2.5329550204822651 29 -1.6172825385365579 40 2.1169622755834436 44 2.9645157690566539
+		 49 2.1495197696309321 54 1.8281208671369695 58 19.110261293509016 63 10.580201722403013
+		 67 17.267535571961446 75 0;
+createNode animCurveTA -n "FKEar3_R_rotateZ";
+	rename -uid "1F23F0D7-403E-604C-FEBB-D39E2B8154C7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 5 -5.2666193977498379 8 -1.6277328917772387
+		 10 -10.636879746276783 16 -3.09766922761747 20 -8.212626295652699 22 -16.677508222974517
+		 25 2.9384106924545157 29 -3.1987175390196367 40 -6.668500878502571 44 -8.6122661138390093
+		 49 -10.074513567107887 54 -2.5697540585416792 58 -5.3589243938087732 63 -5.5563448344399733
+		 67 -5.4029815825137675 75 0;
+createNode animCurveTU -n "FKEar3_R_scaleX";
+	rename -uid "1F2800B4-441D-4B54-9592-1A8D78347F5D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar3_R_scaleY";
+	rename -uid "BF87AC0F-4E69-B0DC-B301-66884CBA65FC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar3_R_scaleZ";
+	rename -uid "88AA25E8-4331-F85F-3AF2-638E0B6C2610";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar4_R_translateX";
+	rename -uid "A98AFFFD-4A97-945C-F465-5E9366356A3C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar4_R_translateY";
+	rename -uid "C1934D4E-474B-0DF0-EBEC-FFA1173114BB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar4_R_translateZ";
+	rename -uid "9CA9DBD4-446C-A249-F066-BB826A1BD676";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar4_R_rotateX";
+	rename -uid "D7E259E7-45EF-B18D-F296-1592825DDC18";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 16 ".ktv[0:15]"  0 0 8 -0.92410831307297336 10 -0.94777934691053622
+		 16 -1.9858155578414922 20 -2.2158876120218154 22 -2.5912716149463209 25 -1.6493292676727189
+		 29 -1.4882392120650427 40 -1.6200618915624727 44 -1.6934094385434364 49 -3.25936457014026
+		 54 2.3132978250948946 58 1.2939897021256763 63 1.2435833793226265 67 1.2803305089821706
+		 75 0;
+createNode animCurveTA -n "FKEar4_R_rotateY";
+	rename -uid "09B1BC51-498B-1B48-3D10-F9951AE02932";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 5 -3.6796801993881911 8 0.22397295319359159
+		 10 0.076488897084177901 16 -5.3958319932555971 20 2.7147696195739592 22 2.3591446742907958
+		 25 2.6014062857732219 29 -1.5495991028275529 40 2.1838672447012843 44 3.0308772222031557
+		 49 2.2153302558255108 54 1.8959188407717098 58 19.17748856074877 63 10.647382814887301
+		 67 17.334752602334962 75 0;
+createNode animCurveTA -n "FKEar4_R_rotateZ";
+	rename -uid "AB5439DA-42B1-3CC8-ACA1-C9AB04F97230";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 5 -5.2666193977498379 8 9.2553752102766431
+		 10 0.24620968392565321 16 7.7864512060259914 20 2.6696965045369678 22 -5.7954724942694842
+		 25 13.821357450009115 29 7.6846855681411741 40 4.2140443643587648 44 2.269940123222959
+		 49 0.80783866150491979 54 8.3130229193063929 58 5.5195431107912887 63 5.3242132304686285
+		 67 5.4759461071708557 75 0;
+createNode animCurveTU -n "FKEar4_R_scaleX";
+	rename -uid "FFEB96FA-4240-5826-6BA5-5B90F7E1848C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar4_R_scaleY";
+	rename -uid "AB65FB3D-4E55-A875-3627-FE8D7921CF3C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar4_R_scaleZ";
+	rename -uid "D5D4C23D-4361-4C6B-D436-4CB2E08B4014";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar5_R_translateX";
+	rename -uid "33C9387C-4D2D-BD61-11D8-3C9C021002D3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar5_R_translateY";
+	rename -uid "1E00D327-4B53-5337-EC7E-759AFD2E3C8A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar5_R_translateZ";
+	rename -uid "E965BCBC-47DA-05F6-20BE-DC8E14A35B4A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar5_R_rotateX";
+	rename -uid "F723B13F-41AE-6ED5-DA1E-5B8AF421FD18";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 12 -9.3369552034630878 17 -6.0144785488400014
+		 21 -5.5723432964935373 23 -11.423625490365186 27 -1.8260878668963676 34 -1.8060596841680698
+		 39 -5.3223761786379322 45 -6.1092574658168033 51 -6.9141031183601722 56 -3.8680485832575657
+		 61 -4.0051682905820156 71 -1.123331295269564 76 0;
+createNode animCurveTA -n "FKEar5_R_rotateY";
+	rename -uid "B91961B5-4361-BFB7-B4A7-919DFBCCC800";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 5 -4.7263097270220955 12 -3.2293844001558023
+		 17 6.7854066520028455 21 14.774729547016765 23 10.942919256958435 27 13.485241883061789
+		 34 10.514082433826925 39 13.23876338154907 45 8.2066881409195194 51 7.5424719485911353
+		 56 4.1757261804908472 61 15.580632046068811 71 -10.972142840759069 76 0;
+createNode animCurveTA -n "FKEar5_R_rotateZ";
+	rename -uid "687C3352-4372-D844-3F65-5AAB4C71A6CE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 9 16.093766477964778 12 -10.485569102906092
+		 17 11.678570267855397 21 15.709538900651179 23 -10.142938638014092 27 4.7728670751260154
+		 34 4.8691675848347273 39 -5.3860066463776821 45 -8.7734212183556028 51 -14.64284876660308
+		 56 5.8401209270725305 61 5.0448081436053931 71 -8.2376018675421765 76 0;
+createNode animCurveTU -n "FKEar5_R_scaleX";
+	rename -uid "1BF3783E-4FE6-2A17-7B77-BD858674A6B7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar5_R_scaleY";
+	rename -uid "E4572395-428D-8822-8CFA-16924943F055";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar5_R_scaleZ";
+	rename -uid "3F07DC54-4C1C-7D3E-F7D4-C9937CB6AE8C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar6_R_translateX";
+	rename -uid "5EA2A998-42E3-A9DC-9BA4-3DA5C19E42BD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar6_R_translateY";
+	rename -uid "657D931B-4C37-FBF0-1FDE-5EB160570307";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar6_R_translateZ";
+	rename -uid "938133BB-4C6A-88C3-B238-319504AED78D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar6_R_rotateX";
+	rename -uid "8A02D8EE-4761-FCE3-6672-12836A8603D5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 12 -9.3658322833427619 17 -6.4536322961968615
+		 21 -5.9965524396542627 23 -11.971820534019459 27 -2.3159353091745856 34 -2.2898778430150424
+		 39 -5.8589676286438559 45 -6.6487010416580539 51 -7.4687520169219894 56 -4.339482571994643
+		 61 -4.4982851409314257 71 -1.664818153470073 76 0;
+createNode animCurveTA -n "FKEar6_R_rotateY";
+	rename -uid "FA2D38F5-4CDB-867B-6174-E78FE1B3A647";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 5 -4.7263097270220982 12 -2.9015628751360425
+		 17 7.1440571609633539 21 15.162934376836976 23 11.113592149488891 27 13.788619750955123
+		 34 10.818367566409172 39 13.453383748723896 45 8.39029822079479 51 7.6705535296398439
+		 56 4.4882457659050967 61 15.886190471065932 71 -10.78271312654339 76 0;
+createNode animCurveTA -n "FKEar6_R_rotateZ";
+	rename -uid "C46AF751-4A9F-65CB-CC5F-23806F84D4DA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 16 ".ktv[0:15]"  0 0 5 -10.292896195254395 9 16.093766477964778
+		 12 -10.484024834461449 17 11.62436506804087 21 15.599013698821821 23 -10.248759053116677
+		 27 4.6564217649682478 34 4.7786645183504017 39 -5.5108239389865252 45 -8.8522334855916736
+		 51 -14.717221345994778 56 5.8035570208704694 61 4.9101388432513176 71 -8.1363713955639749
+		 76 0;
+createNode animCurveTU -n "FKEar6_R_scaleX";
+	rename -uid "C3B2AD49-448B-A3D5-E593-78ACAFE0822D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar6_R_scaleY";
+	rename -uid "9F55C77E-4383-CFEA-F41F-23829923BDB1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar6_R_scaleZ";
+	rename -uid "22E4A7F9-43A1-F859-3691-BD8DFA842330";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTA -n "FKEar2_L_rotateX";
+	rename -uid "1E49D44A-4F42-5378-7E80-17B5B25B86FB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 7 0.060742739548184092 8 -0.74518383158914814
+		 9 0.55575456098590215 14 0.92622698281178206 22 -3.8190057114765761 24 0.46524479682350972
+		 28 0.55917319969628276 36 5.5432497179673152 41 0.24296922320619194 44 -3.5532071155743119
+		 52 -7.4049138153135017 60 -3.3662836210755502 70 -3.2605845320001836 75 0.33006185764457174;
+createNode animCurveTA -n "FKEar2_L_rotateY";
+	rename -uid "20EAFF55-4B2B-7D01-F75F-09B940FCF7CF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 7 -2.3160931031907497 8 4.7612433242681096
+		 9 7.4109890691327758 14 2.1863221191698297 22 -7.2137218473577676 24 -1.7704025103643131
+		 28 -1.7622473644757379 36 -5.4030256176552482 41 -14.001533300018782 44 0.90287937845023747
+		 52 -6.916148028413442 60 -14.483959097534061 70 -10.013687850686145 75 0.33006185764457174;
+createNode animCurveTA -n "FKEar2_L_rotateZ";
+	rename -uid "E3F24330-4F70-8B39-F7B2-7FA97284D2DB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 7 4.8656488902179778 9 4.4673828505808864
+		 14 5.3612425117639066 22 12.796916930344592 24 6.9033929147513469 28 4.9006303090860621
+		 36 2.9311379929014478 41 7.4948918138944487 44 19.027039062020208 52 11.624569083586962
+		 60 6.0960281146959954 70 5.7159699750208661 75 0.33006185764457174;
+createNode reference -n "sharedReferenceNode";
+	rename -uid "F45A10BA-4848-BF90-F89D-2CB6619EBFBF";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode animCurveTL -n "FKEar3_L_translateX";
+	rename -uid "3A24CF21-4AA9-EB1E-FA0F-20902B37F7CF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar3_L_translateY";
+	rename -uid "85AB478B-409D-94DF-F23F-AB8EF63B866E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar3_L_translateZ";
+	rename -uid "647D985D-4450-7D4C-9CAA-9B9AF6122230";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar3_L_rotateX";
+	rename -uid "3B240F04-492E-E578-0F16-D69F393C5439";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 8 -0.39401011792975771 17 -1.2104977354821063
+		 21 -1.3853015811481086 23 -1.670606996797708 25 -0.95367196740140991 29 -0.82232912971309036
+		 40 -0.92196576636777883 44 -0.97740316102807712 49 -2.1975580319239945 55 2.1422907025810698
+		 58 1.350402155023569 63 1.3108394755902042 68 1.3396738270719346 75 0.33006185764457174;
+createNode animCurveTA -n "FKEar3_L_rotateY";
+	rename -uid "57BA0E3F-4E5E-99CD-8093-BE8F47CC4187";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 6 -2.5400884641110277 8 0.4533813884405094
+		 10 0.33846601389469699 17 -3.9314946713345846 21 2.3957280085051353 23 2.1208212824628028
+		 25 2.3057666127040979 29 -0.9314184196692562 40 1.9812922981107093 44 2.6423839691754059
+		 49 2.0066871413993987 55 1.7559960178723268 58 15.236064452521731 63 8.5826185289670267
+		 68 13.798738506781545 75 0.33006185764457174;
+createNode animCurveTA -n "FKEar3_L_rotateZ";
+	rename -uid "12CC722E-477D-28D9-7638-DAA4F0BDDA6C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 6 -3.7779009380161135 8 -0.9395696945330837
+		 10 -7.9667036686987158 17 -2.0861199431045652 21 -6.0757861312228441 23 -12.678393496766569
+		 25 2.6220220110841739 29 -2.164937619578736 40 -4.8713684039428164 44 -6.3875051640193625
+		 49 -7.5280580846736598 55 -1.6743461447634835 58 -3.8498988290780192 63 -4.0038867602283892
+		 68 -3.8842634334689965 75 0.33006185764457174;
+createNode animCurveTU -n "FKEar3_L_scaleX";
+	rename -uid "629E3CE8-491D-CFB1-6B45-55876E3CF91F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar3_L_scaleY";
+	rename -uid "8E9D1CB3-4DF9-E394-B79D-A3824185A120";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar3_L_scaleZ";
+	rename -uid "2C81A4A0-4964-57BE-F677-60A109345608";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar4_L_translateX";
+	rename -uid "213C4A85-4DD5-A707-FF6A-828FDAC51581";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar4_L_translateY";
+	rename -uid "B5C7AF38-4163-16DB-0D49-4787EB6EE587";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar4_L_translateZ";
+	rename -uid "516538DD-473D-79F0-56F8-B092CEF95A67";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar4_L_rotateX";
+	rename -uid "152587D9-4DD7-9096-5D92-368E3A6D97C7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 16 ".ktv[0:15]"  0 0 8 -0.39074256784447275 10 -0.40920597273397008
+		 17 -1.2188741513144914 21 -1.3983303389588466 23 -1.6911298373921104 25 -0.95641486635955786
+		 29 -0.83076463321949523 40 -0.93358631485289856 44 -0.99079739683833923 49 -2.2122422999999642
+		 55 2.1344340142565978 58 1.339373743096451 63 1.3000568145123461 68 1.3287195733122745
+		 75 0.33006185764457174;
+createNode animCurveTA -n "FKEar4_L_rotateY";
+	rename -uid "DE0195C7-4014-AD69-0D14-1BB539F79061";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 6 -2.5400884641110277 8 0.50476074690674744
+		 10 0.38972319251095094 17 -3.8786867543018313 21 2.4475819884450809 23 2.1701945537167862
+		 25 2.3591585952823886 29 -0.87862534411610704 40 2.0334781697722049 44 2.6941458984137867
+		 49 2.0580193164502809 55 1.8088784330002718 58 15.288501716697848 63 8.6350197768368098
+		 68 13.851167786202643 75 0.33006185764457174;
+createNode animCurveTA -n "FKEar4_L_rotateZ";
+	rename -uid "1ADA5A9E-4D29-CA76-29FE-F1A1016E3804";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 6 -3.7779009380161135 8 7.5492539336736462
+		 10 0.52210539546507362 17 6.4034933036777248 21 2.4124249615796871 23 -4.1904063197038166
+		 25 11.110719790591711 29 6.324116112592657 40 3.6170161941294854 44 2.1006150095509688
+		 49 0.96017596229705404 55 6.8142192065837515 58 4.6353051334095436 63 4.4829478391670232
+		 68 4.601299473355291 75 0.33006185764457174;
+createNode animCurveTU -n "FKEar4_L_scaleX";
+	rename -uid "41306972-4ED3-17C2-A376-E1B4065B653A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar4_L_scaleY";
+	rename -uid "8C40B6E2-4A01-72CE-69F9-22A49240871B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar4_L_scaleZ";
+	rename -uid "1AA6ADC0-4998-DA2B-841B-BBA13C26641F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar5_L_translateX";
+	rename -uid "94B680D5-4307-5901-9EE2-04BB6CBD2116";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar5_L_translateY";
+	rename -uid "09DDE278-49E0-E593-B75B-0AA086C113B8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar5_L_translateZ";
+	rename -uid "3B5E404C-4778-5ADB-20D5-35ABC67D0797";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar5_L_rotateX";
+	rename -uid "E4A84287-4BFA-61B0-8384-2F82B86C61F7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 12 -6.952762607887216 18 -4.3612310283555367
+		 22 -4.0163655596137993 23 -8.5803652991063313 27 -1.0942865625246694 35 -1.0786645812689708
+		 39 -3.8213912235666432 45 -4.435158577576213 52 -5.0629381354288299 56 -2.6870157915622448
+		 61 -2.7939691545642091 71 -0.54613648130133463 76 0.33006185764457174;
+createNode animCurveTA -n "FKEar5_L_rotateY";
+	rename -uid "5CD367EB-4109-A0C6-7C05-C9BFAAED04B3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 6 -3.3564594291739223 12 -2.1888577693167024
+		 18 5.6226786151352428 22 11.8543499656907 23 8.8655381828770974 27 10.848549669725957
+		 35 8.5310454880781847 39 10.65629645420462 45 6.7312780861973547 52 6.2131894983783482
+		 56 3.5871280131468342 61 12.482953863752945 71 -8.2282088610958954 76 0.33006185764457174;
+createNode animCurveTA -n "FKEar5_L_rotateZ";
+	rename -uid "AD20F599-4F22-B71D-6BFF-2D839F6A674F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 9 12.88319868803277 12 -7.8486813764822214
+		 18 9.4393459246413975 22 12.583501202137841 23 -7.5814296356335058 27 4.0528978730263736
+		 35 4.1280122644812733 39 -3.8710229843612534 45 -6.5132061353042499 52 -11.091359250057167
+		 56 4.8853558097428564 61 4.2650118891640858 71 -6.0952670757099581 76 0.33006185764457174;
+createNode animCurveTU -n "FKEar5_L_scaleX";
+	rename -uid "8C49B79D-4EFD-433C-3A9A-4691129C9712";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar5_L_scaleY";
+	rename -uid "AAAE4F93-4CB9-C03E-B6FE-D6A13DDD2911";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar5_L_scaleZ";
+	rename -uid "8FCA762B-4849-D6DB-0922-7DA33F60E89D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar6_L_translateX";
+	rename -uid "F4412296-4765-F545-E213-D7912A083CF2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar6_L_translateY";
+	rename -uid "7372BD55-4367-4F5A-0988-EB899951CD40";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar6_L_translateZ";
+	rename -uid "5D4F4DE2-4634-439F-B047-62A5EC6DE023";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "FKEar6_L_rotateX";
+	rename -uid "526CD5FC-40D7-D2B9-7FC4-138947E023B1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 14 ".ktv[0:13]"  0 0 12 -6.9752867283588227 18 -4.7037709233947966
+		 22 -4.3472486643294923 23 -9.0079573983302623 27 -1.476367536382057 35 -1.4560427144330232
+		 39 -4.2399325204820304 45 -4.8559245324619633 52 -5.495564241070638 56 -3.0547342728273343
+		 61 -3.1786002665094224 71 -0.96849619629749717 76 0.33006185764457174;
+createNode animCurveTA -n "FKEar6_L_rotateY";
+	rename -uid "BF14C2AC-4D5D-DC9A-BDEA-FFB042220654";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 15 ".ktv[0:14]"  0 0 6 -3.3564594291739258 12 -1.9331570006275329
+		 18 5.9024259893396547 22 12.157149708288115 23 8.9986630282081403 27 11.085184387409399
+		 35 8.7683878721613393 39 10.823700326966323 45 6.8744939368354609 52 6.3130931234594163
+		 56 3.830893269915824 61 12.721289415838811 71 -8.0804536960419888 76 0.33006185764457174;
+createNode animCurveTA -n "FKEar6_L_rotateZ";
+	rename -uid "5D28C16B-4F68-9637-3E64-2D95507EA282";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 16 ".ktv[0:15]"  0 0 6 -7.6983965207542564 9 12.88319868803277
+		 12 -7.847476847193505 18 9.3970658722296818 22 12.497291551732522 23 -7.663969552690836
+		 27 3.9620705385009938 35 4.0574198783730884 39 -3.9683804646666068 45 -6.5746796987415026
+		 52 -11.149369857257854 56 4.8568359652281252 61 4.1599698434433421 71 -6.0163073139980527
+		 76 0.33006185764457174;
+createNode animCurveTU -n "FKEar6_L_scaleX";
+	rename -uid "43CE2B7E-49D4-AC78-52C6-87BE0309A752";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar6_L_scaleY";
+	rename -uid "4EB23DAF-4C5D-084C-294D-E28443F3313A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar6_L_scaleZ";
+	rename -uid "B46F3488-4538-D7A9-C933-03B14C33C97A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTL -n "FKEar2_L_translateX";
+	rename -uid "7E0D3780-4BE2-9962-EAB2-81AF697BD763";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar2_L_translateY";
+	rename -uid "9E6C43A5-4A42-8FF1-5CB2-E3824D25FD9F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "FKEar2_L_translateZ";
+	rename -uid "771B5C76-4924-3576-123F-FCA20416A669";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTU -n "FKEar2_L_scaleX";
+	rename -uid "1FA0A117-49DD-B469-E617-95BEF9B7FDBE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar2_L_scaleY";
+	rename -uid "6574047E-4AAD-9B22-BE91-2DA75CFC7883";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "FKEar2_L_scaleZ";
+	rename -uid "13BEA670-4DEE-DB59-BAE5-27BB4AA85CCE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 0;
-	setAttr -av ".unw";
+	setAttr ".o" 78;
+	setAttr -av ".unw" 78;
 	setAttr -k on ".etw";
 	setAttr -k on ".tps";
 	setAttr -av -k on ".tms";
@@ -9450,243 +10372,351 @@ connectAttr "FKJaw_M_translateZ2.o" "SK_Dog_RigRN.phl[6]";
 connectAttr "FKJaw_M_rotateY2.o" "SK_Dog_RigRN.phl[7]";
 connectAttr "FKJaw_M_rotateX2.o" "SK_Dog_RigRN.phl[8]";
 connectAttr "FKJaw_M_rotateZ2.o" "SK_Dog_RigRN.phl[9]";
-connectAttr "FKNeck_M_scaleX3.o" "SK_Dog_RigRN.phl[10]";
-connectAttr "FKNeck_M_scaleY3.o" "SK_Dog_RigRN.phl[11]";
-connectAttr "FKNeck_M_scaleZ3.o" "SK_Dog_RigRN.phl[12]";
-connectAttr "FKNeck_M_translateY3.o" "SK_Dog_RigRN.phl[13]";
-connectAttr "FKNeck_M_translateX3.o" "SK_Dog_RigRN.phl[14]";
-connectAttr "FKNeck_M_translateZ3.o" "SK_Dog_RigRN.phl[15]";
-connectAttr "FKNeck_M_rotateY3.o" "SK_Dog_RigRN.phl[16]";
-connectAttr "FKNeck_M_rotateX3.o" "SK_Dog_RigRN.phl[17]";
-connectAttr "FKNeck_M_rotateZ3.o" "SK_Dog_RigRN.phl[18]";
-connectAttr "FKNeck2_M_scaleX3.o" "SK_Dog_RigRN.phl[19]";
-connectAttr "FKNeck2_M_scaleY3.o" "SK_Dog_RigRN.phl[20]";
-connectAttr "FKNeck2_M_scaleZ3.o" "SK_Dog_RigRN.phl[21]";
-connectAttr "FKNeck2_M_translateY3.o" "SK_Dog_RigRN.phl[22]";
-connectAttr "FKNeck2_M_translateX3.o" "SK_Dog_RigRN.phl[23]";
-connectAttr "FKNeck2_M_translateZ3.o" "SK_Dog_RigRN.phl[24]";
-connectAttr "FKNeck2_M_rotateY3.o" "SK_Dog_RigRN.phl[25]";
-connectAttr "FKNeck2_M_rotateX3.o" "SK_Dog_RigRN.phl[26]";
-connectAttr "FKNeck2_M_rotateZ3.o" "SK_Dog_RigRN.phl[27]";
-connectAttr "FKHead_M_scaleX3.o" "SK_Dog_RigRN.phl[28]";
-connectAttr "FKHead_M_scaleY3.o" "SK_Dog_RigRN.phl[29]";
-connectAttr "FKHead_M_scaleZ3.o" "SK_Dog_RigRN.phl[30]";
-connectAttr "FKHead_M_translateY3.o" "SK_Dog_RigRN.phl[31]";
-connectAttr "FKHead_M_translateX3.o" "SK_Dog_RigRN.phl[32]";
-connectAttr "FKHead_M_translateZ3.o" "SK_Dog_RigRN.phl[33]";
-connectAttr "FKHead_M_rotateY3.o" "SK_Dog_RigRN.phl[34]";
-connectAttr "FKHead_M_rotateX3.o" "SK_Dog_RigRN.phl[35]";
-connectAttr "FKHead_M_rotateZ3.o" "SK_Dog_RigRN.phl[36]";
-connectAttr "FKTail0_M_scaleX2.o" "SK_Dog_RigRN.phl[37]";
-connectAttr "FKTail0_M_scaleY2.o" "SK_Dog_RigRN.phl[38]";
-connectAttr "FKTail0_M_scaleZ2.o" "SK_Dog_RigRN.phl[39]";
-connectAttr "FKTail0_M_translateY2.o" "SK_Dog_RigRN.phl[40]";
-connectAttr "FKTail0_M_translateX2.o" "SK_Dog_RigRN.phl[41]";
-connectAttr "FKTail0_M_translateZ2.o" "SK_Dog_RigRN.phl[42]";
-connectAttr "FKTail0_M_rotateY2.o" "SK_Dog_RigRN.phl[43]";
-connectAttr "FKTail0_M_rotateX2.o" "SK_Dog_RigRN.phl[44]";
-connectAttr "FKTail0_M_rotateZ2.o" "SK_Dog_RigRN.phl[45]";
-connectAttr "FKTail1_M_scaleX2.o" "SK_Dog_RigRN.phl[46]";
-connectAttr "FKTail1_M_scaleY2.o" "SK_Dog_RigRN.phl[47]";
-connectAttr "FKTail1_M_scaleZ2.o" "SK_Dog_RigRN.phl[48]";
-connectAttr "FKTail1_M_translateY2.o" "SK_Dog_RigRN.phl[49]";
-connectAttr "FKTail1_M_translateX2.o" "SK_Dog_RigRN.phl[50]";
-connectAttr "FKTail1_M_translateZ2.o" "SK_Dog_RigRN.phl[51]";
-connectAttr "FKTail1_M_rotateY2.o" "SK_Dog_RigRN.phl[52]";
-connectAttr "FKTail1_M_rotateX2.o" "SK_Dog_RigRN.phl[53]";
-connectAttr "FKTail1_M_rotateZ2.o" "SK_Dog_RigRN.phl[54]";
-connectAttr "FKTail2_M_scaleX2.o" "SK_Dog_RigRN.phl[55]";
-connectAttr "FKTail2_M_scaleY2.o" "SK_Dog_RigRN.phl[56]";
-connectAttr "FKTail2_M_scaleZ2.o" "SK_Dog_RigRN.phl[57]";
-connectAttr "FKTail2_M_translateY2.o" "SK_Dog_RigRN.phl[58]";
-connectAttr "FKTail2_M_translateX2.o" "SK_Dog_RigRN.phl[59]";
-connectAttr "FKTail2_M_translateZ2.o" "SK_Dog_RigRN.phl[60]";
-connectAttr "FKTail2_M_rotateY2.o" "SK_Dog_RigRN.phl[61]";
-connectAttr "FKTail2_M_rotateX2.o" "SK_Dog_RigRN.phl[62]";
-connectAttr "FKTail2_M_rotateZ2.o" "SK_Dog_RigRN.phl[63]";
-connectAttr "FKTail3_M_scaleX2.o" "SK_Dog_RigRN.phl[64]";
-connectAttr "FKTail3_M_scaleY2.o" "SK_Dog_RigRN.phl[65]";
-connectAttr "FKTail3_M_scaleZ2.o" "SK_Dog_RigRN.phl[66]";
-connectAttr "FKTail3_M_translateY2.o" "SK_Dog_RigRN.phl[67]";
-connectAttr "FKTail3_M_translateX2.o" "SK_Dog_RigRN.phl[68]";
-connectAttr "FKTail3_M_translateZ2.o" "SK_Dog_RigRN.phl[69]";
-connectAttr "FKTail3_M_rotateY2.o" "SK_Dog_RigRN.phl[70]";
-connectAttr "FKTail3_M_rotateX2.o" "SK_Dog_RigRN.phl[71]";
-connectAttr "FKTail3_M_rotateZ2.o" "SK_Dog_RigRN.phl[72]";
-connectAttr "FKTail4_M_scaleX2.o" "SK_Dog_RigRN.phl[73]";
-connectAttr "FKTail4_M_scaleY2.o" "SK_Dog_RigRN.phl[74]";
-connectAttr "FKTail4_M_scaleZ2.o" "SK_Dog_RigRN.phl[75]";
-connectAttr "FKTail4_M_translateY2.o" "SK_Dog_RigRN.phl[76]";
-connectAttr "FKTail4_M_translateX2.o" "SK_Dog_RigRN.phl[77]";
-connectAttr "FKTail4_M_translateZ2.o" "SK_Dog_RigRN.phl[78]";
-connectAttr "FKTail4_M_rotateY2.o" "SK_Dog_RigRN.phl[79]";
-connectAttr "FKTail4_M_rotateX2.o" "SK_Dog_RigRN.phl[80]";
-connectAttr "FKTail4_M_rotateZ2.o" "SK_Dog_RigRN.phl[81]";
-connectAttr "FKTail5_M_scaleX2.o" "SK_Dog_RigRN.phl[82]";
-connectAttr "FKTail5_M_scaleY2.o" "SK_Dog_RigRN.phl[83]";
-connectAttr "FKTail5_M_scaleZ2.o" "SK_Dog_RigRN.phl[84]";
-connectAttr "FKTail5_M_translateY2.o" "SK_Dog_RigRN.phl[85]";
-connectAttr "FKTail5_M_translateX2.o" "SK_Dog_RigRN.phl[86]";
-connectAttr "FKTail5_M_translateZ2.o" "SK_Dog_RigRN.phl[87]";
-connectAttr "FKTail5_M_rotateY2.o" "SK_Dog_RigRN.phl[88]";
-connectAttr "FKTail5_M_rotateX2.o" "SK_Dog_RigRN.phl[89]";
-connectAttr "FKTail5_M_rotateZ2.o" "SK_Dog_RigRN.phl[90]";
-connectAttr "FKRoot_M_scaleX3.o" "SK_Dog_RigRN.phl[91]";
-connectAttr "FKRoot_M_scaleY3.o" "SK_Dog_RigRN.phl[92]";
-connectAttr "FKRoot_M_scaleZ3.o" "SK_Dog_RigRN.phl[93]";
-connectAttr "FKRoot_M_translateY3.o" "SK_Dog_RigRN.phl[94]";
-connectAttr "FKRoot_M_translateX3.o" "SK_Dog_RigRN.phl[95]";
-connectAttr "FKRoot_M_translateZ3.o" "SK_Dog_RigRN.phl[96]";
-connectAttr "FKRoot_M_rotateY3.o" "SK_Dog_RigRN.phl[97]";
-connectAttr "FKRoot_M_rotateX3.o" "SK_Dog_RigRN.phl[98]";
-connectAttr "FKRoot_M_rotateZ3.o" "SK_Dog_RigRN.phl[99]";
-connectAttr "FKSpine1_M_scaleX3.o" "SK_Dog_RigRN.phl[100]";
-connectAttr "FKSpine1_M_scaleY3.o" "SK_Dog_RigRN.phl[101]";
-connectAttr "FKSpine1_M_scaleZ3.o" "SK_Dog_RigRN.phl[102]";
-connectAttr "FKSpine1_M_translateY3.o" "SK_Dog_RigRN.phl[103]";
-connectAttr "FKSpine1_M_translateX3.o" "SK_Dog_RigRN.phl[104]";
-connectAttr "FKSpine1_M_translateZ3.o" "SK_Dog_RigRN.phl[105]";
-connectAttr "FKSpine1_M_rotateY3.o" "SK_Dog_RigRN.phl[106]";
-connectAttr "FKSpine1_M_rotateX3.o" "SK_Dog_RigRN.phl[107]";
-connectAttr "FKSpine1_M_rotateZ3.o" "SK_Dog_RigRN.phl[108]";
-connectAttr "FKSpine2_M_scaleX3.o" "SK_Dog_RigRN.phl[109]";
-connectAttr "FKSpine2_M_scaleY3.o" "SK_Dog_RigRN.phl[110]";
-connectAttr "FKSpine2_M_scaleZ3.o" "SK_Dog_RigRN.phl[111]";
-connectAttr "FKSpine2_M_translateY3.o" "SK_Dog_RigRN.phl[112]";
-connectAttr "FKSpine2_M_translateX3.o" "SK_Dog_RigRN.phl[113]";
-connectAttr "FKSpine2_M_translateZ3.o" "SK_Dog_RigRN.phl[114]";
-connectAttr "FKSpine2_M_rotateY3.o" "SK_Dog_RigRN.phl[115]";
-connectAttr "FKSpine2_M_rotateX3.o" "SK_Dog_RigRN.phl[116]";
-connectAttr "FKSpine2_M_rotateZ3.o" "SK_Dog_RigRN.phl[117]";
-connectAttr "FKSpine3_M_scaleX3.o" "SK_Dog_RigRN.phl[118]";
-connectAttr "FKSpine3_M_scaleY3.o" "SK_Dog_RigRN.phl[119]";
-connectAttr "FKSpine3_M_scaleZ3.o" "SK_Dog_RigRN.phl[120]";
-connectAttr "FKSpine3_M_translateY3.o" "SK_Dog_RigRN.phl[121]";
-connectAttr "FKSpine3_M_translateX3.o" "SK_Dog_RigRN.phl[122]";
-connectAttr "FKSpine3_M_translateZ3.o" "SK_Dog_RigRN.phl[123]";
-connectAttr "FKSpine3_M_rotateY3.o" "SK_Dog_RigRN.phl[124]";
-connectAttr "FKSpine3_M_rotateX3.o" "SK_Dog_RigRN.phl[125]";
-connectAttr "FKSpine3_M_rotateZ3.o" "SK_Dog_RigRN.phl[126]";
-connectAttr "FKChest_M_scaleX3.o" "SK_Dog_RigRN.phl[127]";
-connectAttr "FKChest_M_scaleY3.o" "SK_Dog_RigRN.phl[128]";
-connectAttr "FKChest_M_scaleZ3.o" "SK_Dog_RigRN.phl[129]";
-connectAttr "FKChest_M_translateY3.o" "SK_Dog_RigRN.phl[130]";
-connectAttr "FKChest_M_translateX3.o" "SK_Dog_RigRN.phl[131]";
-connectAttr "FKChest_M_translateZ3.o" "SK_Dog_RigRN.phl[132]";
-connectAttr "FKChest_M_rotateY3.o" "SK_Dog_RigRN.phl[133]";
-connectAttr "FKChest_M_rotateX3.o" "SK_Dog_RigRN.phl[134]";
-connectAttr "FKChest_M_rotateZ3.o" "SK_Dog_RigRN.phl[135]";
-connectAttr "IKLegFront_R_scaleY3.o" "SK_Dog_RigRN.phl[136]";
-connectAttr "IKLegFront_R_scaleZ3.o" "SK_Dog_RigRN.phl[137]";
-connectAttr "IKLegFront_R_scaleX3.o" "SK_Dog_RigRN.phl[138]";
-connectAttr "IKLegFront_R_translateY3.o" "SK_Dog_RigRN.phl[139]";
-connectAttr "IKLegFront_R_translateZ3.o" "SK_Dog_RigRN.phl[140]";
-connectAttr "IKLegFront_R_translateX3.o" "SK_Dog_RigRN.phl[141]";
-connectAttr "IKLegFront_R_followMain3.o" "SK_Dog_RigRN.phl[142]";
-connectAttr "IKLegFront_R_followRoot3.o" "SK_Dog_RigRN.phl[143]";
-connectAttr "IKLegFront_R_followChest3.o" "SK_Dog_RigRN.phl[144]";
-connectAttr "IKLegFront_R_swivel3.o" "SK_Dog_RigRN.phl[145]";
-connectAttr "IKLegFront_R_rock3.o" "SK_Dog_RigRN.phl[146]";
-connectAttr "IKLegFront_R_roll3.o" "SK_Dog_RigRN.phl[147]";
-connectAttr "IKLegFront_R_rollStartAngle3.o" "SK_Dog_RigRN.phl[148]";
-connectAttr "IKLegFront_R_rollEndAngle3.o" "SK_Dog_RigRN.phl[149]";
-connectAttr "IKLegFront_R_toesAim3.o" "SK_Dog_RigRN.phl[150]";
-connectAttr "IKLegFront_R_liftRoll3.o" "SK_Dog_RigRN.phl[151]";
-connectAttr "IKLegFront_R_legAim3.o" "SK_Dog_RigRN.phl[152]";
-connectAttr "IKLegFront_R_stretchy3.o" "SK_Dog_RigRN.phl[153]";
-connectAttr "IKLegFront_R_antiPop3.o" "SK_Dog_RigRN.phl[154]";
-connectAttr "IKLegFront_R_Lenght7.o" "SK_Dog_RigRN.phl[155]";
-connectAttr "IKLegFront_R_Lenght8.o" "SK_Dog_RigRN.phl[156]";
-connectAttr "IKLegFront_R_Fatness7.o" "SK_Dog_RigRN.phl[157]";
-connectAttr "IKLegFront_R_Fatness8.o" "SK_Dog_RigRN.phl[158]";
-connectAttr "IKLegFront_R_volume3.o" "SK_Dog_RigRN.phl[159]";
-connectAttr "IKLegFront_R_rotateZ3.o" "SK_Dog_RigRN.phl[160]";
-connectAttr "IKLegFront_R_rotateX3.o" "SK_Dog_RigRN.phl[161]";
-connectAttr "IKLegFront_R_rotateY3.o" "SK_Dog_RigRN.phl[162]";
-connectAttr "IKLegBack_R_scaleY3.o" "SK_Dog_RigRN.phl[163]";
-connectAttr "IKLegBack_R_scaleZ3.o" "SK_Dog_RigRN.phl[164]";
-connectAttr "IKLegBack_R_scaleX3.o" "SK_Dog_RigRN.phl[165]";
-connectAttr "IKLegBack_R_followMain3.o" "SK_Dog_RigRN.phl[166]";
-connectAttr "IKLegBack_R_followRoot3.o" "SK_Dog_RigRN.phl[167]";
-connectAttr "IKLegBack_R_swivel3.o" "SK_Dog_RigRN.phl[168]";
-connectAttr "IKLegBack_R_rock3.o" "SK_Dog_RigRN.phl[169]";
-connectAttr "IKLegBack_R_roll3.o" "SK_Dog_RigRN.phl[170]";
-connectAttr "IKLegBack_R_rollStartAngle3.o" "SK_Dog_RigRN.phl[171]";
-connectAttr "IKLegBack_R_rollEndAngle3.o" "SK_Dog_RigRN.phl[172]";
-connectAttr "IKLegBack_R_toesAim3.o" "SK_Dog_RigRN.phl[173]";
-connectAttr "IKLegBack_R_liftRoll3.o" "SK_Dog_RigRN.phl[174]";
-connectAttr "IKLegBack_R_stretchy3.o" "SK_Dog_RigRN.phl[175]";
-connectAttr "IKLegBack_R_antiPop3.o" "SK_Dog_RigRN.phl[176]";
-connectAttr "IKLegBack_R_Lenght7.o" "SK_Dog_RigRN.phl[177]";
-connectAttr "IKLegBack_R_Lenght8.o" "SK_Dog_RigRN.phl[178]";
-connectAttr "IKLegBack_R_Fatness7.o" "SK_Dog_RigRN.phl[179]";
-connectAttr "IKLegBack_R_Fatness8.o" "SK_Dog_RigRN.phl[180]";
-connectAttr "IKLegBack_R_volume3.o" "SK_Dog_RigRN.phl[181]";
-connectAttr "IKLegBack_R_translateY3.o" "SK_Dog_RigRN.phl[182]";
-connectAttr "IKLegBack_R_translateZ3.o" "SK_Dog_RigRN.phl[183]";
-connectAttr "IKLegBack_R_translateX3.o" "SK_Dog_RigRN.phl[184]";
-connectAttr "IKLegBack_R_rotateZ3.o" "SK_Dog_RigRN.phl[185]";
-connectAttr "IKLegBack_R_rotateX3.o" "SK_Dog_RigRN.phl[186]";
-connectAttr "IKLegBack_R_rotateY3.o" "SK_Dog_RigRN.phl[187]";
-connectAttr "IKLegFront_L_scaleY3.o" "SK_Dog_RigRN.phl[188]";
-connectAttr "IKLegFront_L_scaleZ3.o" "SK_Dog_RigRN.phl[189]";
-connectAttr "IKLegFront_L_scaleX3.o" "SK_Dog_RigRN.phl[190]";
-connectAttr "IKLegFront_L_translateY3.o" "SK_Dog_RigRN.phl[191]";
-connectAttr "IKLegFront_L_translateZ3.o" "SK_Dog_RigRN.phl[192]";
-connectAttr "IKLegFront_L_translateX3.o" "SK_Dog_RigRN.phl[193]";
-connectAttr "IKLegFront_L_followMain3.o" "SK_Dog_RigRN.phl[194]";
-connectAttr "IKLegFront_L_followRoot3.o" "SK_Dog_RigRN.phl[195]";
-connectAttr "IKLegFront_L_followChest3.o" "SK_Dog_RigRN.phl[196]";
-connectAttr "IKLegFront_L_swivel3.o" "SK_Dog_RigRN.phl[197]";
-connectAttr "IKLegFront_L_rock3.o" "SK_Dog_RigRN.phl[198]";
-connectAttr "IKLegFront_L_roll3.o" "SK_Dog_RigRN.phl[199]";
-connectAttr "IKLegFront_L_rollStartAngle3.o" "SK_Dog_RigRN.phl[200]";
-connectAttr "IKLegFront_L_rollEndAngle3.o" "SK_Dog_RigRN.phl[201]";
-connectAttr "IKLegFront_L_toesAim3.o" "SK_Dog_RigRN.phl[202]";
-connectAttr "IKLegFront_L_liftRoll3.o" "SK_Dog_RigRN.phl[203]";
-connectAttr "IKLegFront_L_legAim3.o" "SK_Dog_RigRN.phl[204]";
-connectAttr "IKLegFront_L_stretchy3.o" "SK_Dog_RigRN.phl[205]";
-connectAttr "IKLegFront_L_antiPop3.o" "SK_Dog_RigRN.phl[206]";
-connectAttr "IKLegFront_L_Lenght7.o" "SK_Dog_RigRN.phl[207]";
-connectAttr "IKLegFront_L_Lenght8.o" "SK_Dog_RigRN.phl[208]";
-connectAttr "IKLegFront_L_Fatness7.o" "SK_Dog_RigRN.phl[209]";
-connectAttr "IKLegFront_L_Fatness8.o" "SK_Dog_RigRN.phl[210]";
-connectAttr "IKLegFront_L_volume3.o" "SK_Dog_RigRN.phl[211]";
-connectAttr "IKLegFront_L_rotateZ3.o" "SK_Dog_RigRN.phl[212]";
-connectAttr "IKLegFront_L_rotateX3.o" "SK_Dog_RigRN.phl[213]";
-connectAttr "IKLegFront_L_rotateY3.o" "SK_Dog_RigRN.phl[214]";
-connectAttr "IKLegBack_L_scaleY3.o" "SK_Dog_RigRN.phl[215]";
-connectAttr "IKLegBack_L_scaleZ3.o" "SK_Dog_RigRN.phl[216]";
-connectAttr "IKLegBack_L_scaleX3.o" "SK_Dog_RigRN.phl[217]";
-connectAttr "IKLegBack_L_rock3.o" "SK_Dog_RigRN.phl[218]";
-connectAttr "IKLegBack_L_roll3.o" "SK_Dog_RigRN.phl[219]";
-connectAttr "IKLegBack_L_rollStartAngle3.o" "SK_Dog_RigRN.phl[220]";
-connectAttr "IKLegBack_L_rollEndAngle3.o" "SK_Dog_RigRN.phl[221]";
-connectAttr "IKLegBack_L_liftRoll3.o" "SK_Dog_RigRN.phl[222]";
-connectAttr "IKLegBack_L_stretchy3.o" "SK_Dog_RigRN.phl[223]";
-connectAttr "IKLegBack_L_antiPop3.o" "SK_Dog_RigRN.phl[224]";
-connectAttr "IKLegBack_L_Lenght7.o" "SK_Dog_RigRN.phl[225]";
-connectAttr "IKLegBack_L_Lenght8.o" "SK_Dog_RigRN.phl[226]";
-connectAttr "IKLegBack_L_Fatness7.o" "SK_Dog_RigRN.phl[227]";
-connectAttr "IKLegBack_L_Fatness8.o" "SK_Dog_RigRN.phl[228]";
-connectAttr "IKLegBack_L_followRoot3.o" "SK_Dog_RigRN.phl[229]";
-connectAttr "IKLegBack_L_followMain3.o" "SK_Dog_RigRN.phl[230]";
-connectAttr "IKLegBack_L_volume3.o" "SK_Dog_RigRN.phl[231]";
-connectAttr "IKLegBack_L_swivel3.o" "SK_Dog_RigRN.phl[232]";
-connectAttr "IKLegBack_L_toesAim3.o" "SK_Dog_RigRN.phl[233]";
-connectAttr "IKLegBack_L_translateY3.o" "SK_Dog_RigRN.phl[234]";
-connectAttr "IKLegBack_L_translateZ3.o" "SK_Dog_RigRN.phl[235]";
-connectAttr "IKLegBack_L_translateX3.o" "SK_Dog_RigRN.phl[236]";
-connectAttr "IKLegBack_L_rotateZ3.o" "SK_Dog_RigRN.phl[237]";
-connectAttr "IKLegBack_L_rotateX3.o" "SK_Dog_RigRN.phl[238]";
-connectAttr "IKLegBack_L_rotateY3.o" "SK_Dog_RigRN.phl[239]";
-connectAttr "RootX_M_translateY3.o" "SK_Dog_RigRN.phl[240]";
-connectAttr "RootX_M_translateX3.o" "SK_Dog_RigRN.phl[241]";
-connectAttr "RootX_M_translateZ3.o" "SK_Dog_RigRN.phl[242]";
-connectAttr "RootX_M_rotateY3.o" "SK_Dog_RigRN.phl[243]";
-connectAttr "RootX_M_rotateX3.o" "SK_Dog_RigRN.phl[244]";
-connectAttr "RootX_M_rotateZ3.o" "SK_Dog_RigRN.phl[245]";
-connectAttr "RootX_M_visibility3.o" "SK_Dog_RigRN.phl[246]";
+connectAttr "FKEar1_R_scaleX.o" "SK_Dog_RigRN.phl[10]";
+connectAttr "FKEar1_R_scaleY.o" "SK_Dog_RigRN.phl[11]";
+connectAttr "FKEar1_R_scaleZ.o" "SK_Dog_RigRN.phl[12]";
+connectAttr "FKEar1_R_rotateX.o" "SK_Dog_RigRN.phl[13]";
+connectAttr "FKEar1_R_rotateY.o" "SK_Dog_RigRN.phl[14]";
+connectAttr "FKEar1_R_rotateZ.o" "SK_Dog_RigRN.phl[15]";
+connectAttr "FKEar1_R_translateX.o" "SK_Dog_RigRN.phl[16]";
+connectAttr "FKEar1_R_translateY.o" "SK_Dog_RigRN.phl[17]";
+connectAttr "FKEar1_R_translateZ.o" "SK_Dog_RigRN.phl[18]";
+connectAttr "FKEar2_R_scaleX.o" "SK_Dog_RigRN.phl[19]";
+connectAttr "FKEar2_R_scaleY.o" "SK_Dog_RigRN.phl[20]";
+connectAttr "FKEar2_R_scaleZ.o" "SK_Dog_RigRN.phl[21]";
+connectAttr "FKEar2_R_translateX.o" "SK_Dog_RigRN.phl[22]";
+connectAttr "FKEar2_R_translateY.o" "SK_Dog_RigRN.phl[23]";
+connectAttr "FKEar2_R_translateZ.o" "SK_Dog_RigRN.phl[24]";
+connectAttr "FKEar2_R_rotateX.o" "SK_Dog_RigRN.phl[25]";
+connectAttr "FKEar2_R_rotateY.o" "SK_Dog_RigRN.phl[26]";
+connectAttr "FKEar2_R_rotateZ.o" "SK_Dog_RigRN.phl[27]";
+connectAttr "FKEar3_R_scaleX.o" "SK_Dog_RigRN.phl[28]";
+connectAttr "FKEar3_R_scaleY.o" "SK_Dog_RigRN.phl[29]";
+connectAttr "FKEar3_R_scaleZ.o" "SK_Dog_RigRN.phl[30]";
+connectAttr "FKEar3_R_translateX.o" "SK_Dog_RigRN.phl[31]";
+connectAttr "FKEar3_R_translateY.o" "SK_Dog_RigRN.phl[32]";
+connectAttr "FKEar3_R_translateZ.o" "SK_Dog_RigRN.phl[33]";
+connectAttr "FKEar3_R_rotateX.o" "SK_Dog_RigRN.phl[34]";
+connectAttr "FKEar3_R_rotateY.o" "SK_Dog_RigRN.phl[35]";
+connectAttr "FKEar3_R_rotateZ.o" "SK_Dog_RigRN.phl[36]";
+connectAttr "FKEar4_R_scaleX.o" "SK_Dog_RigRN.phl[37]";
+connectAttr "FKEar4_R_scaleY.o" "SK_Dog_RigRN.phl[38]";
+connectAttr "FKEar4_R_scaleZ.o" "SK_Dog_RigRN.phl[39]";
+connectAttr "FKEar4_R_translateX.o" "SK_Dog_RigRN.phl[40]";
+connectAttr "FKEar4_R_translateY.o" "SK_Dog_RigRN.phl[41]";
+connectAttr "FKEar4_R_translateZ.o" "SK_Dog_RigRN.phl[42]";
+connectAttr "FKEar4_R_rotateX.o" "SK_Dog_RigRN.phl[43]";
+connectAttr "FKEar4_R_rotateY.o" "SK_Dog_RigRN.phl[44]";
+connectAttr "FKEar4_R_rotateZ.o" "SK_Dog_RigRN.phl[45]";
+connectAttr "FKEar5_R_scaleX.o" "SK_Dog_RigRN.phl[46]";
+connectAttr "FKEar5_R_scaleY.o" "SK_Dog_RigRN.phl[47]";
+connectAttr "FKEar5_R_scaleZ.o" "SK_Dog_RigRN.phl[48]";
+connectAttr "FKEar5_R_translateX.o" "SK_Dog_RigRN.phl[49]";
+connectAttr "FKEar5_R_translateY.o" "SK_Dog_RigRN.phl[50]";
+connectAttr "FKEar5_R_translateZ.o" "SK_Dog_RigRN.phl[51]";
+connectAttr "FKEar5_R_rotateX.o" "SK_Dog_RigRN.phl[52]";
+connectAttr "FKEar5_R_rotateY.o" "SK_Dog_RigRN.phl[53]";
+connectAttr "FKEar5_R_rotateZ.o" "SK_Dog_RigRN.phl[54]";
+connectAttr "FKEar6_R_scaleX.o" "SK_Dog_RigRN.phl[55]";
+connectAttr "FKEar6_R_scaleY.o" "SK_Dog_RigRN.phl[56]";
+connectAttr "FKEar6_R_scaleZ.o" "SK_Dog_RigRN.phl[57]";
+connectAttr "FKEar6_R_translateX.o" "SK_Dog_RigRN.phl[58]";
+connectAttr "FKEar6_R_translateY.o" "SK_Dog_RigRN.phl[59]";
+connectAttr "FKEar6_R_translateZ.o" "SK_Dog_RigRN.phl[60]";
+connectAttr "FKEar6_R_rotateX.o" "SK_Dog_RigRN.phl[61]";
+connectAttr "FKEar6_R_rotateY.o" "SK_Dog_RigRN.phl[62]";
+connectAttr "FKEar6_R_rotateZ.o" "SK_Dog_RigRN.phl[63]";
+connectAttr "FKEar1_L_scaleX.o" "SK_Dog_RigRN.phl[64]";
+connectAttr "FKEar1_L_scaleY.o" "SK_Dog_RigRN.phl[65]";
+connectAttr "FKEar1_L_scaleZ.o" "SK_Dog_RigRN.phl[66]";
+connectAttr "FKEar1_L_rotateX.o" "SK_Dog_RigRN.phl[67]";
+connectAttr "FKEar1_L_rotateY.o" "SK_Dog_RigRN.phl[68]";
+connectAttr "FKEar1_L_rotateZ.o" "SK_Dog_RigRN.phl[69]";
+connectAttr "FKEar1_L_translateX.o" "SK_Dog_RigRN.phl[70]";
+connectAttr "FKEar1_L_translateY.o" "SK_Dog_RigRN.phl[71]";
+connectAttr "FKEar1_L_translateZ.o" "SK_Dog_RigRN.phl[72]";
+connectAttr "FKEar2_L_scaleX.o" "SK_Dog_RigRN.phl[73]";
+connectAttr "FKEar2_L_scaleY.o" "SK_Dog_RigRN.phl[74]";
+connectAttr "FKEar2_L_scaleZ.o" "SK_Dog_RigRN.phl[75]";
+connectAttr "FKEar2_L_translateX.o" "SK_Dog_RigRN.phl[76]";
+connectAttr "FKEar2_L_translateY.o" "SK_Dog_RigRN.phl[77]";
+connectAttr "FKEar2_L_translateZ.o" "SK_Dog_RigRN.phl[78]";
+connectAttr "FKEar2_L_rotateX.o" "SK_Dog_RigRN.phl[79]";
+connectAttr "FKEar2_L_rotateY.o" "SK_Dog_RigRN.phl[80]";
+connectAttr "FKEar2_L_rotateZ.o" "SK_Dog_RigRN.phl[81]";
+connectAttr "FKEar3_L_scaleX.o" "SK_Dog_RigRN.phl[82]";
+connectAttr "FKEar3_L_scaleY.o" "SK_Dog_RigRN.phl[83]";
+connectAttr "FKEar3_L_scaleZ.o" "SK_Dog_RigRN.phl[84]";
+connectAttr "FKEar3_L_translateX.o" "SK_Dog_RigRN.phl[85]";
+connectAttr "FKEar3_L_translateY.o" "SK_Dog_RigRN.phl[86]";
+connectAttr "FKEar3_L_translateZ.o" "SK_Dog_RigRN.phl[87]";
+connectAttr "FKEar3_L_rotateX.o" "SK_Dog_RigRN.phl[88]";
+connectAttr "FKEar3_L_rotateY.o" "SK_Dog_RigRN.phl[89]";
+connectAttr "FKEar3_L_rotateZ.o" "SK_Dog_RigRN.phl[90]";
+connectAttr "FKEar4_L_scaleX.o" "SK_Dog_RigRN.phl[91]";
+connectAttr "FKEar4_L_scaleY.o" "SK_Dog_RigRN.phl[92]";
+connectAttr "FKEar4_L_scaleZ.o" "SK_Dog_RigRN.phl[93]";
+connectAttr "FKEar4_L_translateX.o" "SK_Dog_RigRN.phl[94]";
+connectAttr "FKEar4_L_translateY.o" "SK_Dog_RigRN.phl[95]";
+connectAttr "FKEar4_L_translateZ.o" "SK_Dog_RigRN.phl[96]";
+connectAttr "FKEar4_L_rotateX.o" "SK_Dog_RigRN.phl[97]";
+connectAttr "FKEar4_L_rotateY.o" "SK_Dog_RigRN.phl[98]";
+connectAttr "FKEar4_L_rotateZ.o" "SK_Dog_RigRN.phl[99]";
+connectAttr "FKEar5_L_scaleX.o" "SK_Dog_RigRN.phl[100]";
+connectAttr "FKEar5_L_scaleY.o" "SK_Dog_RigRN.phl[101]";
+connectAttr "FKEar5_L_scaleZ.o" "SK_Dog_RigRN.phl[102]";
+connectAttr "FKEar5_L_translateX.o" "SK_Dog_RigRN.phl[103]";
+connectAttr "FKEar5_L_translateY.o" "SK_Dog_RigRN.phl[104]";
+connectAttr "FKEar5_L_translateZ.o" "SK_Dog_RigRN.phl[105]";
+connectAttr "FKEar5_L_rotateX.o" "SK_Dog_RigRN.phl[106]";
+connectAttr "FKEar5_L_rotateY.o" "SK_Dog_RigRN.phl[107]";
+connectAttr "FKEar5_L_rotateZ.o" "SK_Dog_RigRN.phl[108]";
+connectAttr "FKEar6_L_scaleX.o" "SK_Dog_RigRN.phl[109]";
+connectAttr "FKEar6_L_scaleY.o" "SK_Dog_RigRN.phl[110]";
+connectAttr "FKEar6_L_scaleZ.o" "SK_Dog_RigRN.phl[111]";
+connectAttr "FKEar6_L_translateX.o" "SK_Dog_RigRN.phl[112]";
+connectAttr "FKEar6_L_translateY.o" "SK_Dog_RigRN.phl[113]";
+connectAttr "FKEar6_L_translateZ.o" "SK_Dog_RigRN.phl[114]";
+connectAttr "FKEar6_L_rotateX.o" "SK_Dog_RigRN.phl[115]";
+connectAttr "FKEar6_L_rotateY.o" "SK_Dog_RigRN.phl[116]";
+connectAttr "FKEar6_L_rotateZ.o" "SK_Dog_RigRN.phl[117]";
+connectAttr "FKNeck_M_scaleX3.o" "SK_Dog_RigRN.phl[118]";
+connectAttr "FKNeck_M_scaleY3.o" "SK_Dog_RigRN.phl[119]";
+connectAttr "FKNeck_M_scaleZ3.o" "SK_Dog_RigRN.phl[120]";
+connectAttr "FKNeck_M_translateY3.o" "SK_Dog_RigRN.phl[121]";
+connectAttr "FKNeck_M_translateX3.o" "SK_Dog_RigRN.phl[122]";
+connectAttr "FKNeck_M_translateZ3.o" "SK_Dog_RigRN.phl[123]";
+connectAttr "FKNeck_M_rotateY3.o" "SK_Dog_RigRN.phl[124]";
+connectAttr "FKNeck_M_rotateX3.o" "SK_Dog_RigRN.phl[125]";
+connectAttr "FKNeck_M_rotateZ3.o" "SK_Dog_RigRN.phl[126]";
+connectAttr "FKNeck2_M_scaleX3.o" "SK_Dog_RigRN.phl[127]";
+connectAttr "FKNeck2_M_scaleY3.o" "SK_Dog_RigRN.phl[128]";
+connectAttr "FKNeck2_M_scaleZ3.o" "SK_Dog_RigRN.phl[129]";
+connectAttr "FKNeck2_M_translateY3.o" "SK_Dog_RigRN.phl[130]";
+connectAttr "FKNeck2_M_translateX3.o" "SK_Dog_RigRN.phl[131]";
+connectAttr "FKNeck2_M_translateZ3.o" "SK_Dog_RigRN.phl[132]";
+connectAttr "FKNeck2_M_rotateY3.o" "SK_Dog_RigRN.phl[133]";
+connectAttr "FKNeck2_M_rotateX3.o" "SK_Dog_RigRN.phl[134]";
+connectAttr "FKNeck2_M_rotateZ3.o" "SK_Dog_RigRN.phl[135]";
+connectAttr "FKHead_M_scaleX3.o" "SK_Dog_RigRN.phl[136]";
+connectAttr "FKHead_M_scaleY3.o" "SK_Dog_RigRN.phl[137]";
+connectAttr "FKHead_M_scaleZ3.o" "SK_Dog_RigRN.phl[138]";
+connectAttr "FKHead_M_translateY3.o" "SK_Dog_RigRN.phl[139]";
+connectAttr "FKHead_M_translateX3.o" "SK_Dog_RigRN.phl[140]";
+connectAttr "FKHead_M_translateZ3.o" "SK_Dog_RigRN.phl[141]";
+connectAttr "FKHead_M_rotateY3.o" "SK_Dog_RigRN.phl[142]";
+connectAttr "FKHead_M_rotateX3.o" "SK_Dog_RigRN.phl[143]";
+connectAttr "FKHead_M_rotateZ3.o" "SK_Dog_RigRN.phl[144]";
+connectAttr "FKTail0_M_scaleX2.o" "SK_Dog_RigRN.phl[145]";
+connectAttr "FKTail0_M_scaleY2.o" "SK_Dog_RigRN.phl[146]";
+connectAttr "FKTail0_M_scaleZ2.o" "SK_Dog_RigRN.phl[147]";
+connectAttr "FKTail0_M_translateY2.o" "SK_Dog_RigRN.phl[148]";
+connectAttr "FKTail0_M_translateX2.o" "SK_Dog_RigRN.phl[149]";
+connectAttr "FKTail0_M_translateZ2.o" "SK_Dog_RigRN.phl[150]";
+connectAttr "FKTail0_M_rotateY2.o" "SK_Dog_RigRN.phl[151]";
+connectAttr "FKTail0_M_rotateX2.o" "SK_Dog_RigRN.phl[152]";
+connectAttr "FKTail0_M_rotateZ2.o" "SK_Dog_RigRN.phl[153]";
+connectAttr "FKTail1_M_scaleX2.o" "SK_Dog_RigRN.phl[154]";
+connectAttr "FKTail1_M_scaleY2.o" "SK_Dog_RigRN.phl[155]";
+connectAttr "FKTail1_M_scaleZ2.o" "SK_Dog_RigRN.phl[156]";
+connectAttr "FKTail1_M_translateY2.o" "SK_Dog_RigRN.phl[157]";
+connectAttr "FKTail1_M_translateX2.o" "SK_Dog_RigRN.phl[158]";
+connectAttr "FKTail1_M_translateZ2.o" "SK_Dog_RigRN.phl[159]";
+connectAttr "FKTail1_M_rotateY2.o" "SK_Dog_RigRN.phl[160]";
+connectAttr "FKTail1_M_rotateX2.o" "SK_Dog_RigRN.phl[161]";
+connectAttr "FKTail1_M_rotateZ2.o" "SK_Dog_RigRN.phl[162]";
+connectAttr "FKTail2_M_scaleX2.o" "SK_Dog_RigRN.phl[163]";
+connectAttr "FKTail2_M_scaleY2.o" "SK_Dog_RigRN.phl[164]";
+connectAttr "FKTail2_M_scaleZ2.o" "SK_Dog_RigRN.phl[165]";
+connectAttr "FKTail2_M_translateY2.o" "SK_Dog_RigRN.phl[166]";
+connectAttr "FKTail2_M_translateX2.o" "SK_Dog_RigRN.phl[167]";
+connectAttr "FKTail2_M_translateZ2.o" "SK_Dog_RigRN.phl[168]";
+connectAttr "FKTail2_M_rotateY2.o" "SK_Dog_RigRN.phl[169]";
+connectAttr "FKTail2_M_rotateX2.o" "SK_Dog_RigRN.phl[170]";
+connectAttr "FKTail2_M_rotateZ2.o" "SK_Dog_RigRN.phl[171]";
+connectAttr "FKTail3_M_scaleX2.o" "SK_Dog_RigRN.phl[172]";
+connectAttr "FKTail3_M_scaleY2.o" "SK_Dog_RigRN.phl[173]";
+connectAttr "FKTail3_M_scaleZ2.o" "SK_Dog_RigRN.phl[174]";
+connectAttr "FKTail3_M_translateY2.o" "SK_Dog_RigRN.phl[175]";
+connectAttr "FKTail3_M_translateX2.o" "SK_Dog_RigRN.phl[176]";
+connectAttr "FKTail3_M_translateZ2.o" "SK_Dog_RigRN.phl[177]";
+connectAttr "FKTail3_M_rotateY2.o" "SK_Dog_RigRN.phl[178]";
+connectAttr "FKTail3_M_rotateX2.o" "SK_Dog_RigRN.phl[179]";
+connectAttr "FKTail3_M_rotateZ2.o" "SK_Dog_RigRN.phl[180]";
+connectAttr "FKTail4_M_scaleX2.o" "SK_Dog_RigRN.phl[181]";
+connectAttr "FKTail4_M_scaleY2.o" "SK_Dog_RigRN.phl[182]";
+connectAttr "FKTail4_M_scaleZ2.o" "SK_Dog_RigRN.phl[183]";
+connectAttr "FKTail4_M_translateY2.o" "SK_Dog_RigRN.phl[184]";
+connectAttr "FKTail4_M_translateX2.o" "SK_Dog_RigRN.phl[185]";
+connectAttr "FKTail4_M_translateZ2.o" "SK_Dog_RigRN.phl[186]";
+connectAttr "FKTail4_M_rotateY2.o" "SK_Dog_RigRN.phl[187]";
+connectAttr "FKTail4_M_rotateX2.o" "SK_Dog_RigRN.phl[188]";
+connectAttr "FKTail4_M_rotateZ2.o" "SK_Dog_RigRN.phl[189]";
+connectAttr "FKTail5_M_scaleX2.o" "SK_Dog_RigRN.phl[190]";
+connectAttr "FKTail5_M_scaleY2.o" "SK_Dog_RigRN.phl[191]";
+connectAttr "FKTail5_M_scaleZ2.o" "SK_Dog_RigRN.phl[192]";
+connectAttr "FKTail5_M_translateY2.o" "SK_Dog_RigRN.phl[193]";
+connectAttr "FKTail5_M_translateX2.o" "SK_Dog_RigRN.phl[194]";
+connectAttr "FKTail5_M_translateZ2.o" "SK_Dog_RigRN.phl[195]";
+connectAttr "FKTail5_M_rotateY2.o" "SK_Dog_RigRN.phl[196]";
+connectAttr "FKTail5_M_rotateX2.o" "SK_Dog_RigRN.phl[197]";
+connectAttr "FKTail5_M_rotateZ2.o" "SK_Dog_RigRN.phl[198]";
+connectAttr "FKRoot_M_scaleX3.o" "SK_Dog_RigRN.phl[199]";
+connectAttr "FKRoot_M_scaleY3.o" "SK_Dog_RigRN.phl[200]";
+connectAttr "FKRoot_M_scaleZ3.o" "SK_Dog_RigRN.phl[201]";
+connectAttr "FKRoot_M_translateY3.o" "SK_Dog_RigRN.phl[202]";
+connectAttr "FKRoot_M_translateX3.o" "SK_Dog_RigRN.phl[203]";
+connectAttr "FKRoot_M_translateZ3.o" "SK_Dog_RigRN.phl[204]";
+connectAttr "FKRoot_M_rotateY3.o" "SK_Dog_RigRN.phl[205]";
+connectAttr "FKRoot_M_rotateX3.o" "SK_Dog_RigRN.phl[206]";
+connectAttr "FKRoot_M_rotateZ3.o" "SK_Dog_RigRN.phl[207]";
+connectAttr "FKSpine1_M_scaleX3.o" "SK_Dog_RigRN.phl[208]";
+connectAttr "FKSpine1_M_scaleY3.o" "SK_Dog_RigRN.phl[209]";
+connectAttr "FKSpine1_M_scaleZ3.o" "SK_Dog_RigRN.phl[210]";
+connectAttr "FKSpine1_M_translateY3.o" "SK_Dog_RigRN.phl[211]";
+connectAttr "FKSpine1_M_translateX3.o" "SK_Dog_RigRN.phl[212]";
+connectAttr "FKSpine1_M_translateZ3.o" "SK_Dog_RigRN.phl[213]";
+connectAttr "FKSpine1_M_rotateY3.o" "SK_Dog_RigRN.phl[214]";
+connectAttr "FKSpine1_M_rotateX3.o" "SK_Dog_RigRN.phl[215]";
+connectAttr "FKSpine1_M_rotateZ3.o" "SK_Dog_RigRN.phl[216]";
+connectAttr "FKSpine2_M_scaleX3.o" "SK_Dog_RigRN.phl[217]";
+connectAttr "FKSpine2_M_scaleY3.o" "SK_Dog_RigRN.phl[218]";
+connectAttr "FKSpine2_M_scaleZ3.o" "SK_Dog_RigRN.phl[219]";
+connectAttr "FKSpine2_M_translateY3.o" "SK_Dog_RigRN.phl[220]";
+connectAttr "FKSpine2_M_translateX3.o" "SK_Dog_RigRN.phl[221]";
+connectAttr "FKSpine2_M_translateZ3.o" "SK_Dog_RigRN.phl[222]";
+connectAttr "FKSpine2_M_rotateY3.o" "SK_Dog_RigRN.phl[223]";
+connectAttr "FKSpine2_M_rotateX3.o" "SK_Dog_RigRN.phl[224]";
+connectAttr "FKSpine2_M_rotateZ3.o" "SK_Dog_RigRN.phl[225]";
+connectAttr "FKSpine3_M_scaleX3.o" "SK_Dog_RigRN.phl[226]";
+connectAttr "FKSpine3_M_scaleY3.o" "SK_Dog_RigRN.phl[227]";
+connectAttr "FKSpine3_M_scaleZ3.o" "SK_Dog_RigRN.phl[228]";
+connectAttr "FKSpine3_M_translateY3.o" "SK_Dog_RigRN.phl[229]";
+connectAttr "FKSpine3_M_translateX3.o" "SK_Dog_RigRN.phl[230]";
+connectAttr "FKSpine3_M_translateZ3.o" "SK_Dog_RigRN.phl[231]";
+connectAttr "FKSpine3_M_rotateY3.o" "SK_Dog_RigRN.phl[232]";
+connectAttr "FKSpine3_M_rotateX3.o" "SK_Dog_RigRN.phl[233]";
+connectAttr "FKSpine3_M_rotateZ3.o" "SK_Dog_RigRN.phl[234]";
+connectAttr "FKChest_M_scaleX3.o" "SK_Dog_RigRN.phl[235]";
+connectAttr "FKChest_M_scaleY3.o" "SK_Dog_RigRN.phl[236]";
+connectAttr "FKChest_M_scaleZ3.o" "SK_Dog_RigRN.phl[237]";
+connectAttr "FKChest_M_translateY3.o" "SK_Dog_RigRN.phl[238]";
+connectAttr "FKChest_M_translateX3.o" "SK_Dog_RigRN.phl[239]";
+connectAttr "FKChest_M_translateZ3.o" "SK_Dog_RigRN.phl[240]";
+connectAttr "FKChest_M_rotateY3.o" "SK_Dog_RigRN.phl[241]";
+connectAttr "FKChest_M_rotateX3.o" "SK_Dog_RigRN.phl[242]";
+connectAttr "FKChest_M_rotateZ3.o" "SK_Dog_RigRN.phl[243]";
+connectAttr "IKLegFront_R_scaleY3.o" "SK_Dog_RigRN.phl[244]";
+connectAttr "IKLegFront_R_scaleZ3.o" "SK_Dog_RigRN.phl[245]";
+connectAttr "IKLegFront_R_scaleX3.o" "SK_Dog_RigRN.phl[246]";
+connectAttr "IKLegFront_R_translateY3.o" "SK_Dog_RigRN.phl[247]";
+connectAttr "IKLegFront_R_translateZ3.o" "SK_Dog_RigRN.phl[248]";
+connectAttr "IKLegFront_R_translateX3.o" "SK_Dog_RigRN.phl[249]";
+connectAttr "IKLegFront_R_followMain3.o" "SK_Dog_RigRN.phl[250]";
+connectAttr "IKLegFront_R_followRoot3.o" "SK_Dog_RigRN.phl[251]";
+connectAttr "IKLegFront_R_followChest3.o" "SK_Dog_RigRN.phl[252]";
+connectAttr "IKLegFront_R_swivel3.o" "SK_Dog_RigRN.phl[253]";
+connectAttr "IKLegFront_R_rock3.o" "SK_Dog_RigRN.phl[254]";
+connectAttr "IKLegFront_R_roll3.o" "SK_Dog_RigRN.phl[255]";
+connectAttr "IKLegFront_R_rollStartAngle3.o" "SK_Dog_RigRN.phl[256]";
+connectAttr "IKLegFront_R_rollEndAngle3.o" "SK_Dog_RigRN.phl[257]";
+connectAttr "IKLegFront_R_toesAim3.o" "SK_Dog_RigRN.phl[258]";
+connectAttr "IKLegFront_R_liftRoll3.o" "SK_Dog_RigRN.phl[259]";
+connectAttr "IKLegFront_R_legAim3.o" "SK_Dog_RigRN.phl[260]";
+connectAttr "IKLegFront_R_stretchy3.o" "SK_Dog_RigRN.phl[261]";
+connectAttr "IKLegFront_R_antiPop3.o" "SK_Dog_RigRN.phl[262]";
+connectAttr "IKLegFront_R_Lenght7.o" "SK_Dog_RigRN.phl[263]";
+connectAttr "IKLegFront_R_Lenght8.o" "SK_Dog_RigRN.phl[264]";
+connectAttr "IKLegFront_R_Fatness7.o" "SK_Dog_RigRN.phl[265]";
+connectAttr "IKLegFront_R_Fatness8.o" "SK_Dog_RigRN.phl[266]";
+connectAttr "IKLegFront_R_volume3.o" "SK_Dog_RigRN.phl[267]";
+connectAttr "IKLegFront_R_rotateZ3.o" "SK_Dog_RigRN.phl[268]";
+connectAttr "IKLegFront_R_rotateX3.o" "SK_Dog_RigRN.phl[269]";
+connectAttr "IKLegFront_R_rotateY3.o" "SK_Dog_RigRN.phl[270]";
+connectAttr "IKLegBack_R_scaleY3.o" "SK_Dog_RigRN.phl[271]";
+connectAttr "IKLegBack_R_scaleZ3.o" "SK_Dog_RigRN.phl[272]";
+connectAttr "IKLegBack_R_scaleX3.o" "SK_Dog_RigRN.phl[273]";
+connectAttr "IKLegBack_R_followMain3.o" "SK_Dog_RigRN.phl[274]";
+connectAttr "IKLegBack_R_followRoot3.o" "SK_Dog_RigRN.phl[275]";
+connectAttr "IKLegBack_R_swivel3.o" "SK_Dog_RigRN.phl[276]";
+connectAttr "IKLegBack_R_rock3.o" "SK_Dog_RigRN.phl[277]";
+connectAttr "IKLegBack_R_roll3.o" "SK_Dog_RigRN.phl[278]";
+connectAttr "IKLegBack_R_rollStartAngle3.o" "SK_Dog_RigRN.phl[279]";
+connectAttr "IKLegBack_R_rollEndAngle3.o" "SK_Dog_RigRN.phl[280]";
+connectAttr "IKLegBack_R_toesAim3.o" "SK_Dog_RigRN.phl[281]";
+connectAttr "IKLegBack_R_liftRoll3.o" "SK_Dog_RigRN.phl[282]";
+connectAttr "IKLegBack_R_stretchy3.o" "SK_Dog_RigRN.phl[283]";
+connectAttr "IKLegBack_R_antiPop3.o" "SK_Dog_RigRN.phl[284]";
+connectAttr "IKLegBack_R_Lenght7.o" "SK_Dog_RigRN.phl[285]";
+connectAttr "IKLegBack_R_Lenght8.o" "SK_Dog_RigRN.phl[286]";
+connectAttr "IKLegBack_R_Fatness7.o" "SK_Dog_RigRN.phl[287]";
+connectAttr "IKLegBack_R_Fatness8.o" "SK_Dog_RigRN.phl[288]";
+connectAttr "IKLegBack_R_volume3.o" "SK_Dog_RigRN.phl[289]";
+connectAttr "IKLegBack_R_translateY3.o" "SK_Dog_RigRN.phl[290]";
+connectAttr "IKLegBack_R_translateZ3.o" "SK_Dog_RigRN.phl[291]";
+connectAttr "IKLegBack_R_translateX3.o" "SK_Dog_RigRN.phl[292]";
+connectAttr "IKLegBack_R_rotateZ3.o" "SK_Dog_RigRN.phl[293]";
+connectAttr "IKLegBack_R_rotateX3.o" "SK_Dog_RigRN.phl[294]";
+connectAttr "IKLegBack_R_rotateY3.o" "SK_Dog_RigRN.phl[295]";
+connectAttr "IKLegFront_L_scaleY3.o" "SK_Dog_RigRN.phl[296]";
+connectAttr "IKLegFront_L_scaleZ3.o" "SK_Dog_RigRN.phl[297]";
+connectAttr "IKLegFront_L_scaleX3.o" "SK_Dog_RigRN.phl[298]";
+connectAttr "IKLegFront_L_translateY3.o" "SK_Dog_RigRN.phl[299]";
+connectAttr "IKLegFront_L_translateZ3.o" "SK_Dog_RigRN.phl[300]";
+connectAttr "IKLegFront_L_translateX3.o" "SK_Dog_RigRN.phl[301]";
+connectAttr "IKLegFront_L_followMain3.o" "SK_Dog_RigRN.phl[302]";
+connectAttr "IKLegFront_L_followRoot3.o" "SK_Dog_RigRN.phl[303]";
+connectAttr "IKLegFront_L_followChest3.o" "SK_Dog_RigRN.phl[304]";
+connectAttr "IKLegFront_L_swivel3.o" "SK_Dog_RigRN.phl[305]";
+connectAttr "IKLegFront_L_rock3.o" "SK_Dog_RigRN.phl[306]";
+connectAttr "IKLegFront_L_roll3.o" "SK_Dog_RigRN.phl[307]";
+connectAttr "IKLegFront_L_rollStartAngle3.o" "SK_Dog_RigRN.phl[308]";
+connectAttr "IKLegFront_L_rollEndAngle3.o" "SK_Dog_RigRN.phl[309]";
+connectAttr "IKLegFront_L_toesAim3.o" "SK_Dog_RigRN.phl[310]";
+connectAttr "IKLegFront_L_liftRoll3.o" "SK_Dog_RigRN.phl[311]";
+connectAttr "IKLegFront_L_legAim3.o" "SK_Dog_RigRN.phl[312]";
+connectAttr "IKLegFront_L_stretchy3.o" "SK_Dog_RigRN.phl[313]";
+connectAttr "IKLegFront_L_antiPop3.o" "SK_Dog_RigRN.phl[314]";
+connectAttr "IKLegFront_L_Lenght7.o" "SK_Dog_RigRN.phl[315]";
+connectAttr "IKLegFront_L_Lenght8.o" "SK_Dog_RigRN.phl[316]";
+connectAttr "IKLegFront_L_Fatness7.o" "SK_Dog_RigRN.phl[317]";
+connectAttr "IKLegFront_L_Fatness8.o" "SK_Dog_RigRN.phl[318]";
+connectAttr "IKLegFront_L_volume3.o" "SK_Dog_RigRN.phl[319]";
+connectAttr "IKLegFront_L_rotateZ3.o" "SK_Dog_RigRN.phl[320]";
+connectAttr "IKLegFront_L_rotateX3.o" "SK_Dog_RigRN.phl[321]";
+connectAttr "IKLegFront_L_rotateY3.o" "SK_Dog_RigRN.phl[322]";
+connectAttr "IKLegBack_L_scaleY3.o" "SK_Dog_RigRN.phl[323]";
+connectAttr "IKLegBack_L_scaleZ3.o" "SK_Dog_RigRN.phl[324]";
+connectAttr "IKLegBack_L_scaleX3.o" "SK_Dog_RigRN.phl[325]";
+connectAttr "IKLegBack_L_rock3.o" "SK_Dog_RigRN.phl[326]";
+connectAttr "IKLegBack_L_roll3.o" "SK_Dog_RigRN.phl[327]";
+connectAttr "IKLegBack_L_rollStartAngle3.o" "SK_Dog_RigRN.phl[328]";
+connectAttr "IKLegBack_L_rollEndAngle3.o" "SK_Dog_RigRN.phl[329]";
+connectAttr "IKLegBack_L_liftRoll3.o" "SK_Dog_RigRN.phl[330]";
+connectAttr "IKLegBack_L_stretchy3.o" "SK_Dog_RigRN.phl[331]";
+connectAttr "IKLegBack_L_antiPop3.o" "SK_Dog_RigRN.phl[332]";
+connectAttr "IKLegBack_L_Lenght7.o" "SK_Dog_RigRN.phl[333]";
+connectAttr "IKLegBack_L_Lenght8.o" "SK_Dog_RigRN.phl[334]";
+connectAttr "IKLegBack_L_Fatness7.o" "SK_Dog_RigRN.phl[335]";
+connectAttr "IKLegBack_L_Fatness8.o" "SK_Dog_RigRN.phl[336]";
+connectAttr "IKLegBack_L_followRoot3.o" "SK_Dog_RigRN.phl[337]";
+connectAttr "IKLegBack_L_followMain3.o" "SK_Dog_RigRN.phl[338]";
+connectAttr "IKLegBack_L_volume3.o" "SK_Dog_RigRN.phl[339]";
+connectAttr "IKLegBack_L_swivel3.o" "SK_Dog_RigRN.phl[340]";
+connectAttr "IKLegBack_L_toesAim3.o" "SK_Dog_RigRN.phl[341]";
+connectAttr "IKLegBack_L_translateY3.o" "SK_Dog_RigRN.phl[342]";
+connectAttr "IKLegBack_L_translateZ3.o" "SK_Dog_RigRN.phl[343]";
+connectAttr "IKLegBack_L_translateX3.o" "SK_Dog_RigRN.phl[344]";
+connectAttr "IKLegBack_L_rotateZ3.o" "SK_Dog_RigRN.phl[345]";
+connectAttr "IKLegBack_L_rotateX3.o" "SK_Dog_RigRN.phl[346]";
+connectAttr "IKLegBack_L_rotateY3.o" "SK_Dog_RigRN.phl[347]";
+connectAttr "RootX_M_translateY3.o" "SK_Dog_RigRN.phl[348]";
+connectAttr "RootX_M_translateX3.o" "SK_Dog_RigRN.phl[349]";
+connectAttr "RootX_M_translateZ3.o" "SK_Dog_RigRN.phl[350]";
+connectAttr "RootX_M_rotateY3.o" "SK_Dog_RigRN.phl[351]";
+connectAttr "RootX_M_rotateX3.o" "SK_Dog_RigRN.phl[352]";
+connectAttr "RootX_M_rotateZ3.o" "SK_Dog_RigRN.phl[353]";
+connectAttr "RootX_M_visibility3.o" "SK_Dog_RigRN.phl[354]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -9699,6 +10729,7 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "sharedReferenceNode.sr" "SK_Dog_RigRN.sr";
 connectAttr "trackInfoManager1.msg" ":sequenceManager1.tim";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of SK_Dog_Scarf.ma

@@ -37,13 +37,13 @@ public class DogMinigame : MinigameBase
 
         if (playerOnePoints > playerTwoPoints)
         {
-            gameInstance.IncreasePlayerStarCount(0);
+            ServiceLocator.GetService<IGameService>().IncreaseStarCount(0);
         }
         else if (playerTwoPoints > playerOnePoints)
         {
-            gameInstance.IncreasePlayerStarCount(1);
+            ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
         }
-        gameInstance.InitializePlayerHub();
+        ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
     }
 
     private void Countdown()

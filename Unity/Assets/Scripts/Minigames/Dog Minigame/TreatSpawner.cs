@@ -24,15 +24,30 @@ public class TreatSpawner : MonoBehaviour
 
     private void SpawnTreat()
     {
-        Vector2 randomCircle = Random.insideUnitCircle * GetComponent<SphereCollider>().radius;
+        Vector3 spawnPosition = Vector3.zero;
 
+        bool shouldNotSpawn = true;
+        while (shouldNotSpawn)
+        {
 
+            Vector2 randomCircle = Random.insideUnitCircle * GetComponent<SphereCollider>().radius;
+            float YPosition = gameObject.transform.position.y;
 
-        float XPosition = Random.Range(bounds.min.x, bounds.max.x - 1);
-        float ZPosition = Random.Range(bounds.min.z, bounds.max.z - 1);
-        float YPosition = gameObject.transform.position.y;
+            spawnPosition = new Vector3(randomCircle.x, YPosition, randomCircle.y);
 
-        Vector3 spawnPosition = new Vector3(randomCircle.x, YPosition, randomCircle.y);
+        
+            if(Physics.Raycast(spawnPosition, Vector3.down, out RaycastHit hit, 1000))
+            {
+                if (hit.collider.gameObject.TryGetComponent<DogTreat>(out DogTreat treat))
+                {
+                    continue;
+                }
+                else
+                {
+                    shouldNotSpawn = false;
+                }
+            }
+        }
 
         GameObject newTreat = Instantiate(treatPrefab, spawnPosition, Quaternion.identity);
         newTreat.GetComponent<DogTreat>().dog = dog;

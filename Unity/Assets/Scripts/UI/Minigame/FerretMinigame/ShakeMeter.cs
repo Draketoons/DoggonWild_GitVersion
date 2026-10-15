@@ -25,11 +25,11 @@ public class ShakeMeter : MonoBehaviour
 
     public void RepositionRangeIcon(float newYPosition)
     {
-        attentionRangeIcon.rectTransform.localPosition = new Vector3(attentionRangeIcon.rectTransform.localPosition.x, newYPosition, attentionRangeIcon.rectTransform.localPosition.x);
+        attentionRangeIcon.rectTransform.DOLocalMove(new Vector3(attentionRangeIcon.rectTransform.localPosition.x, newYPosition, attentionRangeIcon.rectTransform.localPosition.x), 0.3f);
     }
 
     public void UpdateRangeScale()
     {
-        attentionRangeIcon.rectTransform.localScale = new Vector3(attentionRangeIcon.transform.localScale.x, player.attentionRange, attentionRangeIcon.transform.localScale.y);
+        attentionRangeIcon.rectTransform.DOScale(new Vector3(attentionRangeIcon.transform.localScale.x, player.attentionRange, attentionRangeIcon.transform.localScale.y), 0.2f);
     }
 }

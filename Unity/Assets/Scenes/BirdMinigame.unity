@@ -653,7 +653,7 @@ MonoBehaviour:
   metronome: {fileID: 1481494088}
   minigameManager: {fileID: 1810363698}
   currentBeat: {fileID: 0}
-  playerHealth: 3
+  playerHealth: 5
   playerHealthUI: {fileID: 1693201028}
   noteAttempted: 0
 --- !u!1 &690161620
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   metronome: {fileID: 1481494088}
   minigameManager: {fileID: 1810363698}
   currentBeat: {fileID: 0}
-  playerHealth: 3
+  playerHealth: 5
   playerHealthUI: {fileID: 16357982}
   noteAttempted: 0
 --- !u!1660057539 &9223372036854775807

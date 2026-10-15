@@ -39,7 +39,7 @@ public class WinScreenController : MonoBehaviour
     {
         playerControls = Instantiate(playerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(playerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(playerIndex), inputUser);
         inputUser.AssociateActionsWithUser(playerControls);
     }
 
@@ -47,5 +47,13 @@ public class WinScreenController : MonoBehaviour
     {
         Debug.Log("Pressing Main Menu Button");
         mainMenuButton.onClick.Invoke();
+    }
+
+    private void OnDestroy()
+    {
+        if (inputUser.valid)
+        {
+            inputUser.UnpairDevicesAndRemoveUser();
+        }
     }
 }

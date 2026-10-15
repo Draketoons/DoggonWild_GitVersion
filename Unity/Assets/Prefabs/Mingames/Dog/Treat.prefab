@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 5198012043751352616}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.011672, z: 0}
+  m_LocalScale: {x: 0.59545, y: 0.59545, z: 0.59545}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5224998003876877093}
@@ -74,9 +74,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0edf5f535667b340998ad959b50154b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treat
-  fallSpeed: 2
+  fallSpeed: 1.5
   pointAmount: 1
+  treatShadowPrefab: {fileID: 8388801943272034412, guid: fb19642491eeddd41912efa5288d49c1, type: 3}
   dog: {fileID: 0}
+  shadow: {fileID: 0}
 --- !u!65 &8686712027678859335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96,8 +98,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20318916, y: 0.30407628, z: 0.82339406}
-  m_Center: {x: 0, y: -0.16, z: 0}
+  m_Size: {x: 0.42027688, y: 0.30407628, z: 0.8233941}
+  m_Center: {x: -0.034614764, y: -0.16000001, z: 0}
 --- !u!1001 &5694895724899710158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,9 +160,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -7971811865172687611, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
       propertyPath: m_Name
       value: SM_DogBone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332670223027268640, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304912704652716639, guid: 4baab57394c26bf42b2927482dfb2e70, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

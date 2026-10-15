@@ -47,7 +47,7 @@ public class Ferret : MonoBehaviour
             speed = winningPlayer.attentionScore * 0.00001f;
         }
 
-        if ((transform.position.x >= 1.0f || transform.position.x <= -1.0f) && !endedGame)
+        if ((transform.position.x >= 0.78f || transform.position.x <= -0.78f) && !endedGame)
         {
             FerretMGManager.EndMinigame();
             endedGame = true;

@@ -12,6 +12,7 @@ public class FerretMGController : MonoBehaviour
     [SerializeField] private Ferret ferret;
     [SerializeField] private Toy currentToy;
     [SerializeField] private Toy[] toys;
+    [SerializeField] private Transform toySpawnPosition;
     public float attentionScore;
     public float shakeIntensity;
     public float shakeLevel;
@@ -20,7 +21,9 @@ public class FerretMGController : MonoBehaviour
     private InputAction shakeAction;
     private InputAction switchToyAction;
     private FerretMinigame ferretMGManager;
+    GameObject currentToyObj;
     int currentToySelectionIndex;
+    Vector2 previousStickPosition;
 
     InputUser inputUser;
 
@@ -48,7 +51,11 @@ public class FerretMGController : MonoBehaviour
         }
 
         if (ferret.attentionLevel < shakeLevel + attentionRange && ferret.attentionLevel > shakeLevel - attentionRange)
+        {
             attentionScore += 0.1f * currentToy.GetScoreMultiplier();
+            ferret.canMove = true;
+        }
+        ferret.canMove = false;
 
         if (ferretMGManager.endedGame)
             shakeAction.Disable();
@@ -58,7 +65,7 @@ public class FerretMGController : MonoBehaviour
     {
         PlayerControls = Instantiate(PlayerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(PlayerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(PlayerIndex), inputUser);
         inputUser.AssociateActionsWithUser(PlayerControls);
     }
 
@@ -82,10 +89,17 @@ public class FerretMGController : MonoBehaviour
     private void Shake(InputAction.CallbackContext context)
     {
         StopAllCoroutines();
+        Vector2 targetStickPosition = -1 * previousStickPosition.normalized;
+        Vector2 currentStickPosition = context.ReadValue<Vector2>().normalized;
+        float dotProd = Vector2.Dot(currentStickPosition, targetStickPosition);
         isShaking = true;
-        if (shakeLevel < maxShakeLevel)
+        if (shakeLevel < maxShakeLevel && dotProd > 0.4f)
+        {
+            Debug.Log("Target stick position reached");
             shakeLevel += shakeIntensity * currentToy.GetShakeMultiplier();
+        }
         ferretMGManager.RepositionRangeUI(PlayerIndex, shakeLevel);
+        previousStickPosition = context.ReadValue<Vector2>();
         StartCoroutine(ShakeCooldown());
     }
 
@@ -99,20 +113,29 @@ public class FerretMGController : MonoBehaviour
     {
         float inputValue = context.ReadValue<float>();
         Debug.Log("Switching Toy!");
+
         if (inputValue < 0 && currentToySelectionIndex > 0)
         {
+            if (currentToyObj)
+                Destroy(currentToyObj.gameObject);
+
             currentToySelectionIndex--;
             currentToy = toys[currentToySelectionIndex];
             attentionRange = currentToy.GetAttentionRange();
             ferretMGManager.UpdateRangeUI(PlayerIndex);
+            currentToyObj = currentToy.SpawnToy(toySpawnPosition.position, toySpawnPosition.transform.rotation);
             return;
         }
         if (inputValue > 0 && currentToySelectionIndex < 2)
         {
+            if (currentToyObj)
+                Destroy(currentToyObj.gameObject);
+
             currentToySelectionIndex++;
             currentToy = toys[currentToySelectionIndex];
             attentionRange = currentToy.GetAttentionRange();
             ferretMGManager.UpdateRangeUI(PlayerIndex);
+            currentToyObj = currentToy.SpawnToy(toySpawnPosition.position, toySpawnPosition.transform.rotation);
             return;
         }
     }

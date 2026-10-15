@@ -63,7 +63,7 @@ public class RatMGController : MonoBehaviour
     {
         playerControls = Instantiate(playerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(playerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(playerIndex), inputUser);
         inputUser.AssociateActionsWithUser(playerControls);
     }
 
@@ -109,20 +109,29 @@ public class RatMGController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            if (hit.collider.gameObject.TryGetComponent<RatHidingSpot>(out RatHidingSpot hidingSpot))
+            if (hit.collider.gameObject.TryGetComponent<RatHidingSpot>(out RatHidingSpot hidingSpot) && hidingSpot.selectable)
             {
                 if (hidingSpot.currentRat)
                 {
                     CheckRat(hidingSpot.currentRat.GetComponent<BaseRat>());
                     minigameManager.RemoveFromSelectedSpotsList(hidingSpot);
+                    hidingSpot.selectable = false;
                     //hidingSpot.PopDownTween();
                 }
+            }
+            else
+            {
+                UpdateScore(-1);
             }
 
             if (hit.collider.gameObject.TryGetComponent<BaseRat>(out BaseRat rat))
             {
                 
             }
+        }
+        else
+        {
+            UpdateScore(-1);
         }
     }
 
@@ -187,5 +196,13 @@ public class RatMGController : MonoBehaviour
         score = Mathf.Clamp(score, 0, 9999);
 
         scoreUI.SetText(score.ToString());
+    }
+
+    private void OnDestroy()
+    {
+        if (inputUser.valid)
+        {
+            inputUser.UnpairDevicesAndRemoveUser();
+        }
     }
 }

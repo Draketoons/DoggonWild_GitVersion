@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseWidget : MonoBehaviour
 {
+    public static PauseWidget Instance;
+
     [SerializeField] private Button mainMenuButton, quitButton;
     [SerializeField] private InputActionAsset playerControls;
     [SerializeField] private GameObject pausePanel;
@@ -27,19 +30,28 @@ public class PauseWidget : MonoBehaviour
 
     private void Awake()
     {
-        gameInstance = GameInstance.gameInstance;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.transform.parent.gameObject);
+        }
+        else
+        {
+            Instance = this;
 
-        SetInputActions();
-        BindInputActions();
-        EnableInputActions();
+            SetInputActions();
+            BindInputActions();
+            EnableInputActions();
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            DontDestroyOnLoad(Instance.transform.parent.gameObject);
+        }
     }
 
     private void Start()
     {
-        mainMenuButton.onClick.AddListener(() => gameInstance.InitializeMainMenu());
-        quitButton.onClick.AddListener(() => gameInstance.QuitGame());
-
-        gameInstance = GameInstance.gameInstance;
+        mainMenuButton.onClick.AddListener(() => ServiceLocator.GetService<ILevelLoadService>().InitializeMainMenu());
+        quitButton.onClick.AddListener(() => ServiceLocator.GetService<IGameService>().QuitGame());
 
         selectionImage.transform.position = mainMenuButton.transform.position;
 
@@ -98,22 +110,56 @@ public class PauseWidget : MonoBehaviour
         selectAction = playerControls.FindActionMap("Player").FindAction("Select");
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenu")
+        {
+            paused = false;
+            pausePanel.SetActive(false);
+            return;
+        }
+    }
+
     private void TogglePause()
     {
-        paused = !paused;
-        if (paused)
+        if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "WinScreen") 
         {
+            paused = false;
+            return;
+        }
+
+        paused = !paused;
+        if (paused && pausePanel != null)
+        {
+            //Debug.Log(this.gameObject);
             pausePanel.SetActive(true);
             if (hub)
             {
-                player1.animator.Play("IdleHub");
-                player2.animator.Play("IdleHub");
+                // TODO: Move this functionality into the players or other local to level location
+                //player1.animator.Play("IdleHub");
+                //player2.animator.Play("IdleHub");
             }
         }
-        if (!paused)
+        if (!paused && pausePanel != null)
         {
             pausePanel.SetActive(false);
         }
-        gameInstance.SetPauseGame(paused);
+        ServiceLocator.GetService<IGameService>().SetPauseGame(paused);
+    }
+
+    private void OnDisable()
+    {
+        if (this != Instance) { return; }
+
+        Debug.Log("OnDisable Running");
+        pauseAction.performed -= context => TogglePause();
+        upAction.performed -= context => SetCurrentButton(mainMenuButton);
+        downAction.performed -= context => SetCurrentButton(quitButton);
+        selectAction.performed -= context => InvokeCurrentButton();
+
+        pauseAction.Disable();
+        upAction.Disable();
+        downAction.Disable();
+        selectAction.Disable();
     }
 }

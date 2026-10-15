@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
@@ -44,7 +45,7 @@ public class DogMGPlayerController : MonoBehaviour
     {
         playerControls = Instantiate(playerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(playerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(playerIndex), inputUser);
         inputUser.AssociateActionsWithUser(playerControls);
     }
 
@@ -124,7 +125,19 @@ public class DogMGPlayerController : MonoBehaviour
         {
             UpdatePlayerPoints(treat.pointAmount);
             FindAnyObjectByType<DogBehavior>().RemoveTreatFromList(treat.gameObject);
+
+            treat.shadow.transform.DOKill();
+            Destroy(treat.shadow);
+            
             Destroy(treat.gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (inputUser.valid)
+        {
+            inputUser.UnpairDevicesAndRemoveUser();
         }
     }
 }

@@ -3,20 +3,9 @@ using UnityEngine.InputSystem;
 
 public class GameService : IGameService
 {
-    private int playerOneStarCount = 0;
-    private int playerTwoStarCount = 0;
-
-    public int player1StarCount => player1StarCount;
-
-    public int player2StarCount => player2StarCount;
-
-    public Gamepad[] controllers => new Gamepad[2];
-
-    public void AddController(Gamepad controller)
-    {
-        throw new System.NotImplementedException();
-    }
-
+    public int playerOneStarCount { get; private set; }
+    public int playerTwoStarCount { get; private set; }
+    
     public void IncreaseStarCount(int playerIndex)
     {
         if (playerIndex == 0)
@@ -29,8 +18,24 @@ public class GameService : IGameService
         }
     }
 
-    public void InitializeControllers()
+    public void QuitGame()
     {
-        throw new System.NotImplementedException();
+        Application.Quit();
+    }
+
+    public void RestartGame()
+    {
+        playerOneStarCount = 0;
+        playerTwoStarCount = 0;
+    }
+
+    public void SetPauseGame(bool paused)
+    {
+        if (paused)
+        {
+            Time.timeScale = 0;
+            return;
+        }
+        Time.timeScale = 1;
     }
 }

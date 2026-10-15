@@ -14,13 +14,13 @@ public class WinChecker : MonoBehaviour
     {
         Debug.Log("Checking player star count");
 
-        if (gameInstance.playerOneStarCount >= 3)
+        if (ServiceLocator.GetService<IGameService>().playerOneStarCount >= 3)
         {
             Debug.Log("Player 1 Won!");
             SceneManager.LoadScene("WinScreen");
         }
         
-        if (gameInstance.playerTwoStarCount >= 3)
+        if (ServiceLocator.GetService<IGameService>().playerTwoStarCount >= 3)
         {
             Debug.Log("Player 2 Won!");
             SceneManager.LoadScene("WinScreen");

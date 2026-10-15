@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4e970a92208964ab94b01187b220b7, type: 3}
   m_Name: BigToy
   m_EditorClassIdentifier: Assembly-CSharp::Toy
-  shakeMultiplier: 1
+  shakeMultiplier: 20
   scoreMultiplier: 2
   attentionRange: 30
+  model: {fileID: 4939029557575712396, guid: e42dd4844945bc04dbd09f3c42466d92, type: 3}

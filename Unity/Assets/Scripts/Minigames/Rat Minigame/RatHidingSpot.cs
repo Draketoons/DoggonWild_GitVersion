@@ -17,6 +17,7 @@ public class RatHidingSpot : MonoBehaviour
     private void Start()
     {
         originalPosition = transform.position;
+        selectable = false;
     }
 
     public void SetHidingPrefab(GameObject prefab)
@@ -70,6 +71,7 @@ public class RatHidingSpot : MonoBehaviour
         currentRat.transform.DOMove(popedUpPosition.position, 1, false).OnComplete(() =>
         {
             StartCoroutine(WaitBeforeRatDown(2));
+            selectable = true;
         });
     }
 

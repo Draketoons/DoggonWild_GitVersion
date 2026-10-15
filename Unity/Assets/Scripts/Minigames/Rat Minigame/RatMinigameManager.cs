@@ -21,15 +21,15 @@ public class RatMinigameManager : MinigameBase
     private int completedPopupLoops = 0;
 
     [SerializeField] private RatMGController playerOne;
-    [SerializeField] private RatMGController playerTwo; 
+    [SerializeField] private RatMGController playerTwo;
 
     private void Start()
     {
-        StartMinigame();
+        StartCoroutine(MinigameStartDelay());
     }
 
     private void Update()
-    { 
+    {
     }
 
     public override void StartMinigame()
@@ -42,7 +42,7 @@ public class RatMinigameManager : MinigameBase
     private void SelectRandomHidingSpots(int amountOfRandomSpots)
     {
         bool spotsSelected = false;
-        
+
         while (!spotsSelected)
         {
             RatHidingSpot selectedRandomSpot = hidingSpots[Random.Range(0, hidingSpots.Count)];
@@ -63,7 +63,7 @@ public class RatMinigameManager : MinigameBase
     {
         foreach (RatHidingSpot hidingSpot in selectedHidingSpots)
         {
-            hidingSpot.StartShaking(3,0.01f);
+            hidingSpot.StartShaking(3, 0.01f);
         }
 
         StartCoroutine(WaitForPopup(3));
@@ -74,7 +74,7 @@ public class RatMinigameManager : MinigameBase
         int totalNumberOfRats = fakeRatPrefabs.Count + 1;
 
         for (int i = 0; i < selectedHidingSpots.Count; i++)
-        {   
+        {
             if (i == 0)
             {
                 selectedHidingSpots[i].hidingPrefab = ratPrefab;
@@ -87,7 +87,7 @@ public class RatMinigameManager : MinigameBase
 
     public void PopUpRats()
     {
-        foreach(RatHidingSpot spot in selectedHidingSpots)
+        foreach (RatHidingSpot spot in selectedHidingSpots)
         {
             spot.PopupTween();
         }
@@ -164,9 +164,16 @@ public class RatMinigameManager : MinigameBase
         RatMGController winningPlayer = DetermineWinner();
         if (winningPlayer)
         {
-            GameInstance.gameInstance.IncreasePlayerStarCount(winningPlayer.playerIndex);
+            ServiceLocator.GetService<IGameService>().IncreaseStarCount(winningPlayer.playerIndex);
         }
 
-        GameInstance.gameInstance.InitializePlayerHub();
+        ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+    }
+
+    IEnumerator MinigameStartDelay()
+    {
+        yield return new WaitForSeconds(2);
+
+        StartMinigame();
     }
 }

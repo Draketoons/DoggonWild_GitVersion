@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4e970a92208964ab94b01187b220b7, type: 3}
   m_Name: SmallToy
   m_EditorClassIdentifier: Assembly-CSharp::Toy
-  shakeMultiplier: 2
+  shakeMultiplier: 50
   scoreMultiplier: 0.2
   attentionRange: 100
+  model: {fileID: 1286931588366656732, guid: 79b6e084d81f9e042a70b60a4f7c6127, type: 3}

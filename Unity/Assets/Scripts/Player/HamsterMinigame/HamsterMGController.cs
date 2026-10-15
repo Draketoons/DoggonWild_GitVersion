@@ -165,7 +165,15 @@ public class HamsterMGController : MonoBehaviour
         Debug.Log("Associating actions with controller");
         PlayerControls = Instantiate(PlayerControls);
         inputUser = InputUser.CreateUserWithoutPairedDevices();
-        InputUser.PerformPairingWithDevice(GameInstance.gameInstance.GetPlayerController(PlayerIndex), inputUser);
+        InputUser.PerformPairingWithDevice(ServiceLocator.GetService<IControllerService>().GetPlayerController(PlayerIndex), inputUser);
         inputUser.AssociateActionsWithUser(PlayerControls);
+    }
+
+    private void OnDestroy()
+    {
+        if (inputUser.valid)
+        {
+            inputUser.UnpairDevicesAndRemoveUser();
+        }
     }
 }
