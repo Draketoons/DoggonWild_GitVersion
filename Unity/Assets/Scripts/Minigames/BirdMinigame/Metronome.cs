@@ -135,4 +135,9 @@ public class Metronome : MonoBehaviour
             player2.NoteWrong();
         }
     }
+
+    public void ChangeBPM(float newBPM)
+    {
+        bpm = newBPM;
+    }
 }

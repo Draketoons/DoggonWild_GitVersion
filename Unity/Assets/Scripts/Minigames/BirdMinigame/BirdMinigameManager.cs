@@ -7,9 +7,17 @@ using UnityEngine;
 
 public class BirdMinigameManager : MinigameBase
 {
-    [SerializeField] int numberOfRounds;
-    [SerializeField] int numberOfRoundsTilNotesIncrease;
-    [SerializeField] int numberOfRoundsTilNotesSpeedUp;
+    private int roundNumber;
+
+    
+     private const int firstSpeedUpRound = 3;
+     private const int secondSpeedUpRound = 7;
+     private const int thirdSpeedUpRound = 11;
+     private const int firstNoteIncreaseRound = 5;
+     private const int secondNoteIncreaseRound = 9;
+     private const int thirdNoteIncreaseRound = 13;
+
+    [Header("Settings")]
     [SerializeField] Metronome metronome;
     [SerializeField] private int numberOfNotesPlayed;
     [SerializeField] private TextMeshProUGUI UIText;
@@ -25,6 +33,7 @@ public class BirdMinigameManager : MinigameBase
 
     private void Start()
     {
+
         ClearNotesList();
         DetermineNotesToPlay();
         StartMinigame();
@@ -85,12 +94,44 @@ public class BirdMinigameManager : MinigameBase
         noteTypeIndex = 0;
         UpdateUIText("Bird Turn");
 
+        roundNumber++;
+
+        switch (roundNumber)
+        {
+            
+            case firstSpeedUpRound:
+                metronome.ChangeBPM(60);
+                break;
+
+            case secondSpeedUpRound:
+                metronome.ChangeBPM(75);
+                break;
+
+            case thirdSpeedUpRound:
+                metronome.ChangeBPM(90);
+                break;
+
+            case firstNoteIncreaseRound:
+                numberOfNotesPlayed++;
+                break;
+
+            case secondNoteIncreaseRound:
+                numberOfNotesPlayed++;
+                break;
+
+            case thirdNoteIncreaseRound:
+                numberOfNotesPlayed++;
+                break;
+        }
+
+
         ClearNotesList();
         DetermineNotesToPlay();
     }
 
     public override void StartMinigame()
     {
+        roundNumber = 1;
         StartCoroutine(StartMinigameCoroutine());
     }
 

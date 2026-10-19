@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b28ef4cfb45964abe50263d578936a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metronome
-  bpm: 60
+  bpm: 45
   beatPerMeasure: 2
   isRunning: 0
   metronomeTick: {fileID: 8300000, guid: f35de72bd14eb1e4d884a0e293f0d368, type: 3}
@@ -1569,11 +1569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce8d7d72eef3b44db9a480578bc20b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BirdMinigameManager
-  numberOfRounds: 10
-  numberOfRoundsTilNotesIncrease: 2
-  numberOfRoundsTilNotesSpeedUp: 2
   metronome: {fileID: 1481494088}
-  numberOfNotesPlayed: 4
+  numberOfNotesPlayed: 3
   UIText: {fileID: 1574633933}
   waitTime: 0.5
   playerTurn: 0

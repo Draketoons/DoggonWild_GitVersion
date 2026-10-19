@@ -71,7 +71,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5198012043751352616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0edf5f535667b340998ad959b50154b, type: 3}
+  m_Script: {fileID: 11500000, guid: 29e38c5e5f9f14f4888d24d569c02bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Treat
   fallSpeed: 1.5
