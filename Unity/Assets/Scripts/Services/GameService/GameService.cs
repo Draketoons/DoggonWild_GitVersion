@@ -5,6 +5,9 @@ public class GameService : IGameService
 {
     public int playerOneStarCount { get; private set; }
     public int playerTwoStarCount { get; private set; }
+
+    public int winningPlayerIndex { get; private set; }
+    public string minigamePlayed { get; private set; }
     
     public void IncreaseStarCount(int playerIndex)
     {
@@ -37,5 +40,11 @@ public class GameService : IGameService
             return;
         }
         Time.timeScale = 1;
+    }
+
+    public void SetPostMinigameInfo(int playerIndex, string pet)
+    {
+        winningPlayerIndex = playerIndex;
+        minigamePlayed = pet;
     }
 }

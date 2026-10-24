@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PracticeScreen",
+    "maps": [
+        {
+            "name": "PracticeScreen",
+            "id": "f12fe07f-386c-46ae-9671-ab7831c20bbb",
+            "actions": [
+                {
+                    "name": "ReadyUp",
+                    "type": "Button",
+                    "id": "10be53dd-4e34-426f-beec-587f13c98262",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c485f4aa-5f98-4905-b64d-280ced4fa3c6",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReadyUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

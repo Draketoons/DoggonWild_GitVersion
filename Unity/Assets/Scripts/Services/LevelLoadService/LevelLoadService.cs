@@ -21,6 +21,11 @@ public class LevelLoadService : ILevelLoadService
         SceneManager.LoadScene(minigameName);
     }
 
+    public void InitializeResultsScreen()
+    {
+        SceneManager.LoadScene("MinigameResults");
+    }
+
     public void InitializeWinScreen()
     {
         Time.timeScale = 1.0f;

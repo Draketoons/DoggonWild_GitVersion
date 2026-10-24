@@ -192,24 +192,28 @@ public class BirdMinigameManager : MinigameBase
         {
             if (metronome.player2.playerHealth <= 0)
             {
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(-1, "Bird");
+                ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
             }
             else
             {
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(1, "Bird");
                 ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
             }
         }
         if (playerIndex == 1)
         {
             if (metronome.player1.playerHealth <= 0)
             {
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(-1, "Bird");
+                ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
             }
             else
             {
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(0, "Bird");
                 ServiceLocator.GetService<IGameService>().IncreaseStarCount(0);
-                ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+                ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
             }
         }
 

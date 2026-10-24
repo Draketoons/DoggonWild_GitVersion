@@ -40,8 +40,6 @@ public class HamsterMinigame : MinigameBase
     private bool startedGame = false;
     private bool endedGame = false;
     private HamsterMGScoreHolder scoreHolder;
-    private GameInstance gameInstance;
-    bool finalRound;
 
     private void Start()
     {

@@ -6,4 +6,5 @@ public interface ILevelLoadService
     void InitializeHub();
     void InitializeMainMenu();
     void InitializeWinScreen();
+    void InitializeResultsScreen();
 }

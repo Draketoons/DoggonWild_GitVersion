@@ -16,9 +16,6 @@ public class FerretMinigame : MonoBehaviour
 
     private void Awake()
     {
-        //gameInstance = GameObject.FindGameObjectWithTag("GI").GetComponent<GameInstance>();
-        // (gameInstance)
-            //Debug.Log("FoundGameInstance");
         WinText.text = "";
     }
 
