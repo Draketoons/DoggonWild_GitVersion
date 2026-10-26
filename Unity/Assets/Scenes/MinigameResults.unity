@@ -263,7 +263,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResultsScreenManager
   player1: {fileID: 160665184706164783}
   player2: {fileID: 321989109319648912}
-  petPrefabList: []
+  petPrefabList:
+  - {fileID: -5328849019950119618, guid: 8865912fd5bd0504e89a28dfe9e12a54, type: 3}
+  - {fileID: 7008118924373516675, guid: e299361b2e60b6449b44faa73e9d26b5, type: 3}
+  - {fileID: -3976021767135564476, guid: 488e3a0c10f504f4bb460aa015f11e12, type: 3}
+  - {fileID: 7897696566188965322, guid: 24e86843659a7c147ab915cd6b93bc66, type: 3}
+  - {fileID: 3518595884208296455, guid: 8bf9f22d81b2a824bb67f68dbeaeac27, type: 3}
+  - {fileID: 529465111756060500, guid: 713939f039438d24bbca15f1659efe32, type: 3}
+  petLocation: {fileID: 2084625942}
 --- !u!4 &1209673940
 Transform:
   m_ObjectHideFlags: 0
@@ -656,6 +663,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &2084625941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084625942}
+  m_Layer: 0
+  m_Name: PetSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084625942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084625941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &160665184706164782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -791,3 +829,4 @@ SceneRoots:
   - {fileID: 321989109319648911}
   - {fileID: 160665184706164782}
   - {fileID: 1209673940}
+  - {fileID: 2084625942}

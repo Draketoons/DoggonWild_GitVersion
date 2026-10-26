@@ -5,7 +5,13 @@ public class ResultsScreenManager : MonoBehaviour
 {
     [SerializeField] GameObject player1;
     [SerializeField] GameObject player2;
-    [SerializeField] GameObject[] petPrefabList;
+    [SerializeField] ResultsScreenPet[] petPrefabList;
+    [SerializeField] Transform petLocation;
+
+    private void Awake()
+    {
+        DeterminePet();
+    }
 
     private void Start()
     {
@@ -34,6 +40,18 @@ public class ResultsScreenManager : MonoBehaviour
         {
             player1.GetComponent<Animator>().SetTrigger("Lose");
             player2.GetComponent<Animator>().SetTrigger("Lose");
+        }
+    }
+
+    private void DeterminePet()
+    {
+        foreach (ResultsScreenPet pet in petPrefabList )
+        {
+            if (pet.petName == ServiceLocator.GetService<IGameService>().minigamePlayed)
+            {
+                Instantiate(pet.gameObject, petLocation.position, Quaternion.identity);
+                return;
+            }
         }
     }
 }
