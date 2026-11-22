@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
-using UnityEngine.UI;
 
 public class PracticeScreenController : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class PracticeScreenController : MonoBehaviour
     [SerializeField] private int playerIndex;
     [SerializeField] bool ready;
     [SerializeField] private PracticeScreenManager practiceScreenManager;
+
     InputUser inputUser;
     private InputAction readyUp;
 

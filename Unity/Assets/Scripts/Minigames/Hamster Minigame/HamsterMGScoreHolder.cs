@@ -4,6 +4,7 @@ using UnityEngine;
 public class HamsterMGScoreHolder : MonoBehaviour
 {
     public static HamsterMGScoreHolder instance;
+    public bool startedGame = false;
 
     [SerializeField] private float Player1Score;
     [SerializeField] private float Player2Score;
@@ -53,6 +54,17 @@ public class HamsterMGScoreHolder : MonoBehaviour
     public float GetP2Score()
     {
         return Player2Score;
+    }
+
+    public void ResetScores()
+    {
+        Player1Score = 0;
+        Player2Score = 0;
+    }
+
+    public void ResetRoundCount()
+    {
+        RoundNumber = 0;
     }
 
     public int GetWinningPlayer()

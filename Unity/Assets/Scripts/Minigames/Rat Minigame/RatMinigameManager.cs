@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.AppUI.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RatMinigameManager : MinigameBase
 {
@@ -22,25 +23,35 @@ public class RatMinigameManager : MinigameBase
 
     [SerializeField] private RatMGController playerOne;
     [SerializeField] private RatMGController playerTwo;
+    [SerializeField] private bool practiceMode;
+
+    private int roundNum = 0;
 
     private void Start()
     {
-        StartCoroutine(MinigameStartDelay());
-    }
-
-    private void Update()
-    {
+        if (practiceMode)
+        {
+            StartMinigame();
+        }
     }
 
     public override void StartMinigame()
     {
+        roundNum = 0;
+        numberOfHidingSpotsToShake = 2;
         TimerUI.UpdateScore(gameTimer);
         StartPopupLoop();
         Invoke("Countdown", 1f);
     }
 
+    private void Update()
+    {
+        Debug.Log(numberOfHidingSpotsToShake);
+    }
+
     private void SelectRandomHidingSpots(int amountOfRandomSpots)
     {
+        selectedHidingSpots.Clear();
         bool spotsSelected = false;
 
         while (!spotsSelected)
@@ -103,6 +114,10 @@ public class RatMinigameManager : MinigameBase
     {
         foreach (RatHidingSpot spot in selectedHidingSpots)
         {
+            if(spot.currentRat.TryGetComponent<Animator>(out Animator animator))
+            {
+                animator.SetTrigger("Caught");
+            }
             spot.PopDownTween();
         }
     }
@@ -119,6 +134,8 @@ public class RatMinigameManager : MinigameBase
 
     private void StartPopupLoop()
     {
+        roundNum++;
+        CheckRoundNum();
         completedPopupLoops = 0;
         SelectRandomHidingSpots(numberOfHidingSpotsToShake);
         currentNumberOfSpots = numberOfHidingSpotsToShake;
@@ -161,13 +178,25 @@ public class RatMinigameManager : MinigameBase
 
     public override void EndMingame()
     {
+        if (practiceMode)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame(currentSceneName);
+            return;
+        }
+
         RatMGController winningPlayer = DetermineWinner();
         if (winningPlayer)
         {
+            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(winningPlayer.playerIndex, "Rat");
             ServiceLocator.GetService<IGameService>().IncreaseStarCount(winningPlayer.playerIndex);
         }
+        else
+        {
+            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(-1, "Rat");
+        }
 
-        ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+        ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
     }
 
     IEnumerator MinigameStartDelay()
@@ -175,5 +204,24 @@ public class RatMinigameManager : MinigameBase
         yield return new WaitForSeconds(2);
 
         StartMinigame();
+    }
+
+    private void CheckRoundNum()
+    {
+        switch (roundNum)
+        {
+            case 3:
+                numberOfHidingSpotsToShake = 3;
+                break;
+
+            case 5:
+                numberOfHidingSpotsToShake = 4;
+                break;
+
+            case 7:
+                numberOfHidingSpotsToShake = 5;
+                break;
+
+        }
     }
 }

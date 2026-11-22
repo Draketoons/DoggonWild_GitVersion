@@ -9,5 +9,7 @@ AnimatorOverrideController:
   m_Name: Hamster_Results_AC
   m_Controller: {fileID: 9100000, guid: e41f9ee466ec51142995bec665a591a8, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: -7072165173448479900, guid: 3c84fa8a0f2b4a14e9e64ed1549fd382, type: 3}
+  - m_OriginalClip: {fileID: -115899371804562333, guid: ed2640e5bac20e445b28dbe6c666b5ca, type: 3}
+    m_OverrideClip: {fileID: 1517140919514353064, guid: 36a6fa54c2f439b4aa2dab17dc49ac73, type: 3}
+  - m_OriginalClip: {fileID: -3385867209513896200, guid: bae5c0d4cd8b6f242b85821342fbe6bf, type: 3}
     m_OverrideClip: {fileID: -2375834189721665684, guid: 610d129b6ae202644908c1a0175132e2, type: 3}

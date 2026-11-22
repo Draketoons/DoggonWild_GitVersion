@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,9 +13,11 @@ public class PlayerHubController : MonoBehaviour
     [Header("Player Settings")]
     [SerializeField] private float playerWalkSpeed;
     [SerializeField] private float playerSprintSpeed;
+    [SerializeField] private float fallSpeed;
     [SerializeField] private InputActionAsset playerControls;
     [SerializeField] private bool recieveInput = true;
     [SerializeField] private PauseWidget pauseWidget;
+    [SerializeField] private ToonCircle toonCircle;
     public Animator animator;
 
     private CharacterController playerController;
@@ -31,12 +34,6 @@ public class PlayerHubController : MonoBehaviour
 
     Vector3 currentPos = Vector3.zero;
     Vector3 oldPos = Vector3.zero;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
-    {
-
-    }
 
     private void Start()
     {
@@ -76,8 +73,11 @@ public class PlayerHubController : MonoBehaviour
     void Update()
     {
         Move();
+    }
 
-        transform.position = new Vector3(transform.position.x, 1.0f, transform.position.z);
+    private void FixedUpdate()
+    {
+        playerController.Move(Vector3.down * fallSpeed * Time.deltaTime);
     }
 
     public void Select(InputAction.CallbackContext context)
@@ -134,13 +134,8 @@ public class PlayerHubController : MonoBehaviour
 
     private void SelectMinigame()
     {
-        if (!currentMinigameSelector)
-        {
-            Debug.Log("No current minigame selector!");
-            return;
-        }
-        DisableInputActions();
-        currentMinigameSelector.LoadMinigame();
+        if (currentMinigameSelector)
+            StartCoroutine(SelectMinigameSequence());
     }
 
     private void BindInputActions()
@@ -174,6 +169,17 @@ public class PlayerHubController : MonoBehaviour
         if (inputUser.valid)
         {
             inputUser.UnpairDevicesAndRemoveUser();
+        }
+    }
+
+    public IEnumerator SelectMinigameSequence()
+    {
+        toonCircle.StartCircleTween(Camera.main.WorldToScreenPoint(transform.position), 0.0f);
+        yield return new WaitForSeconds(2.0f);
+        if (currentMinigameSelector)
+        {
+            DisableInputActions();
+            currentMinigameSelector.LoadMinigame();
         }
     }
 }

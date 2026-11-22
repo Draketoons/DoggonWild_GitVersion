@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6439652210655269551}
   - component: {fileID: 529465111756060500}
+  - component: {fileID: 7012909240349334357}
   m_Layer: 0
   m_Name: Rat_Results
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 89399275845239576}
   m_Father: {fileID: 0}
@@ -46,6 +47,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultsScreenPet
   petName: Rat
+--- !u!95 &7012909240349334357
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536232075905196560}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 035694ace9bfc53489ea393ba93f40fe, type: 3}
+  m_Controller: {fileID: 22100000, guid: fb0235d6837ed2c4fad80fe428d59e30, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &483896542996178163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94,10 +117,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 035694ace9bfc53489ea393ba93f40fe, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 035694ace9bfc53489ea393ba93f40fe, type: 3}
       propertyPath: m_Name
       value: Rat_Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 1172003504555076861, guid: 035694ace9bfc53489ea393ba93f40fe, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a89117e198cbb1a46a8b5066d332dbd6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

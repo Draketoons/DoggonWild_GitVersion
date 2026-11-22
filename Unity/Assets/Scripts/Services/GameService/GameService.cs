@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class GameService : IGameService
 {
@@ -8,7 +7,7 @@ public class GameService : IGameService
 
     public int winningPlayerIndex { get; private set; }
     public string minigamePlayed { get; private set; }
-    
+
     public void IncreaseStarCount(int playerIndex)
     {
         if (playerIndex == 0)

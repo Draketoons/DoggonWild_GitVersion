@@ -13,6 +13,7 @@ public class HamsterMinigame : MinigameBase
     [SerializeField] private float RowOffset;
     [SerializeField] private float EndGameWait;
     [SerializeField] private float FinalEndGameWait;
+    [SerializeField] private bool PracticeMode;
 
     [Header("References")]
     [SerializeField] private TubeRow TubeRowObj;
@@ -49,7 +50,8 @@ public class HamsterMinigame : MinigameBase
 
         UpdateUI();
 
-        scoreHolder.IncrementRoundNumber();
+        if (!PracticeMode)
+            scoreHolder.IncrementRoundNumber();
 
         startedGame = false;
         cam = Camera.main;
@@ -65,10 +67,22 @@ public class HamsterMinigame : MinigameBase
         MainCameraBrain.DefaultBlend.Time = blendTime;
 
         StartCoroutine(StartCameraSequence());
+
+        foreach (HamsterMGController player in Players)
+        {
+            player.DisableInputActions();
+        }
     }
 
     private void Update()
     {
+        if (scoreHolder.startedGame == true)
+        {
+            scoreHolder.ResetScores();
+            scoreHolder.ResetRoundCount();
+            UpdateUI();
+            scoreHolder.startedGame = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Players[0].placedTreat && Players[1].placedTreat && !startedGame)
         {
@@ -97,6 +111,16 @@ public class HamsterMinigame : MinigameBase
         }
     }
 
+    public override void StartMinigame()
+    {
+        base.StartMinigame();
+
+        foreach (HamsterMGController player in Players)
+        {
+            player.EnableInputActions();
+        }
+    }
+
     public void UpdateUI()
     {
         if (scoreHolder.GetRoundNumber() < MaxRounds)
@@ -105,14 +129,17 @@ public class HamsterMinigame : MinigameBase
         P2ScoreCounter.text = $"P2 Score: {scoreHolder.GetP2Score()}";
     }
 
-    public void UpdateResultText(int player)
+    public void UpdateResultText()
     {
+        ResultText.text = "Finish!";
+        /*
         if (player < 0)
         {
             ResultText.text = $"Nobody Won :/";
             return;
         }
         ResultText.text = $"Player {player + 1} Won!";
+        */
     }
 
     public void ResetMinigame()
@@ -165,6 +192,9 @@ public class HamsterMinigame : MinigameBase
 
         UpdateUI();
 
+        if (PracticeMode)
+            return;
+
         if (scoreHolder.GetRoundNumber() >= MaxRounds)
         {
             StartCoroutine(EndMinigame());
@@ -203,27 +233,46 @@ public class HamsterMinigame : MinigameBase
     {
         Debug.Log("Restarting Minigame!");
         yield return new WaitForSeconds(EndGameWait);
-        ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame("HamsterMinigame");
+        if (!PracticeMode)
+            ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame("HamsterMinigame");
+        if (PracticeMode)
+            ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame("PracticeHamsterMG");
     }
 
     public IEnumerator EndMinigame()
     {
-        UpdateResultText(scoreHolder.GetWinningPlayer());
+        UpdateResultText();
 
         if (scoreHolder.GetWinningPlayer() != -1)
         {
             Debug.Log($"Game Over! Player: {scoreHolder.GetWinningPlayer() + 1} won!");
             Destroy(scoreHolder.gameObject);
             yield return new WaitForSeconds(FinalEndGameWait);
-            ServiceLocator.GetService<IGameService>().IncreaseStarCount(scoreHolder.GetWinningPlayer());
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            if (!PracticeMode)
+            {
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(scoreHolder.GetWinningPlayer(), "Hamster");
+                ServiceLocator.GetService<IGameService>().IncreaseStarCount(scoreHolder.GetWinningPlayer());
+                ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
+            }
+            if (PracticeMode)
+            {
+                ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame("PracticeHamsterMG");
+            }
         }
         else
         {
             Debug.Log($"Game Over! Nobody won!");
             Destroy(scoreHolder.gameObject);
             yield return new WaitForSeconds(FinalEndGameWait);
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            if (!PracticeMode)
+            {
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(-1, "Hamster");
+                ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
+            }
+            if (PracticeMode)
+            {
+                ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame("PracticeHamsterMG");
+            }
         }
     }
 }

@@ -49,9 +49,14 @@ public class DogMGPlayerController : MonoBehaviour
         inputUser.AssociateActionsWithUser(playerControls);
     }
 
-    void EnableInputActions()
+    public void EnableInputActions()
     {
         moveAction.Enable();
+    }
+
+    public void DisableInputActions()
+    {
+        moveAction.Disable();
     }
 
     void Update()
@@ -126,9 +131,11 @@ public class DogMGPlayerController : MonoBehaviour
             UpdatePlayerPoints(treat.pointAmount);
             FindAnyObjectByType<DogBehavior>().RemoveTreatFromList(treat.gameObject);
 
-            treat.shadow.transform.DOKill();
-            Destroy(treat.shadow);
-            
+            if (treat.shadow)
+            {
+                treat.shadow.transform.DOKill();
+                Destroy(treat.shadow);
+            }
             Destroy(treat.gameObject);
         }
     }

@@ -9,5 +9,5 @@ AnimatorOverrideController:
   m_Name: Cat_Results_AC
   m_Controller: {fileID: 9100000, guid: e41f9ee466ec51142995bec665a591a8, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: -7072165173448479900, guid: 3c84fa8a0f2b4a14e9e64ed1549fd382, type: 3}
-    m_OverrideClip: {fileID: 5982347250400238132, guid: a49e4fc4fe2e597419842dfc531f31dc, type: 3}
+  - m_OriginalClip: {fileID: -3385867209513896200, guid: bae5c0d4cd8b6f242b85821342fbe6bf, type: 3}
+    m_OverrideClip: {fileID: 7944421219044828558, guid: 531cbcfde932b7b46a9e22327b1bf97d, type: 3}

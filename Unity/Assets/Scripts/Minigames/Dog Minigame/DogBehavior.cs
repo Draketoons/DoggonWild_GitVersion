@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Behavior;
 using System.Collections;
 using System;
+using UnityEngine.AI;
 
 public class DogBehavior : MonoBehaviour
 {
@@ -14,10 +15,12 @@ public class DogBehavior : MonoBehaviour
 
     BehaviorGraphAgent behaviorGraph;
     Animator animator;
+    NavMeshAgent navMeshAgent;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
     private void Start()
     {
@@ -25,6 +28,12 @@ public class DogBehavior : MonoBehaviour
         behaviorGraph.SetVariableValue<GameObject>("CurrentTreat", null);
         behaviorGraph.SetVariableValue<float>("MoveSpeed", moveSpeed);
         behaviorGraph.SetVariableValue<float>("EatTime", eatTime);
+    }
+
+    private void Update()
+    {
+       // animator.SetFloat("speedMagnitude", navMeshAgent.velocity.sqrMagnitude);
+        
     }
 
     public void AddTreatsToList(GameObject treat)

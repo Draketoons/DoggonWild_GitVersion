@@ -68,6 +68,12 @@ public class RatHidingSpot : MonoBehaviour
     public void PopupTween()
     {
         SpawnRatPrefab();
+       // if (currentRat.TryGetComponent<Animator>(out Animator animator))
+        //{
+           // Debug.Log("Aimation playing");
+            //animator.SetTrigger("Popup");
+       // }
+
         currentRat.transform.DOMove(popedUpPosition.position, 1, false).OnComplete(() =>
         {
             StartCoroutine(WaitBeforeRatDown(2));

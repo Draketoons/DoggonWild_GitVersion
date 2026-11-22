@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CatMinigame : MinigameBase
 {
@@ -9,6 +10,7 @@ public class CatMinigame : MinigameBase
     [SerializeField] private GameObject catObj;
     [SerializeField] private CatMGPlayerController[] players;
     [SerializeField] private GameInstance gameInstance;
+    [SerializeField] private bool practiceMode;
 
     [Header("Minigame Stats")]
     public bool lookingBack;
@@ -47,6 +49,11 @@ public class CatMinigame : MinigameBase
         MainCamera.DefaultBlend.Time = blendTime;
 
         StartCoroutine(StartMinigameBlend());
+
+        foreach (CatMGPlayerController player in players)
+        {
+            player.DisableInputActions();
+        }
     }
 
     void Update()
@@ -59,6 +66,16 @@ public class CatMinigame : MinigameBase
             {
                 StartEndCatMinigame(player.GetIndex());
             }
+        }
+    }
+
+    public override void StartMinigame()
+    {
+        base.StartMinigame();
+
+        foreach (CatMGPlayerController player in players)
+        {
+            player.EnableInputActions();
         }
     }
 
@@ -108,14 +125,29 @@ public class CatMinigame : MinigameBase
         {
             Debug.Log($"Player: {playerIndex + 1} won!");
             yield return new WaitForSeconds(endMinigameDelay);
+            if (!practiceMode)
+            {
+                
+            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(playerIndex, "Cat");
             ServiceLocator.GetService<IGameService>().IncreaseStarCount(playerIndex);
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
+            }
+
         }
         if (playerIndex < 0)
         {
             Debug.Log("Minigame end! No players won...");
             yield return new WaitForSeconds(endMinigameDelay);
-            ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+            if (!practiceMode)
+                            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(-1, "Cat");
+            ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();;
+        }
+        if (practiceMode)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame(currentSceneName);
+
+
         }
     }
 
@@ -127,11 +159,6 @@ public class CatMinigame : MinigameBase
         }
 
         coroutine = StartCoroutine(EndCatMinigame(playerIndex));
-    }
-
-    public override void StartMinigame()
-    {
-        
     }
     
     IEnumerator StartMinigameBlend()

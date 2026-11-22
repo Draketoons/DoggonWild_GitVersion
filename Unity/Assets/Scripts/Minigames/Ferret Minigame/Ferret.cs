@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Ferret : MonoBehaviour
 {
@@ -8,10 +7,10 @@ public class Ferret : MonoBehaviour
     public bool canMove;
     [SerializeField] private float attentionChangeRate;
     [SerializeField] private float speed;
+    [SerializeField] FerretMGController winningPlayer;
 
     private FerretMinigame FerretMGManager;
     private FerretMGController[] players;
-    FerretMGController winningPlayer;
     Animator animator;
     bool endedGame = false;
 
@@ -28,13 +27,13 @@ public class Ferret : MonoBehaviour
         if (players[0].attentionScore > players[1].attentionScore || players[0].isShaking && !players[1].isShaking)
         {
             winningPlayer = players[0];
-            transform.rotation = Quaternion.Euler(0, 0, 90);
+            transform.rotation = Quaternion.Euler(0, 180, 90);
         }
 
         if (players[0].attentionScore < players[1].attentionScore || !players[0].isShaking && players[1].isShaking)
         {
             winningPlayer = players[1];
-            transform.rotation = Quaternion.Euler(0, 180, 90);
+            transform.rotation = Quaternion.Euler(0, 0, 90);
         }
 
         if (players[0].attentionScore == players[1].attentionScore)
@@ -44,7 +43,7 @@ public class Ferret : MonoBehaviour
         
         if (winningPlayer)
         {
-            speed = winningPlayer.attentionScore * 0.00001f;
+            speed = winningPlayer.attentionScore * 0.00003f;
         }
 
         if ((transform.position.x >= 0.78f || transform.position.x <= -0.78f) && !endedGame)

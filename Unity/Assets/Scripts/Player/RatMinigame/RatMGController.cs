@@ -13,6 +13,7 @@ public class RatMGController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] TextMeshProUGUI scoreUI;
     [SerializeField] RatMinigameManager minigameManager;
+    [SerializeField] private Camera currentCamera;
 
     public int score = 0;
     private InputUser inputUser;
@@ -105,7 +106,7 @@ public class RatMGController : MonoBehaviour
     {
         Vector3 position = playerSelector.rectTransform.position;
 
-        Ray ray = Camera.main.ScreenPointToRay(position);
+        Ray ray = currentCamera.ScreenPointToRay(position);
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
@@ -119,27 +120,21 @@ public class RatMGController : MonoBehaviour
                     //hidingSpot.PopDownTween();
                 }
             }
-            else
-            {
-                UpdateScore(-1);
-            }
+      
 
             if (hit.collider.gameObject.TryGetComponent<BaseRat>(out BaseRat rat))
             {
                 
             }
         }
-        else
-        {
-            UpdateScore(-1);
-        }
+        
     }
 
     private GameObject ShootRaycastFromPosition()
     {
         Vector3 position = playerSelector.rectTransform.position;
 
-        Ray ray = Camera.main.ScreenPointToRay(position);
+        Ray ray = currentCamera.ScreenPointToRay(position);
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5535845472532239576}
   - component: {fileID: 8804810705766495522}
-  - component: {fileID: 5845699161146929374}
   - component: {fileID: 8686712027678859335}
+  - component: {fileID: -891369325678854268}
   m_Layer: 0
   m_Name: Treat
   m_TagString: Untagged
@@ -62,23 +62,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &5845699161146929374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5198012043751352616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e38c5e5f9f14f4888d24d569c02bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Treat
-  fallSpeed: 1.5
-  pointAmount: 1
-  treatShadowPrefab: {fileID: 8388801943272034412, guid: fb19642491eeddd41912efa5288d49c1, type: 3}
-  dog: {fileID: 0}
-  shadow: {fileID: 0}
 --- !u!65 &8686712027678859335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100,6 +83,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.42027688, y: 0.30407628, z: 0.8233941}
   m_Center: {x: -0.034614764, y: -0.16000001, z: 0}
+--- !u!114 &-891369325678854268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198012043751352616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0edf5f535667b340998ad959b50154b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DogTreat
+  fallSpeed: 1.5
+  pointAmount: 1
+  treatShadowPrefab: {fileID: 8388801943272034412, guid: fb19642491eeddd41912efa5288d49c1, type: 3}
+  dog: {fileID: 0}
+  shadow: {fileID: 0}
 --- !u!1001 &5694895724899710158
 PrefabInstance:
   m_ObjectHideFlags: 0

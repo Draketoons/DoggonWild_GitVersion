@@ -1,8 +1,9 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class FerretMinigame : MonoBehaviour
+public class FerretMinigame : MinigameBase
 {
     [SerializeField] private ShakeMeter Player1ShakeMeter;
     [SerializeField] private ShakeMeter Player2ShakeMeter;
@@ -13,10 +14,24 @@ public class FerretMinigame : MonoBehaviour
     [SerializeField] private Ferret ferret;
 
     public bool endedGame = false;
+    public bool practiceMode = false;
 
     private void Awake()
     {
         WinText.text = "";
+    }
+
+    private void Start()
+    {
+        foreach (var player in players)
+        {
+            player.DisableInputActions();
+        }
+
+        if (practiceMode)
+        {
+            StartMinigame();
+        }
     }
 
     private void FixedUpdate()
@@ -25,9 +40,15 @@ public class FerretMinigame : MonoBehaviour
         {
             ferret.canMove = false;
         }
-        if (players[0].isShaking || players[1].isShaking)
+    }
+
+    public override void StartMinigame()
+    {
+        base.StartMinigame();
+
+        foreach (var player in players)
         {
-            ferret.canMove = true;
+            player.EnableInputActions();
         }
     }
 
@@ -78,26 +99,43 @@ public class FerretMinigame : MonoBehaviour
 
     public IEnumerator EndMinigameSequence()
     {
+        WinText.text = "Finish!";
+
         if (players[0].attentionScore > players[1].attentionScore)
         {
             Debug.Log("Player 1 won!");
-            WinText.text = "Player 1 Won!";
-            ServiceLocator.GetService<IGameService>().IncreaseStarCount(0);
+
+            if (!practiceMode)
+            {
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(0, "Ferret");
+                ServiceLocator.GetService<IGameService>().IncreaseStarCount(0);
+            }
         }
         if (players[0].attentionScore < players[1].attentionScore)
         {
             Debug.Log("Player 2 won!");
-            WinText.text = "Player 2 Won!";
-            ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
+
+            if (!practiceMode)
+            {
+                ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(1, "Ferret");
+                ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
+            }
         }
         if (players[0].attentionScore == players[1].attentionScore)
         {
             Debug.Log("Neither Player won!");
-            WinText.text = "Nobody Won :/";
-            ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
+            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(-1, "Ferret");
         }
         yield return new WaitForSeconds(EndGameDelay);
-        ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+        if (!practiceMode)
+            ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
+        if (practiceMode)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame(currentSceneName);
+
+        }
+
     }
 
     public FerretMGController[] GetPlayers()

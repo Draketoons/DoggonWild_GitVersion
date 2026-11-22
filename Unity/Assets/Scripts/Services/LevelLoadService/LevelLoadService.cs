@@ -6,7 +6,7 @@ public class LevelLoadService : ILevelLoadService
     public void InitializeHub()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("PetShopHub");
+        SceneManager.LoadScene("PetShopHub_2");
     }
 
     public void InitializeMainMenu()

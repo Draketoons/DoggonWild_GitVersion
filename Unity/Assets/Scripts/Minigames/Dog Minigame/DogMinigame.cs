@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DogMinigame : MinigameBase
 {
@@ -14,18 +14,31 @@ public class DogMinigame : MinigameBase
     [SerializeField] private ScoreUI playerOneScoreUI;
     [SerializeField] private ScoreUI playerTwoScoreUI;
     [SerializeField] private ScoreUI TimerUI;
+    [SerializeField] private bool PracticeMode;
 
     private GameInstance gameInstance;
+
+    [SerializeField] private DogMGPlayerController[] players;
 
     private void Start()
     {
         gameInstance = FindAnyObjectByType<GameInstance>();
         StartMinigame();
         TimerUI.UpdateScore(gameTimer);
+
+        foreach (DogMGPlayerController player in players)
+        {
+            player.DisableInputActions();
+        }
     }
 
     public override void StartMinigame()
     {
+        foreach (DogMGPlayerController player in players)
+        {
+            player.EnableInputActions();
+        }
+
         Invoke("Countdown", 1f);
 
         treatSpawner.StartSpawning();
@@ -35,15 +48,29 @@ public class DogMinigame : MinigameBase
     {
         treatSpawner.StopSpawning();
 
+        if (PracticeMode)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame(currentSceneName);
+            return;
+        }
+
         if (playerOnePoints > playerTwoPoints)
         {
+            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(0, "Dog");
             ServiceLocator.GetService<IGameService>().IncreaseStarCount(0);
         }
         else if (playerTwoPoints > playerOnePoints)
         {
+            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(1, "Dog");
             ServiceLocator.GetService<IGameService>().IncreaseStarCount(1);
         }
-        ServiceLocator.GetService<ILevelLoadService>().InitializeHub();
+        else
+        {
+            ServiceLocator.GetService<IGameService>().SetPostMinigameInfo(-1, "Dog");
+        }
+
+        ServiceLocator.GetService<ILevelLoadService>().InitializeResultsScreen();
     }
 
     private void Countdown()

@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ferret_Results_AC
+  m_Controller: {fileID: 9100000, guid: e41f9ee466ec51142995bec665a591a8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -3385867209513896200, guid: bae5c0d4cd8b6f242b85821342fbe6bf, type: 3}
+    m_OverrideClip: {fileID: -1660962216096267460, guid: d0abf418b5e47104faf6b1ab585741e2, type: 3}
+  - m_OriginalClip: {fileID: -115899371804562333, guid: d3915af2ddd87a345a16374c71a3cf6b, type: 3}
+    m_OverrideClip: {fileID: -2176856363310212685, guid: 0f8f45aff47b98948bc3ceb9bab003f9, type: 3}

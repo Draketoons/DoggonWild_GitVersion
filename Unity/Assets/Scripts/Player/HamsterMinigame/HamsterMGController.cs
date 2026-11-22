@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -44,6 +45,12 @@ public class HamsterMGController : MonoBehaviour
         Debug.Log("Enabling Input Actions");
         SwitchTubeAction.Enable();
         SelectAction.Enable();
+    }
+
+    public void DisableInputActions()
+    {
+        SwitchTubeAction.Disable();
+        SelectAction.Disable();
     }
 
     public void SetInputActions()

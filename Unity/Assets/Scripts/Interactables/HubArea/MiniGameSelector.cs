@@ -53,7 +53,7 @@ public class MiniGameSelector : MonoBehaviour
 
     public void LoadMinigame()
     {
-        ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame("PracticeFerretMG");
+        ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame(targetSceneName);
     }
 
     private void DisplaySelectHUD()

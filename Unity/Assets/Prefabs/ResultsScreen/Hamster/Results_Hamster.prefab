@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7964451555787212240}
   - component: {fileID: 3518595884208296455}
+  - component: {fileID: 2093150256598130601}
   m_Layer: 0
   m_Name: Results_Hamster
   m_TagString: Untagged
@@ -46,6 +47,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultsScreenPet
   petName: Hamster
+--- !u!95 &2093150256598130601
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723587357759144714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 68b52a6b756347f459521b832cc73d70, type: 3}
+  m_Controller: {fileID: 22100000, guid: fc354564c14374447a659b0687c89c5b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4557020702268492817
 PrefabInstance:
   m_ObjectHideFlags: 0

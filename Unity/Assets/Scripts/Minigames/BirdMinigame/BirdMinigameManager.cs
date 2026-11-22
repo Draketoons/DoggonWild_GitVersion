@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdMinigameManager : MinigameBase
 {
@@ -22,6 +23,8 @@ public class BirdMinigameManager : MinigameBase
     [SerializeField] private int numberOfNotesPlayed;
     [SerializeField] private TextMeshProUGUI UIText;
     [SerializeField] private float waitTime;
+    [SerializeField] Animator birdAnimator;
+    [SerializeField] private bool practiceMode;
     private List<NoteType> noteOrder = new List<NoteType>();
     private int noteTypeIndex = 0;
     // int roundNumber = 0;
@@ -33,12 +36,13 @@ public class BirdMinigameManager : MinigameBase
 
     private void Start()
     {
-
+        if (practiceMode)
+        {
+            StartMinigame();
+        }
         ClearNotesList();
         DetermineNotesToPlay();
-        StartMinigame();
     }
-
 
     private void DetermineNotesToPlay()
     {
@@ -59,6 +63,7 @@ public class BirdMinigameManager : MinigameBase
     public void PlayBirdNote()
     {
         UpdateUIText(noteOrder[noteTypeIndex].ToString());
+        birdAnimator.SetTrigger(noteOrder[noteTypeIndex].ToString());
 
         if (noteTypeIndex >= noteOrder.Count - 1)
         {
@@ -178,6 +183,13 @@ public class BirdMinigameManager : MinigameBase
 
     public void EndMinigame(int playerIndex)
     {
+        if (practiceMode)
+        {
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            ServiceLocator.GetService<ILevelLoadService>().InitializeMinigame(currentSceneName);
+            return;
+        }
+
         if (coroutineReference == null)
         {
             coroutineReference = StartCoroutine(EndMinigameDelay(playerIndex));
