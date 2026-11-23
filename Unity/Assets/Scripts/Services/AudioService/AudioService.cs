@@ -3,27 +3,43 @@ using UnityEngine;
 
 public class AudioService : IAudioService
 {
-    AudioSource audioSource;
-
     List<AudioSource> activeSounds = new List<AudioSource>();
 
     public AudioService()
     {
-        GameObject audioService = new GameObject("AudioService");
-
-        audioSource = audioService.AddComponent<AudioSource>();
         
-        Object.DontDestroyOnLoad(audioService);
     }
 
-    public void PlayLooping(AudioClip audio)
+    public void PlayLooping(AudioClip audio, float volume)
     {
-        
+        GameObject audioSource = new GameObject("Looping Source");
+        AudioSource sourceComponent = audioSource.AddComponent<AudioSource>();
+        sourceComponent.loop = true;
+        sourceComponent.clip = audio;
+        sourceComponent.volume = volume;
+        sourceComponent.Play();
     }
 
     public void PlayOneShot(AudioClip audio)
     {
-        audioSource.PlayOneShot(audio);
+        GameObject audioSource = new GameObject("One Shot Source");
+        OneShotAudioSource sourceComponent = audioSource.AddComponent<OneShotAudioSource>();
+        sourceComponent.audioClip = audio;
+    }
+
+    public void PlayWithRandomPitch(AudioClip audio)
+    {
+        
+    }
+
+    public void RemoveFromCurrentPlayingList(AudioSource source)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void StopAllSounds()
+    {
+        throw new System.NotImplementedException();
     }
 }
 
